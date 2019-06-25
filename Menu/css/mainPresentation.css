@@ -1,0 +1,13 @@
+body{
+  background: green;
+}
+.canvas {
+  border: red 1px solid;
+  background-image: url("../img/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+
+}

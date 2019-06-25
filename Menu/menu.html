@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Menu interactivo</title>
+  <!-- <script>
+    alert("audio context");
+    window.onload = function() {
+      var context = new AudioContext();
+    }
+   </script> -->
+</head>
+<body>
+
+  <section id="game-container" class="game-container notPlaying">
+    <div class="principal-menu">
+        <div id="fondo" class="marco ">
+          <div id="gameBoard" class="gameboard">           
+            
+            <img src="img/img-menu/btn-kamentsa.png" id="kamentsa" class="kamentsa btn-menu "  data-zona="z-kamentsa"></img>
+
+            <img src="img/img-menu/btn-inga.png" id="inga"     class="inga btn-menu  " data-zona="z-inga"></img>
+
+            <img src="img/img-menu/btn-siona.png" id="ziona"    class="siona btn-menu "  data-zona="z-ziona"></img>
+
+            <img src="img/img-menu/btn-kofan.png" id="cofan"    class="kofan btn-menu  "  data-zona="z-cofan"></img></div>  
+        </div>
+    </div>
+  </section>
+  <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
+  <audio id="audio_fondo" src="assets/fondo.mp3" autoplay></audio>
+  <script type="text/javascript" src="js/main.js"></script> 
+  </body>
+</html>

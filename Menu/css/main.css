@@ -1,0 +1,158 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+h1{
+  font-size: 40px;
+  color: white;
+}
+body {
+  margin: 0;
+  /* background-image: url('skyBackground.png');         */
+  background: #7ed6df;
+}
+
+.principal-menu{
+  margin: 0 auto;
+  position: relative; 
+   height: 480px;
+  width: 850px;
+ background-image:  url("../img/img-menu/menu-fondo-only.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marco{
+  margin: 0;  
+  position: relative; 
+  box-sizing: border-box; 
+
+   
+  z-index: 1; 
+}
+
+
+
+.gameboard{
+   box-sizing: border-box; 
+  width: 307px;
+  height: 313px;
+  transform: rotate(-45deg);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+ background-image: url("../img/img-menu/circulo-fondo-bn.png");
+ background-position-y:3px;
+
+}
+
+.btn-menu{
+  box-sizing: border-box; 
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.kamentsa{  
+  top: 0;
+  right: 0;  
+}
+
+
+.kofan{
+   top: 0;
+  left: 0;  
+  
+}
+.siona{
+  
+  bottom: 0;
+  left: 0;  
+ 
+}
+.inga{
+  
+  bottom: 0;
+  right: 0;  
+ 
+}
+
+.kamentsa:hover , .kofan:hover , .siona:hover  , .inga:hover{
+  opacity: 1;
+  cursor:pointer;
+  transition: all .1s;
+  
+}
+
+
+.girar{  
+  animation: rotar 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+.moveKamentsa{
+  animation: girarKamentsa 5s ease-in-out;
+  animation-fill-mode: forwards;
+  
+}
+.moveInga{
+  animation: girarInga 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.moveKofan{
+  animation: girarKofan 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.moveSiona{
+  animation: girarSiona 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes girarKamentsa {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(720deg);
+    animation-play-state: paused;
+  } 
+}
+
+@keyframes girarInga {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(630deg);
+    
+  } 
+}
+
+@keyframes girarKofan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(450deg);
+    
+  } 
+}
+
+@keyframes girarSiona {
+  0% {
+    transform: rotate(0deg);
+    
+  }
+  100%{
+    transform: rotate(540deg);
+    
+  } 
+}
