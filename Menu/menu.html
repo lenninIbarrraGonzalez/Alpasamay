@@ -15,24 +15,43 @@
    </script> -->
 </head>
 <body>
+  
+  <div class="about">
+    <button class="btn primary" id="btn-about">Sobre nosotros</button>
+  </div>
+    
 
-  <section id="game-container" class="game-container notPlaying">
-    <div class="principal-menu">
-        <div id="fondo" class="marco ">
-          <div id="gameBoard" class="gameboard">           
-            
-            <img src="img/img-menu/btn-kamentsa.png" id="kamentsa" class="kamentsa btn-menu "  data-zona="z-kamentsa"></img>
-
-            <img src="img/img-menu/btn-inga.png" id="inga"     class="inga btn-menu  " data-zona="z-inga"></img>
-
-            <img src="img/img-menu/btn-siona.png" id="ziona"    class="siona btn-menu "  data-zona="z-ziona"></img>
-
-            <img src="img/img-menu/btn-kofan.png" id="cofan"    class="kofan btn-menu  "  data-zona="z-cofan"></img></div>  
+    <div class="overlay" id="overlay">
+        <div class="modal" id="modal">
+            <h1>tejiendo saberes</h1>
+            <p>Bienvenido a mi juego, vamos a aprender</p>
+            <p>Bienvenido a mi juego, vamos a aprender</p>
+            <p>Bienvenido a mi juego, vamos a aprender</p>
+            <div class="modal-buttons">
+              <button class="btn primary" id="hide-modal">Creditos</button>
+              <button class="btn primary" id="btn-negative">Agradecimientos</button>
+              <button class="modal-close" id="modal-close">x</button>
+            </div>
         </div>
     </div>
-  </section>
-  <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
-  <audio id="audio_fondo" src="assets/fondo.mp3" autoplay></audio>
+      <div id="game-container" class="game-container notPlaying">
+          <div class="principal-menu">
+              <div id="fondo" class="marco ">
+                <div id="gameBoard" class="gameboard">           
+                  
+                  <img src="img/img-menu/btn-kamentsa.png" id="kamentsa" class="kamentsa btn-menu "  data-zona="z-kamentsa"></img>
+    
+                  <img src="img/img-menu/btn-inga.png" id="inga"     class="inga btn-menu  " data-zona="z-inga"></img>
+    
+                  <img src="img/img-menu/btn-siona.png" id="ziona"    class="siona btn-menu "  data-zona="z-ziona"></img>
+    
+                  <img src="img/img-menu/btn-kofan.png" id="cofan"    class="kofan btn-menu  "  data-zona="z-cofan"></img></div>  
+              </div>
+          </div>
+        </div>
+
+  <!-- <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>  -->
+  <!-- <audio id="audio_fondo" src="assets/fondo.mp3" autoplay controls></audio> -->
   <script type="text/javascript" src="js/main.js"></script> 
   </body>
 </html>

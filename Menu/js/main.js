@@ -9,6 +9,14 @@ btnInga.addEventListener('click', msn);
 btnCofan.addEventListener('click', msn);
 btnZiona.addEventListener('click', msn);
 
+
+const $btnAbout = document.getElementById('btn-about');
+
+const $hideButton = document.getElementById('hide-modal');
+const $modal = document.getElementById('modal');
+const $overlay = document.getElementById('overlay');
+const $modalClose = document.getElementById('modal-close');
+
 function msn(ev) {
   console.log(ev);
   const dataZona = ev.target.dataset.zona;
@@ -120,3 +128,57 @@ function desaparecerBotones(dataZona){
   btnKamentsa.style.display='none';
   }
  }
+
+// script para manejo del modal
+
+
+
+$btnAbout.addEventListener('click', ()=>{
+  $btnAbout.style.animation = 'modalOn .8s fordwars';
+  // $overlay.classList.remove('active');
+  console.log("pasoooo");
+});
+
+// $hideButton.addEventListener('click', (event)=>{
+//   $modal.style.animation = 'modalIn .8s fordwars';
+//   // alert("puta");
+//   $overlay.classList.remove('active');
+// });
+ 
+// $modalClose.addEventListener('click', (event)=>{
+//   $modal.style.animation='modalOut .8s forwards';
+//   $overlay.classList.remove('active');
+// });
+
+//   // muestra el modal y el overlay cuando le doy click a la imagen
+// // $img.addEventListener('click',(event)=>{
+// //       $modal.style.animation = 'modalIn .8s forwards';
+// //       $overlay.classList.add('active');
+// // });
+
+// $overlay.addEventListener('click', (event) => {
+//     const flyoutModal = document.getElementById('modal');
+//     const buttonsModal = document.getElementById('modal-buttons');
+//     //permite controlar que no se realice ninguna acción si se pulsa el boton no
+//     const btnnegative = document.getElementById('btn-negative');
+//     // const $modalClose = document.getElementById('modal-close');
+
+//     let targetElement = event.target;
+//     if (targetElement == flyoutModal ||
+//         targetElement.parentNode == flyoutModal ||
+//         targetElement.parentNode == buttonsModal  ||
+//         targetElement == btnnegative){
+//       console.log('dentro');
+//       console.log(event);
+//     // }else if(targetElement == $modalClose){
+//     //     $modal.style.animation='modalIn .8s forwards';
+//     //     $overlay.classList.remove('active');
+//     //     console.log('vida puta');
+//     }
+//     else{
+//       console.log('fuera');
+//       console.log(event);
+//       $overlay.classList.remove('active');
+//     //   $modal.className = "modal out";
+//     }
+// });
