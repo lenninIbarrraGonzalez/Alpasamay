@@ -3,6 +3,8 @@ const btnInga = document.getElementById("inga");
 const btnCofan = document.getElementById("cofan");
 const btnZiona = document.getElementById("ziona");
 var fondo = document.getElementById("fondo");
+var audioKamentsa = document.getElementById("audio_kamentsa");
+var audioFondo = document.getElementById("audio_fondo");
 
 btnKamentsa.addEventListener('click', msn);
 btnInga.addEventListener('click', msn);
@@ -79,6 +81,9 @@ function startAnimation(dataZona) {
     if(dataZona === 'z-kamentsa'){
       fondo.classList.add("moveKamentsa");
       btnKamentsa.style.opacity=1;
+      // audioFondo.pause();
+      audioKamentsa.play();
+
       desaparecerBotones(dataZona)      
     }
     if(dataZona === "z-inga"){
@@ -100,7 +105,7 @@ function startAnimation(dataZona) {
   
 function goPresentation() {
   setTimeout(()=> {
-    window.open("presentacion.html", "_self");
+    window.open("../Puzzle/index.html", "_self");
   },6000);
 }
 
@@ -133,11 +138,11 @@ function desaparecerBotones(dataZona){
 
 
 
-$btnAbout.addEventListener('click', ()=>{
-  $btnAbout.style.animation = 'modalOn .8s fordwars';
-  // $overlay.classList.remove('active');
-  console.log("pasoooo");
-});
+// $btnAbout.addEventListener('click',()=>{
+//   $btnAbout.style.animation = 'modalOn .8s fordwars';
+//   // $overlay.classList.remove('active');
+//   console.log("pasoooo");
+// });
 
 // $hideButton.addEventListener('click', (event)=>{
 //   $modal.style.animation = 'modalIn .8s fordwars';
