@@ -3,13 +3,19 @@ const btnInga = document.getElementById("inga");
 const btnCofan = document.getElementById("cofan");
 const btnZiona = document.getElementById("ziona");
 var fondo = document.getElementById("fondo");
+
 var audioKamentsa = document.getElementById("audio_kamentsa");
 var audioFondo = document.getElementById("audio_fondo");
+const audioInga = document.getElementById("audio_inga");
+const audioKofan = document.getElementById("audio_kofan");
+const audioSiona = document.getElementById("audio_siona");
+
 
 btnKamentsa.addEventListener('click', msn);
 btnInga.addEventListener('click', msn);
 btnCofan.addEventListener('click', msn);
 btnZiona.addEventListener('click', msn);
+
 
 
 const $btnAbout = document.getElementById('btn-about');
@@ -82,7 +88,7 @@ function startAnimation(dataZona) {
       fondo.classList.add("moveKamentsa");
       btnKamentsa.style.opacity=1;
       // audioFondo.pause();
-      audioKamentsa.play();
+      //audioKamentsa.play();
 
       desaparecerBotones(dataZona)      
     }
@@ -134,6 +140,23 @@ function desaparecerBotones(dataZona){
   }
  }
 
+function playSoundKamentsa(){
+ 
+  audioKamentsa.play();
+}
+function playSoundInga(){
+  audioInga.play();
+}
+function playSoundCofan(){
+  audioKofan.play();
+}
+function playSoundZiona(){
+  audioSiona.play();
+}
+
+
+
+ 
 // script para manejo del modal
 
 

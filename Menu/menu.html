@@ -39,22 +39,25 @@
               <div id="fondo" class="marco ">
                 <div id="gameBoard" class="gameboard">           
                   
-                  <img src="img/img-menu/btn-kamentsa.png" id="kamentsa" class="kamentsa btn-menu "  data-zona="z-kamentsa"></img>
+                  <img src="img/img-menu/btn-kamentsa.png" id="kamentsa" class="kamentsa btn-menu "  data-zona="z-kamentsa" onmouseover="playSoundKamentsa();"></img>
     
-                  <img src="img/img-menu/btn-inga.png" id="inga"     class="inga btn-menu  " data-zona="z-inga"></img>
+                  <img src="img/img-menu/btn-inga.png" id="inga"     class="inga btn-menu  " data-zona="z-inga" onmouseover="playSoundInga();"></img>
     
-                  <img src="img/img-menu/btn-siona.png" id="ziona"    class="siona btn-menu "  data-zona="z-ziona"></img>
+                  <img src="img/img-menu/btn-siona.png" id="ziona"    class="siona btn-menu "  data-zona="z-ziona" onmouseover="playSoundZiona();"></img>
     
-                  <img src="img/img-menu/btn-kofan.png" id="cofan"    class="kofan btn-menu  "  data-zona="z-cofan"></img></div>  
+                  <img src="img/img-menu/btn-kofan.png" id="cofan"    class="kofan btn-menu  "  data-zona="z-cofan" onmouseover="playSoundCofan();"></img></div>  
               </div>
           </div>
         </div>
 
-  <!-- <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>   -->
+  <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>  
   <audio id="audio_fondo" src="assets/fondo.mp3" autoplay></audio>
   <!-- <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>  -->
 
-  <audio id="audio_kamentsa" src="assets/Kamentsa.mp3"></audio>
+  <audio src="assets/Kamentsa.mp3" id="audio_kamentsa"></audio>
+  <audio src="assets/Inga.mp3" id="audio_inga"></audio>
+  <audio src="assets/Kofan.mp3" id="audio_kofan"></audio>
+  <audio src="assets/Siona.mp3" id="audio_siona"></audio>
   <script type="text/javascript" src="js/main.js"></script> 
   </body>
 </html>
