@@ -1,15 +1,15 @@
 var audios = document.getElementsByClassName("audio");
 
 var On;
+var sum = 0;
+var bien_ubicadas = 0;
 
 // El evento onMouseDown sucede cuando el usuario pulsa un botón del ratón.
 // El evento onMouseMove tiene lugar cuando el usuario mueve el cursor del ratón.
 // El evento onMouseUp se genera cuando se deja de pulsar un botón del ratón.
 
-
 //guardamos las plabras en idioma
 var parts_clothing = document.getElementsByClassName('parts');
-
 
 //guardamos los elemento en blanco y negro
 var parts_colors = document.getElementsByClassName('clothing');
@@ -18,10 +18,6 @@ var parts_colors = document.getElementsByClassName('clothing');
 var coloreadas = document.getElementsByClassName('colorear');
 
 //medida de ancho y alto de cada pieza en los arrays
-
-//vestido ancho: 130px alto: 187px
-//cabello ancho: 120px alto: 143px
-//zapatos ancho: 107px alto: 61px
 
 //ancho
 var tamWidth = [];
@@ -125,7 +121,7 @@ function moverElemento(evt, id) {
 }
 
 function deseleccionarElemento() {
-    //testing();
+    testing();
     if(elementSelect != 0){
         elementSelect.removeAttribute("onmousemove");
         elementSelect.removeAttribute("onmouseout");
@@ -336,10 +332,11 @@ function verificarColor(id){
     var On = parts_colors[id].classList.contains("coloresON");
 
     if(On === true){
-        console.log("SI entro en true tiene la clase");
+        var sum = 1;
+        testing(sum);
     }
     else{
-        console.log("NO entro en true paso por el else, no tiene la clase");
+        // console.log("NO entro en true paso por el else, no tiene la clase");
         removeClass(id);
     }
 }
@@ -461,9 +458,6 @@ function removeClass(id){
     }
 }
 
-
-
-
 // ******************
 //posiciones originales para el iman
 var origX = [200, 275,450,450,160,528,363,517,650,670,0,395,650,764,512,593,775,929,800,335,10,302,63,790,230,198,288,170];
@@ -487,8 +481,6 @@ function iman(idFicha) {
         }  
     }
 }
-
-
 
 function pintarFondo(idFicha){
     switch(idFicha){
@@ -612,33 +604,15 @@ function pintarFondo(idFicha){
     }
 }
 
-// var win = document.getElementById("win");
-// function testing(){
-   
-//     //alert("bitch");
-//     var bien_ubicadas = 0;
-
-//     var padres = document.getElementsByClassName('clothing_parts');
-//    // console.log(padres);
-//      for(var i=0; i<parts_clothing.length; i++){
-        
-//     // console.log("entro");
-//         var posx = parseFloat(padres[i].firstChild.getAttribute("x"));
-//         //console.log("posx", posx);
-//         var posy = parseFloat(padres[i].firstChild.getAttribute("y"));
-//         //console.log("posy", posy);
-//         ide = padres[i].getAttribute("id");
-//         //console.log("ide", ide);
-                
-//        // console.log("origX[ide]",origX[ide])
-//        // console.log("origY[ide]", origY[ide]);
-//          if(origX[ide] == posx && origY[ide] == posy){
-//             bien_ubicadas= bien_ubicadas+1;
-//          //   console.log("bien_ubicadas:",bien_ubicadas);
-//          }
-//     }
-//     if(bien_ubicadas == 3){
-//         win.play();
-//     }
-// }
+var win = document.getElementById("queen");
+function testing(sum){
+    console.log("Esto es lo que tiene sum", sum);
+    if(sum == 1){
+        bien_ubicadas = bien_ubicadas +1;
+        console.log("Entro al IF bien ubicadas", bien_ubicadas);
+    }
+    if(bien_ubicadas == 27){
+        win.play();
+    }
+}
 
