@@ -31,6 +31,8 @@ for(var i=0; i<=28; i++){
 }
 
 
+
+
 //posición en X
 var posX = [];
 //posición en Y 475
@@ -42,10 +44,12 @@ for(var i=0; i<=28; i++){
     randomY=Math.floor((Math.random() * (515-477))+477); 
     posX[i]=randomX;
     posY[i]=randomY;
+
+    // Visibility();
 }
 
 for(var i=0; i<parts_clothing.length; i++){
-    //alert('hola mundo');
+    
     //agregamos con setAtrribute el ancho y alto de las imagenes en partes
     parts_clothing[i].setAttribute("width", tamWidth[i]);
     parts_clothing[i].setAttribute("height", tamHeight[i]);
@@ -69,6 +73,32 @@ var currentX = 0;
 var currentY = 0;
 var currentPostX = 0;
 var currentPostY = 0;
+
+var min = 0;
+var max = 27;
+
+function Visibility(min, max) {
+    // var secuenciaVisibility = new Array(27).fill(-1).map(n=>Math.floor(Math.random()*27));
+       var secuenciaVisibility = new Array(27);
+       secuenciaVisibility.fill(-1);
+    //    .map(n=>Math.floor(Math.random()*27));
+
+        // while (rept != -1){
+        //     for(var i=1 ; i<= max ; i++){
+        //         var numaleatorio = Math.floor(Math.random() * (max+1));
+        //         if (arraynum.indexOf(numaleatorio) < 0 && numaleatorio != 0) {
+        //             arraynum.push(numaleatorio);
+        //             end++;
+        //             console.log("imprimiendo el array", arraynum[i]);
+        //         }
+        //         end == max ? rept = -1 : false ;
+        //     }
+        // }
+}
+//console.log("SECUENCIA", secuenciaVisibility);
+
+
+
 
 function seleccionarElemento(evt) {
     //almacenamos la información de la pieza que dispara el evento
@@ -606,10 +636,10 @@ function pintarFondo(idFicha){
 
 var win = document.getElementById("queen");
 function testing(sum){
-    console.log("Esto es lo que tiene sum", sum);
+   // console.log("Esto es lo que tiene sum", sum);
     if(sum == 1){
         bien_ubicadas = bien_ubicadas +1;
-        console.log("Entro al IF bien ubicadas", bien_ubicadas);
+       // console.log("Entro al IF bien ubicadas", bien_ubicadas);
     }
     if(bien_ubicadas == 27){
         win.play();
