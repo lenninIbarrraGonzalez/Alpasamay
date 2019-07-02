@@ -29,6 +29,10 @@
   opacity: 0;
 }
 
+.coloresON{
+  opacity: 1;
+}
+
 .desaparecer{
   display: none
 }
@@ -40,7 +44,7 @@
 }
 
 .prueba{
-    animation: color 1s ease-in-out;
+    animation: color 1.5s ease-in-out;
     transform-origin: center center;
     
   }
