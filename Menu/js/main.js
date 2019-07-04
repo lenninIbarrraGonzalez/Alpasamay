@@ -25,40 +25,32 @@ const $modal = document.getElementById('modal');
 const $overlay = document.getElementById('overlay');
 const $modalClose = document.getElementById('modal-close');
 
+setTimeout(()=>{
+  btnKamentsa.classList.add("Off");
+  btnCofan.classList.add("Off");
+  btnInga.classList.add("Off");
+  btnZiona.classList.add("Off");
+},3000);
+
 function msn(ev) {
   console.log(ev);
   const dataZona = ev.target.dataset.zona;
 
   switch(dataZona) {
-    
      case 'z-kamentsa' : 
       startAnimation(dataZona);
-      // setTimeout(()=> {
-      //    restartCss(dataZona);
-      // },6000);
-     
       goPresentation();
       return 
      case 'z-inga' : 
-      
       startAnimation(dataZona);
-    //   setTimeout(()=> {
-    //     restartCss(dataZona);
-    //  },6000);
-     goPresentation();
+      goPresentation();
        return 
      case 'z-ziona' : 
       startAnimation(dataZona);
-    //   setTimeout(()=> {
-    //     restartCss(dataZona);
-    //  },6000);
       goPresentation();
       return 
      case 'z-cofan' : 
       startAnimation(dataZona);
-      // setTimeout(()=> {
-      //   restartCss(dataZona);
-    //  },6000);
       goPresentation();
       return 
   }
@@ -87,9 +79,6 @@ function startAnimation(dataZona) {
     if(dataZona === 'z-kamentsa'){
       fondo.classList.add("moveKamentsa");
       btnKamentsa.style.opacity=1;
-      // audioFondo.pause();
-      //audioKamentsa.play();
-
       desaparecerBotones(dataZona)      
     }
     if(dataZona === "z-inga"){
@@ -141,7 +130,6 @@ function desaparecerBotones(dataZona){
  }
 
 function playSoundKamentsa(){
- 
   audioKamentsa.play();
 }
 function playSoundInga(){
@@ -155,58 +143,3 @@ function playSoundZiona(){
 }
 
 
-
- 
-// script para manejo del modal
-
-
-
-// $btnAbout.addEventListener('click',()=>{
-//   $btnAbout.style.animation = 'modalOn .8s fordwars';
-//   // $overlay.classList.remove('active');
-//   console.log("pasoooo");
-// });
-
-// $hideButton.addEventListener('click', (event)=>{
-//   $modal.style.animation = 'modalIn .8s fordwars';
-//   // alert("puta");
-//   $overlay.classList.remove('active');
-// });
- 
-// $modalClose.addEventListener('click', (event)=>{
-//   $modal.style.animation='modalOut .8s forwards';
-//   $overlay.classList.remove('active');
-// });
-
-//   // muestra el modal y el overlay cuando le doy click a la imagen
-// // $img.addEventListener('click',(event)=>{
-// //       $modal.style.animation = 'modalIn .8s forwards';
-// //       $overlay.classList.add('active');
-// // });
-
-// $overlay.addEventListener('click', (event) => {
-//     const flyoutModal = document.getElementById('modal');
-//     const buttonsModal = document.getElementById('modal-buttons');
-//     //permite controlar que no se realice ninguna acción si se pulsa el boton no
-//     const btnnegative = document.getElementById('btn-negative');
-//     // const $modalClose = document.getElementById('modal-close');
-
-//     let targetElement = event.target;
-//     if (targetElement == flyoutModal ||
-//         targetElement.parentNode == flyoutModal ||
-//         targetElement.parentNode == buttonsModal  ||
-//         targetElement == btnnegative){
-//       console.log('dentro');
-//       console.log(event);
-//     // }else if(targetElement == $modalClose){
-//     //     $modal.style.animation='modalIn .8s forwards';
-//     //     $overlay.classList.remove('active');
-//     //     console.log('vida puta');
-//     }
-//     else{
-//       console.log('fuera');
-//       console.log(event);
-//       $overlay.classList.remove('active');
-//     //   $modal.className = "modal out";
-//     }
-// });

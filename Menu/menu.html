@@ -7,57 +7,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
   <title>Menu interactivo</title>
-  <!-- <script>
-    alert("audio context");
-    window.onload = function() {
-      var context = new AudioContext();
-    }
-   </script> -->
 </head>
 <body>
-  
-  <!-- <div class="about">
-    <button class="btn primary" id="btn-about">Sobre nosotros</button>
-  </div> -->
-    
-
-    <!-- <div class="overlay" id="overlay">
-        <div class="modal" id="modal">
-            <h1>tejiendo saberes</h1>
-            <p>Bienvenido a mi juego, vamos a aprender</p>
-            <p>Bienvenido a mi juego, vamos a aprender</p>
-            <p>Bienvenido a mi juego, vamos a aprender</p>
-            <div class="modal-buttons">
-              <button class="btn primary" id="hide-modal">Creditos</button>
-              <button class="btn primary" id="btn-negative">Agradecimientos</button>
-              <button class="modal-close" id="modal-close">x</button>
-            </div>
-        </div>
-    </div> -->
-      <div id="game-container" class="game-container notPlaying">
-          <div class="principal-menu">
-              <div id="fondo" class="marco ">
-                <div id="gameBoard" class="gameboard">           
-                  
-                  <img src="img/img-menu/btn-kamentsa.png" id="kamentsa" class="kamentsa btn-menu "  data-zona="z-kamentsa" onmouseover="playSoundKamentsa();"></img>
-    
-                  <img src="img/img-menu/btn-inga.png" id="inga"     class="inga btn-menu  " data-zona="z-inga" onmouseover="playSoundInga();"></img>
-    
-                  <img src="img/img-menu/btn-siona.png" id="ziona"    class="siona btn-menu "  data-zona="z-ziona" onmouseover="playSoundZiona();"></img>
-    
-                  <img src="img/img-menu/btn-kofan.png" id="cofan"    class="kofan btn-menu  "  data-zona="z-cofan" onmouseover="playSoundCofan();"></img></div>  
-              </div>
-          </div>
-        </div>
-
-  <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>  
-  <audio id="audio_fondo" src="assets/fondo.mp3" autoplay></audio>
-  <!-- <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>  -->
-
-  <audio src="assets/Kamentsa.mp3" id="audio_kamentsa"></audio>
-  <audio src="assets/Inga.mp3" id="audio_inga"></audio>
-  <audio src="assets/Kofan.mp3" id="audio_kofan"></audio>
-  <audio src="assets/Siona.mp3" id="audio_siona"></audio>
-  <script type="text/javascript" src="js/main.js"></script> 
+  <div id="game-container" class="game-container notPlaying">
+    <div class="principal-menu">
+      <div id="fondo" class="marco ">
+          <div id="gameBoard" class="gameboard">           
+           <img src="img/img-menu/btn-kamentsa.png" id="kamentsa" class="kamentsa btn-menu "  data-zona="z-kamentsa" onmouseover="playSoundKamentsa();"></img>
+           <img src="img/img-menu/btn-inga.png" id="inga"     class="inga btn-menu  " data-zona="z-inga" onmouseover="playSoundInga();"></img>
+           <img src="img/img-menu/btn-siona.png" id="ziona"    class="siona btn-menu "  data-zona="z-ziona" onmouseover="playSoundZiona();"></img>
+           <img src="img/img-menu/btn-kofan.png" id="cofan"    class="kofan btn-menu  "  data-zona="z-cofan" onmouseover="playSoundCofan();"></img>
+          </div>  
+      </div>
+    </div>
+  </div>
+    <iframe src="assets/fondo.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>  
+    <audio id="audio_fondo" src="assets/fondo.mp3" autoplay></audio>
+    <audio src="assets/Kamentsa.mp3" id="audio_kamentsa"></audio>
+    <audio src="assets/Inga.mp3" id="audio_inga"></audio>
+    <audio src="assets/Kofan.mp3" id="audio_kofan"></audio>
+    <audio src="assets/Siona.mp3" id="audio_siona"></audio>
+    <script type="text/javascript" src="js/main.js"></script> 
   </body>
 </html>
