@@ -1,3 +1,5 @@
+const audios = document.getElementsByClassName("audio");
+
 //guardamos todos los elementos de la ropa con clase parts
 var parts_clothing = document.getElementsByClassName("parts");
 
@@ -40,29 +42,26 @@ var currentX = 0;
 var currentY = 0;
 var currentPostX = 0;
 var currentPostY = 0;
-var min = 0;
-var max = 27;
+// var min = 0;
+// var max = 27;
 
 
-console.log("currentPostX inicial", currentPostX);
+// console.log("currentPostX inicial", currentPostX);
+function seleccionarElemento(evt) {
+    // debugger
+    //almacenamos la información de la pieza que dispara el evento
+    elementSelect = evt.target;
+    //transferimos el elemento seleccionado
+    elementSelect = reordenar(evt);
+    //almacenamos la info de X y Y que se disparo en el evento
+    //evt.clientX->obtiene la posicion cordenada x ydel clic dentro en el evento o wind
+    currentX = evt.clientX;
+    currentY = evt.clientY;
+    //console.log("x: " + currentX + "y: " + currentY  )
 
-function seleccionarElemento(evt){
-     //almacenamos la información de la pieza que dispara el evento
-     elementSelect = evt.target;
-     //transferimos el elemento seleccionado
-     elementSelect = reordenar(evt);
-     //almacenamos la info de X y Y que se disparo en el evento
-     //evt.clientX->obtiene la posicion cordenada x ydel clic dentro en el evento o wind
-     currentX = evt.clientX;
-     currentY = evt.clientY;
-     //console.log("x: " + currentX + "y: " + currentY  )
- 
-     //
-     
-     currentPostX = parseFloat(elementSelect.getAttribute("x"));
-     console.log("que paso aqui currentPostX", currentPostX);
-     currentPostY = parseFloat(elementSelect.getAttribute("y"));
-     elementSelect.setAttribute("onmousemove", "moverElemento(evt)");
+    currentPostX = parseFloat(elementSelect.getAttribute("x"));
+    currentPostY = parseFloat(elementSelect.getAttribute("y"));
+    elementSelect.setAttribute("onmousemove", "moverElemento(evt)");
 }
 
 function moverElemento(evt, id) {
@@ -98,6 +97,7 @@ function moverElemento(evt, id) {
     iman(idFicha);
 }
 
+
 function deseleccionarElemento() {
     // testing();
     if(elementSelect != 0){
@@ -107,6 +107,8 @@ function deseleccionarElemento() {
         elementSelect = 0;
     }
 }
+
+
 
 //creamos una variable global que guardara todo el entorno grafico
 var entorno = document.getElementById('lienzo');
@@ -120,105 +122,98 @@ function reordenar(evt){
 
     entorno.removeChild(document.getElementById(id));
     entorno.appendChild(clone);
-    setTimeout(()=>verificarColor(id), 1600); entorno.lastChild.firstChild;
+    return entorno.lastChild.firstChild;
+    
 
 }
 
-//posiciones originales para el iman
-const origX = [110, 112, 130, 100, 145, 323, 307, 355, 350, 306];
-const origY = [153, 273, 245, 200, 155, 293, 121, 123, 120, 195];
-
-function iman(idFicha){
-    console.log("idFicha en el iman", idFicha);
-    console.log("esto es lo que tiene parts_clothing", parts_clothing);
-    for(var i=0; i<parts_clothing.length; i++){
-        if(Math.abs(currentPostX-origX[i])<13 && Math.abs(currentPostY-origY[i])<13){
-            // console.log("Entro al primer if");
-            // console.log("este es el valor de i", i);
-           if(idFicha == i){
-              //  alert("Entro al segundo if");
-                elementSelect.setAttribute("x", origX[i]);
-                elementSelect.setAttribute("y", origY[i]); 
-                elementSelect.style.opacity="0";
-                 pintarFondo(idFicha);
-            }
-        }  
-    }  
-}
 
 function animatioTab(id){
     // alert("entro");
-    console.log("Este es el id", id);
+    // console.log("Este es el id", id);
     switch(id){
         case '0' : parts_colors[0].style.opacity = "0";
                    coloreadas[0].style.opacity = "1";
                    coloreadas[0].classList.add("prueba");
+                   audios[0].play();
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
 
         case '1' : parts_colors[1].style.opacity = "0";
                    coloreadas[1].style.opacity = "1";
                    coloreadas[1].classList.add("prueba");
+                   audios[1].play();
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
         case '2' : parts_colors[2].style.opacity = "0";
                    coloreadas[2].style.opacity = "1";
                    coloreadas[2].classList.add("prueba");
+                   audios[2].play();
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
          case '3' : parts_colors[3].style.opacity = "0";
                    coloreadas[3].style.opacity = "1";
                    coloreadas[3].classList.add("prueba");
+                   audios[3].play();
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
         case '4' : parts_colors[4].style.opacity = "0";
                    coloreadas[4].style.opacity = "1";
                    coloreadas[4].classList.add("prueba");
+                   audios[4].play();
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
         case '5' : parts_colors[5].style.opacity = "0";
                    coloreadas[5].style.opacity = "1";
                    coloreadas[5].classList.add("prueba");
                    setTimeout(()=>verificarColor(id), 1600);         
-                   break;
+                   return
         case '6' : parts_colors[6].style.opacity = "0";
                    coloreadas[6].style.opacity = "1";
                    coloreadas[6].classList.add("prueba");
+                   audios[5].play();
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
         case '7' : parts_colors[7].style.opacity = "0";
                    coloreadas[7].style.opacity = "1";
                    coloreadas[7].classList.add("prueba");
+                   audios[4].play();
+
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
          case '8' : parts_colors[8].style.opacity = "0";
                    coloreadas[8].style.opacity = "1";
                    coloreadas[8].classList.add("prueba");
+                  
+                   audios[6].play();
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
         case '9' : parts_colors[9].style.opacity = "0";
                    coloreadas[9].style.opacity = "1";
                    coloreadas[9].classList.add("prueba");
+                   audios[3].play();
                    setTimeout(()=>verificarColor(id), 1600);
-                   break;
+                   return
     }
 }
 
+
 function verificarColor(id){
     const On = parts_colors[id].classList.contains("coloresON");
-    console.log("EL valor de ON es: ", On);
+    // console.log("EL valor de ON es: ", On);
     if(On === true){
-        console.log("Entro al if del true del On llamo a la función ValidadVisibility");
-       // var sum = 1;
-       validarVisibilty();
+        // console.log("Entro al if del true del On llamo a la función ValidadVisibility");
+        // var sum = 1;
+        //    validarVisibilty();
        // testing(sum);
     }
     else{
-        console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
+        // console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
         removeClass(id);
     }
     return;
 }
+
 
 function removeClass(id){
     switch(id){
@@ -264,19 +259,29 @@ function removeClass(id){
     }
 }
 
-function validarVisibilty(){
-    //sum +=1;
-   // console.log("esto tiene sum", sum);
-    if(sum == 10){
-       // console.log("ENTRO AL PRIMER IF SUM == A 10");
-        visibility();
-    }
-    if(sum == 19){
-        console.log("ENTRO AL SEGUNDO IF SUM == A 19");
-        visibility();
-    }
-    return;
+
+//posiciones originales para el iman
+const origX = [110, 112, 130, 100, 145, 323, 307, 355, 350, 306];
+const origY = [153, 273, 245, 200, 155, 293, 121, 123, 120, 195];
+
+function iman(idFicha){
+    // console.log("idFicha en el iman", idFicha);
+    // console.log("esto es lo que tiene parts_clothing", parts_clothing);
+    for(var i=0; i<parts_clothing.length; i++){
+        if(Math.abs(currentPostX-origX[i])<13 && Math.abs(currentPostY-origY[i])<13){
+            // console.log("Entro al primer if");
+            // console.log("este es el valor de i", i);
+           if(idFicha == i){
+              //  alert("Entro al segundo if");
+                elementSelect.setAttribute("x", origX[i]);
+                elementSelect.setAttribute("y", origY[i]); 
+                elementSelect.style.opacity="0";
+                 pintarFondo(idFicha);
+            }
+        }  
+    }  
 }
+
 
 function pintarFondo(idFicha){
     switch(idFicha){
@@ -322,3 +327,7 @@ function pintarFondo(idFicha){
                    parts_colors[9].classList.add("coloresON");
     }
 }
+
+
+
+

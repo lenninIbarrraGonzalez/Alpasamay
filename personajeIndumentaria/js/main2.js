@@ -23,21 +23,12 @@ var coloreadas = document.getElementsByClassName('colorear');
 
 //medida de ancho y alto de cada pieza en los arrays
 
-//ancho
-var tamWidth = [];
-//alto
-var tamHeight = [];
-
-for(var i=0; i<=28; i++){
-
-    tamWidth[i]=141;
-    tamHeight[i]=40
-}
+var tamWidth = [113, 108, 81, 28, 43, 105, 149, 52, 61, 28];
+var tamHeight = [96, 140, 39, 23, 51, 168, 180, 55, 60, 23];
 
 //posición en X
-var posX = [115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 194, 352, 508, 655, 115, 274, 432, 589, 733, 194, 352, 508, 655];
-//posición en Y 475
-var posY = [477, 477, 477, 477, 477, 519, 519, 519, 519, 519,477, 477, 477, 477, 477, 519, 519, 519, 519, 477, 477, 477, 477, 477, 519, 519, 519, 519];
+var posX = [620, 630, 640, 600, 650, 790, 771, 852, 775, 742];
+var posY = [153, 280, 245, 200, 100, 310, 128, 70, 67, 195];
 
 for(var i=0; i<parts_clothing.length; i++){
     
@@ -50,12 +41,12 @@ for(var i=0; i<parts_clothing.length; i++){
     // parts_clothing[i].setAttribute("y", Math.floor((Math.random()*409+1)));+
     parts_clothing[i].setAttribute("x", posX[i]);
     parts_clothing[i].setAttribute("y", posY[i]);
-    if(i < 10){
-        parts_clothing[i].style.visibility="visible";
-    }
-    else{
-        parts_clothing[i].style.visibility="hidden";
-    }
+    // if(i < 10){
+    //     parts_clothing[i].style.visibility="visible";
+    // }
+    // else{
+    //     parts_clothing[i].style.visibility="hidden";
+    // }
     parts_clothing[i].setAttribute("onmousedown", "seleccionarElemento(evt)");
 }
 // mousedown se activa cuando el botón de un dispositivo apuntador 
@@ -71,13 +62,13 @@ var currentPostY = 0;
 var min = 0;
 var max = 27;
 
-function visibility() {
-    // parts_clothing = parts_fichas;
-    // console.log("esto tiene parts_clothing en visibility", parts_clothing);
-        for(let i=0; i<9; i++){
-            parts_clothing[i].style.visibility="visible";
-        }
-}
+// function visibility() {
+//     // parts_clothing = parts_fichas;
+//     // console.log("esto tiene parts_clothing en visibility", parts_clothing);
+//         for(let i=0; i<9; i++){
+//             parts_clothing[i].style.visibility="visible";
+//         }
+// }
 //console.log("SECUENCIA", secuenciaVisibility);
 
 function seleccionarElemento(evt) {
