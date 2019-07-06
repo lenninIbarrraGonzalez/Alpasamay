@@ -335,7 +335,7 @@ function animatioTab(id) {
 }
 
 function verificarColor(id){
-    debugger;
+    //debugger;
     const On = parts_colors[id].classList.contains("coloresON");
     console.log("EL valor de ON es: ", On);
     if(On === true){
@@ -475,7 +475,7 @@ var origY = [80, 45, 320,218,238,405,358,223,300,216,368,422,332,326,420,253,250
 
 function iman(idFicha) {
     // console.log("idFicha en el iman", idFicha);
-    // console.log("esto es lo que tiene parts_clothing", parts_clothing);
+    console.log("esto es lo que tiene parts_clothing", parts_clothing);
     for(var i=0; i<parts_clothing.length; i++){
         if(Math.abs(currentPostX-origX[i])<30 && Math.abs(currentPostY-origY[i])<30){
             // alert("Entro al primer if");

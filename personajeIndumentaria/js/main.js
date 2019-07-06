@@ -1,62 +1,37 @@
-// El evento onMouseDown sucede cuando el usuario pulsa un botón del ratón.
-// El evento onMouseMove tiene lugar cuando el usuario mueve el cursor del ratón.
-// El evento onMouseUp se genera cuando se deja de pulsar un botón del ratón.
-
-
 //guardamos todos los elementos de la ropa con clase parts
-var parts_clothing = document.getElementsByClassName('parts');
+var parts_clothing = document.getElementsByClassName("parts");
 
-var parts_colors = document.getElementsByClassName('clothing');
-var coloreadas = document.getElementsByClassName('colorear');
+var parts_colors = document.getElementsByClassName("clothing");
 
-//medida de ancho y alto de cada pieza en los arrays
+var coloreadas= document.getElementsByClassName("colorear");
 
-//vestido ancho: 130px alto: 187px
-//cabello ancho: 120px alto: 143px
-//zapatos ancho: 107px alto: 61px
+//medidas de las piezas ancho por alto
+// collar mujer = 43 x 51
+// blusa mujer = 113 x 96
+// chumbe mujer = 81 x 39
+// falda mujer = 108 x 140
+// flores mujer = 28 x 23
 
-//ancho
-var tamWidth = [];
-//alto
-var tamHeight = [];
+// cusma hombre = 149 x 180
+// collar hombre = 52 x 55
+// pantalo hombre = 105 x 168
+// pañuelo hombre = 61 x 60
+// flores hombre = 28 x 23
 
-for(var i=0; i<=28; i++){
+var tamWidth = [113, 108, 81, 28, 43, 105, 149, 52, 61, 28];
+var tamHeight = [96, 140, 39, 23, 51, 168, 180, 55, 60, 23];
 
-    tamWidth[i]=141;
-    tamHeight[i]=40
-}
-
-
-//posición en X
-var posX = [];
-//posición en Y 475
-var posY = [];
-
-for(var i=0; i<=28; i++){
-
-    randomX=Math.floor((Math.random() * (859-5))+5);
-    randomY=Math.floor((Math.random() * (515-477))+477); 
-    posX[i]=randomX;
-    posY[i]=randomY;
-}
-
-for(var i=0; i<parts_clothing.length; i++){
-    //alert('hola mundo');
-    //agregamos con setAtrribute el ancho y alto de las imagenes en partes
+var posX = [620, 630, 640, 600, 650, 790, 771, 852, 775, 742];
+var posY = [153, 280, 245, 200, 100, 310, 128, 70, 67, 195];
+// debugger;
+for(let i = 0; i < parts_clothing.length; i++){
     parts_clothing[i].setAttribute("width", tamWidth[i]);
     parts_clothing[i].setAttribute("height", tamHeight[i]);
 
-    //agregamos la posición de forma aleatoria sin sobreponerse a la imagen
-     // parts_clothing[i].setAttribute("x", Math.floor((Math.random()*10+1)));
-     // parts_clothing[i].setAttribute("y", Math.floor((Math.random()*409+1)));
     parts_clothing[i].setAttribute("x", posX[i]);
     parts_clothing[i].setAttribute("y", posY[i]);
-
     parts_clothing[i].setAttribute("onmousedown", "seleccionarElemento(evt)");
 }
-// mousedown se activa cuando el botón de un dispositivo apuntador 
-//(usualmente el botón de un ratón) es presionado en un elemento.
-
 
 //inicializamos variables para almacenar información del movimiento
 //current position->posicion actual
@@ -65,26 +40,35 @@ var currentX = 0;
 var currentY = 0;
 var currentPostX = 0;
 var currentPostY = 0;
+var min = 0;
+var max = 27;
 
-function seleccionarElemento(evt) {
-    //almacenamos la información de la pieza que dispara el evento
-    elementSelect = evt.target;
-    //transferimos el elemento seleccionado
-    elementSelect = reordenar(evt);
-    //almacenamos la info de X y Y que se disparo en el evento
-    //evt.clientX->obtiene la posicion cordenada x ydel clic dentro en el evento o wind
-    currentX = evt.clientX;
-    currentY = evt.clientY;
-    //console.log("x: " + currentX + "y: " + currentY  )
 
-    currentPostX = parseFloat(elementSelect.getAttribute("x"));
-    currentPostY = parseFloat(elementSelect.getAttribute("y"));
-    elementSelect.setAttribute("onmousemove", "moverElemento(evt)");
+console.log("currentPostX inicial", currentPostX);
+
+function seleccionarElemento(evt){
+     //almacenamos la información de la pieza que dispara el evento
+     elementSelect = evt.target;
+     //transferimos el elemento seleccionado
+     elementSelect = reordenar(evt);
+     //almacenamos la info de X y Y que se disparo en el evento
+     //evt.clientX->obtiene la posicion cordenada x ydel clic dentro en el evento o wind
+     currentX = evt.clientX;
+     currentY = evt.clientY;
+     //console.log("x: " + currentX + "y: " + currentY  )
+ 
+     //
+     
+     currentPostX = parseFloat(elementSelect.getAttribute("x"));
+     console.log("que paso aqui currentPostX", currentPostX);
+     currentPostY = parseFloat(elementSelect.getAttribute("y"));
+     elementSelect.setAttribute("onmousemove", "moverElemento(evt)");
 }
 
-
-function moverElemento(evt) {
-
+function moverElemento(evt, id) {
+    // console.log("imprimiendo evt en mover elemento", evt);
+    // console.log("imprimiendo el id", evt.target.id);
+    var idFicha = evt.target.id;
     //calculamos la distancia recorrida (pos ant - pos actual)
     var dx = evt.clientX - currentX;
     var dy = evt.clientY - currentY;
@@ -110,12 +94,12 @@ function moverElemento(evt) {
 
     elementSelect.setAttribute("onmouseout","deseleccionarElemento(evt)");
     elementSelect.setAttribute("onmouseup", "deseleccionarElemento(evt)");
-    var ide=evt.target.getAttribute('id')
-    iman(ide);
+    
+    iman(idFicha);
 }
 
 function deseleccionarElemento() {
-    testing();
+    // testing();
     if(elementSelect != 0){
         elementSelect.removeAttribute("onmousemove");
         elementSelect.removeAttribute("onmouseout");
@@ -125,241 +109,216 @@ function deseleccionarElemento() {
 }
 
 //creamos una variable global que guardara todo el entorno grafico
- var entorno = document.getElementById('lienzo');
+var entorno = document.getElementById('lienzo');
 
 function reordenar(evt){
     var padre = evt.target.parentNode;
     var clone = padre.cloneNode(true);
     var id = padre.getAttribute("id");
     //mando a la funcion animar fondo
-    animatioTab(clone,id);
+    animatioTab(id);
 
     entorno.removeChild(document.getElementById(id));
     entorno.appendChild(clone);
-    return entorno.lastChild.firstChild;
+    setTimeout(()=>verificarColor(id), 1600); entorno.lastChild.firstChild;
 
 }
-// ++++++++++++++++++++++++++
-function animatioTab(clone,id) {
-    switch(id){
-        case '0': parts_colors[0].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-        case '1': parts_colors[1].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-        case '2': parts_colors[2].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '3': parts_colors[3].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '4': parts_colors[4].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '5': parts_colors[5].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '6': parts_colors[6].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '7': parts_colors[7].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '8': parts_colors[8].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '9': parts_colors[9].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '10': parts_colors[10].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '11': parts_colors[11].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '12': parts_colors[12].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '13': parts_colors[13].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '14': parts_colors[14].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '15': parts_colors[15].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '16': parts_colors[16].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '17': parts_colors[17].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '18': parts_colors[18].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '19': parts_colors[19].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '20': parts_colors[20].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '21': parts_colors[21].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '22': parts_colors[22].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '23': parts_colors[23].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '24': parts_colors[24].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '25': parts_colors[25].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '26': parts_colors[26].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '27': parts_colors[27].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         case '28': parts_colors[28].classList.add('prueba');
-                  setTimeout(()=>removeClass(id), 3000);
-        return;
-         
 
+//posiciones originales para el iman
+const origX = [110, 112, 130, 100, 145, 323, 307, 355, 350, 306];
+const origY = [153, 273, 245, 200, 155, 293, 121, 123, 120, 195];
+
+function iman(idFicha){
+    console.log("idFicha en el iman", idFicha);
+    console.log("esto es lo que tiene parts_clothing", parts_clothing);
+    for(var i=0; i<parts_clothing.length; i++){
+        if(Math.abs(currentPostX-origX[i])<13 && Math.abs(currentPostY-origY[i])<13){
+            // console.log("Entro al primer if");
+            // console.log("este es el valor de i", i);
+           if(idFicha == i){
+              //  alert("Entro al segundo if");
+                elementSelect.setAttribute("x", origX[i]);
+                elementSelect.setAttribute("y", origY[i]); 
+                elementSelect.style.opacity="0";
+                 pintarFondo(idFicha);
+            }
+        }  
+    }  
+}
+
+function animatioTab(id){
+    // alert("entro");
+    console.log("Este es el id", id);
+    switch(id){
+        case '0' : parts_colors[0].style.opacity = "0";
+                   coloreadas[0].style.opacity = "1";
+                   coloreadas[0].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
+
+        case '1' : parts_colors[1].style.opacity = "0";
+                   coloreadas[1].style.opacity = "1";
+                   coloreadas[1].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
+        case '2' : parts_colors[2].style.opacity = "0";
+                   coloreadas[2].style.opacity = "1";
+                   coloreadas[2].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
+         case '3' : parts_colors[3].style.opacity = "0";
+                   coloreadas[3].style.opacity = "1";
+                   coloreadas[3].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
+        case '4' : parts_colors[4].style.opacity = "0";
+                   coloreadas[4].style.opacity = "1";
+                   coloreadas[4].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
+        case '5' : parts_colors[5].style.opacity = "0";
+                   coloreadas[5].style.opacity = "1";
+                   coloreadas[5].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);         
+                   break;
+        case '6' : parts_colors[6].style.opacity = "0";
+                   coloreadas[6].style.opacity = "1";
+                   coloreadas[6].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
+        case '7' : parts_colors[7].style.opacity = "0";
+                   coloreadas[7].style.opacity = "1";
+                   coloreadas[7].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
+         case '8' : parts_colors[8].style.opacity = "0";
+                   coloreadas[8].style.opacity = "1";
+                   coloreadas[8].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
+        case '9' : parts_colors[9].style.opacity = "0";
+                   coloreadas[9].style.opacity = "1";
+                   coloreadas[9].classList.add("prueba");
+                   setTimeout(()=>verificarColor(id), 1600);
+                   break;
     }
+}
+
+function verificarColor(id){
+    const On = parts_colors[id].classList.contains("coloresON");
+    console.log("EL valor de ON es: ", On);
+    if(On === true){
+        console.log("Entro al if del true del On llamo a la función ValidadVisibility");
+       // var sum = 1;
+       validarVisibilty();
+       // testing(sum);
+    }
+    else{
+        console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
+        removeClass(id);
+    }
+    return;
 }
 
 function removeClass(id){
     switch(id){
-        case '0': parts_colors[0].classList.remove('prueba');
+        case '0': coloreadas[0].style.opacity="0";
+                  coloreadas[0].classList.remove('prueba');
+                  parts_colors[0].style.opacity="1";
         return;
-        case '1': parts_colors[1].classList.remove('prueba');
+        case '1': coloreadas[1].style.opacity="0";
+                  coloreadas[1].classList.remove('prueba');
+                  parts_colors[1].style.opacity="1";
         return;
-        case '2': parts_colors[2].classList.remove('prueba');
+        case '2': coloreadas[2].style.opacity="0";
+                  coloreadas[2].classList.remove('prueba');
+                  parts_colors[2].style.opacity="1";
         return;
-        case '3': parts_colors[3].classList.remove('prueba');
+        case '3': coloreadas[3].style.opacity="0";
+                  coloreadas[3].classList.remove('prueba');
+                  parts_colors[3].style.opacity="1";
         return;
-        case '4': parts_colors[4].classList.remove('prueba');
+        case '4': coloreadas[4].style.opacity="0";
+                  coloreadas[4].classList.remove('prueba');
+                  parts_colors[4].style.opacity="1";
         return;
-        case '5': parts_colors[5].classList.remove('prueba');
+        case '5': coloreadas[5].style.opacity="0";
+                  coloreadas[5].classList.remove('prueba');
+                  parts_colors[5].style.opacity="1";
         return;
-        case '6': parts_colors[6].classList.remove('prueba');
+        case '6': coloreadas[6].style.opacity="0";
+                  coloreadas[6].classList.remove('prueba');
+                  parts_colors[6].style.opacity="1";
         return;
-        case '7': parts_colors[7].classList.remove('prueba');
+        case '7': coloreadas[7].style.opacity="0";
+                  coloreadas[7].classList.remove('prueba');
+                  parts_colors[7].style.opacity="1";
         return;
-        case '8': parts_colors[8].classList.remove('prueba');
+        case '8': coloreadas[8].style.opacity="0";
+                  coloreadas[8].classList.remove('prueba');
+                  parts_colors[8].style.opacity="1";
         return;
-        case '9': parts_colors[9].classList.remove('prueba');
-        return;
-        case '10': parts_colors[10].classList.remove('prueba');
-        return;
-        case '11': parts_colors[11].classList.remove('prueba');
-        return;
-        case '12': parts_colors[12].classList.remove('prueba');
-        return;
-        case '13': parts_colors[13].classList.remove('prueba');
-        return;
-        case '14': parts_colors[14].classList.remove('prueba');
-        return;
-        case '15': parts_colors[15].classList.remove('prueba');
-        return;
-        case '16': parts_colors[16].classList.remove('prueba');
-        return;
-        case '17': parts_colors[17].classList.remove('prueba');
-        return;
-        case '18': parts_colors[18].classList.remove('prueba');
-        return;
-        case '19': parts_colors[19].classList.remove('prueba');
-        return;
-        case '20': parts_colors[20].classList.remove('prueba');
-        return;
-        case '21': parts_colors[21].classList.remove('prueba');
-        return;
-        case '22': parts_colors[22].classList.remove('prueba');
-        return;
-        case '23': parts_colors[23].classList.remove('prueba');
-        return;
-        case '24': parts_colors[24].classList.remove('prueba');
-        return;
-        case '25': parts_colors[25].classList.remove('prueba');
-        return;
-        case '26': parts_colors[26].classList.remove('prueba');
-        return;
-        case '27': parts_colors[27].classList.remove('prueba');
-        return;
-       
-        
+        case '9': coloreadas[9].style.opacity="0";
+                  coloreadas[9].classList.remove('prueba');
+                  parts_colors[9].style.opacity="1";
     }
 }
 
-
-
-
-// ******************
-//posiciones originales para el iman
-//vestido X = 174 , Y = 200
-//cabello X = 194 , Y = 83
-//zapatos X = 200 , Y = 496
-
-var origX = [-10, 275,246,450,160,528,363,517,650,670,0,395,650,764,512,593,775,929,800,335,-45,302,63,790,230,198,288,170];
-var origY = [41, 45, 155,218,238,405,358,223,300,216,368,422,332,326,420,253,250,312,228,166,140,280,0,15,298,302,300,380];
-
-function iman() {
-  
-    for(var i=0; i<parts_clothing.length; i++){
-
-     //si la pieza se aproxima a 15 pixeles de la posición esta es atraida
-     if(Math.abs(currentPostX-origX[i])<15 && Math.abs(currentPostY-origY[i])<15) {
-        //actualizamos coordenadas de la figura
-         elementSelect.setAttribute("x", origX[i]);
-         elementSelect.setAttribute("y", origY[i]); 
-
-        coloreadas[i].style.opacity=1;
-        parts_clothing[i].classList.add('desaparecer');
-      }  
-
+function validarVisibilty(){
+    //sum +=1;
+   // console.log("esto tiene sum", sum);
+    if(sum == 10){
+       // console.log("ENTRO AL PRIMER IF SUM == A 10");
+        visibility();
     }
-
-       
-        
+    if(sum == 19){
+        console.log("ENTRO AL SEGUNDO IF SUM == A 19");
+        visibility();
     }
-
-
-
-
-
-var win = document.getElementById("win");
-function testing(){
-   
-    //alert("bitch");
-    var bien_ubicadas = 0;
-
-    var padres = document.getElementsByClassName('clothing_parts');
-   // console.log(padres);
-     for(var i=0; i<parts_clothing.length; i++){
-        
-    // console.log("entro");
-        var posx = parseFloat(padres[i].firstChild.getAttribute("x"));
-        //console.log("posx", posx);
-        var posy = parseFloat(padres[i].firstChild.getAttribute("y"));
-        //console.log("posy", posy);
-        ide = padres[i].getAttribute("id");
-        //console.log("ide", ide);
-                
-       // console.log("origX[ide]",origX[ide])
-       // console.log("origY[ide]", origY[ide]);
-         if(origX[ide] == posx && origY[ide] == posy){
-            bien_ubicadas= bien_ubicadas+1;
-         //   console.log("bien_ubicadas:",bien_ubicadas);
-         }
-    }
-    if(bien_ubicadas == 3){
-        win.play();
-    }
+    return;
 }
 
+function pintarFondo(idFicha){
+    switch(idFicha){
+        case '0': coloreadas[0].style.opacity="1";
+                  parts_colors[0].style.opacity="0";
+                  parts_colors[0].classList.add("coloresON");
+                  
+        return;
+        case '1': coloreadas[1].style.opacity="1";
+                  parts_colors[1].style.opacity="0";
+                  parts_colors[1].classList.add("coloresON");
+        return;
+        case '2': coloreadas[2].style.opacity="1";
+                  parts_colors[2].style.opacity="0";
+                  parts_colors[2].classList.add("coloresON");
+        return;
+         case '3': coloreadas[3].style.opacity="1";
+                   parts_colors[3].style.opacity="0";
+                   parts_colors[3].classList.add("coloresON");
+        return;
+         case '4': coloreadas[4].style.opacity="1";
+                   parts_colors[4].style.opacity="0";
+                   parts_colors[4].classList.add("coloresON");
+        return;
+         case '5' :  parts_colors[5].style.opacity="0"         
+                     coloreadas[5].style.opacity="1";
+                     parts_colors[5].classList.add("coloresON");
+        return;
+         case '6': coloreadas[6].style.opacity="1";
+                   parts_colors[6].style.opacity="0";
+                   parts_colors[6].classList.add("coloresON");
+        return;
+         case '7': coloreadas[7].style.opacity="1";
+                   parts_colors[7].style.opacity="0";
+                   parts_colors[7].classList.add("coloresON");
+        return;
+         case '8': coloreadas[8].style.opacity="1";
+                   parts_colors[8].style.opacity="0";
+                   parts_colors[8].classList.add("coloresON");
+        return;
+         case '9': coloreadas[9].style.opacity="1";
+                   parts_colors[9].style.opacity="0";
+                   parts_colors[9].classList.add("coloresON");
+    }
+}
