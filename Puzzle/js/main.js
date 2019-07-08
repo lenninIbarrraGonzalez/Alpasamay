@@ -4,11 +4,9 @@ var bien_ubicadas = 0;
 var ban_bien_ubicadas = 0;
 var verClass;
 var On;
-
 // El evento onMouseDown sucede cuando el usuario pulsa un botón del ratón.
 // El evento onMouseMove tiene lugar cuando el usuario mueve el cursor del ratón.
 // El evento onMouseUp se genera cuando se deja de pulsar un botón del ratón.
-
 //guardamos las plabras en idioma
 var parts_clothing = document.getElementsByClassName('parts');
 // console.log("esto tiene parts_clothing", parts_clothing);

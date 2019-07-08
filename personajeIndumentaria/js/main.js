@@ -7,6 +7,9 @@ var parts_colors = document.getElementsByClassName("clothing");
 
 var coloreadas= document.getElementsByClassName("colorear");
 
+var humanBn = document.getElementsByClassName("clothing_humanBn");
+var humanCol = document.getElementsByClassName("colorear_human");
+
 //medidas de las piezas ancho por alto
 // collar mujer = 43 x 51
 // blusa mujer = 113 x 96
@@ -99,7 +102,7 @@ function moverElemento(evt, id) {
 
 
 function deseleccionarElemento() {
-    // testing();
+    testing();
     if(elementSelect != 0){
         elementSelect.removeAttribute("onmousemove");
         elementSelect.removeAttribute("onmouseout");
@@ -205,7 +208,7 @@ function verificarColor(id){
         // console.log("Entro al if del true del On llamo a la función ValidadVisibility");
         // var sum = 1;
         //    validarVisibilty();
-       // testing(sum);
+    //    testing(sum);
     }
     else{
         // console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
@@ -275,7 +278,7 @@ function iman(idFicha){
               //  alert("Entro al segundo if");
                 elementSelect.setAttribute("x", origX[i]);
                 elementSelect.setAttribute("y", origY[i]); 
-                elementSelect.style.opacity="0";
+                elementSelect.classList.add("parts_clotihinOff");
                  pintarFondo(idFicha);
             }
         }  
@@ -329,5 +332,33 @@ function pintarFondo(idFicha){
 }
 
 
+function testing(){
+    var sum = 0;
+    for(let i=0; i < parts_clothing.length; i++){
+        verClass = parts_clothing[i].classList.contains("parts_clotihinOff");
+        if(verClass === true){
+            sum +=1;
+            console.log("sum tiene", sum);
+        }
 
+    }
+    if(sum === 10){
+        setTimeout(()=>gameCompleted(), 1200);
+    }
+   
+}
 
+var win = document.getElementById("bien");
+function gameCompleted(){
+    console.log("gano");
+    console.log(humanBn);
+    console.log(humanCol);
+    fondo.pause();
+    // //fondo2.pause();
+    // debugger
+    for(let i =0; i < humanCol.length; i++){
+        humanBn[i].style.opacity="0";
+        humanCol[i].style.opacity="1";
+    }
+    win.play();
+}

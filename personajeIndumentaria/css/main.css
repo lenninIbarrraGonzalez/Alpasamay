@@ -27,11 +27,19 @@
   opacity: 0;
 }
 
+.clothing_parts{
+  cursor: pointer;
+}
+
+.parts_clotihinOff{
+  opacity: 0;
+}
+
 .prueba{
     animation: color 2s ease-in-out;
     transform-origin: center center;
     
-  }
+}
   
   @keyframes color {
     0%{
