@@ -1,7 +1,9 @@
 const audios = document.getElementsByClassName("audio");
-var sum = 0;
+
 var bien_ubicadas = 0;
 var ban_bien_ubicadas = 0;
+var verClass;
+var On;
 
 // El evento onMouseDown sucede cuando el usuario pulsa un botón del ratón.
 // El evento onMouseMove tiene lugar cuando el usuario mueve el cursor del ratón.
@@ -29,7 +31,6 @@ var tamWidth = [];
 var tamHeight = [];
 
 for(var i=0; i<=28; i++){
-
     tamWidth[i]=141;
     tamHeight[i]=40
 }
@@ -81,7 +82,7 @@ function visibility() {
 //console.log("SECUENCIA", secuenciaVisibility);
 
 function seleccionarElemento(evt) {
-    debugger
+    // debugger
     //almacenamos la información de la pieza que dispara el evento
     elementSelect = evt.target;
     //transferimos el elemento seleccionado
@@ -337,16 +338,16 @@ function animatioTab(id) {
 
 function verificarColor(id){
     //debugger;
-    const On = parts_colors[id].classList.contains("coloresON");
-    console.log("EL valor de ON es: ", On);
+    On = parts_colors[id].classList.contains("coloresON");
+    // console.log("EL valor de ON es: ", On);
     if(On === true){
-        console.log("Entro al if del true del On llamo a la función ValidadVisibility");
-        var sum = 1;
-        validarVisibilty();
-        testing(sum);
+        // console.log("Entro al if del true del On llamo a la función ValidadVisibility");
+        // // var sum = 1;
+        // validarVisibilty();
+        testing();
     }
     else{
-        console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
+        // console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
         removeClass(id);
     }
     return;
@@ -476,7 +477,7 @@ var origY = [80, 45, 320,218,238,405,358,223,300,216,368,422,332,326,420,253,250
 
 function iman(idFicha) {
     // console.log("idFicha en el iman", idFicha);
-    console.log("esto es lo que tiene parts_clothing", parts_clothing);
+    // console.log("esto es lo que tiene parts_clothing", parts_clothing);
     for(var i=0; i<parts_clothing.length; i++){
         if(Math.abs(currentPostX-origX[i])<30 && Math.abs(currentPostY-origY[i])<30){
             // alert("Entro al primer if");
@@ -485,7 +486,8 @@ function iman(idFicha) {
                 // alert("Entro al segundo if");
                 elementSelect.setAttribute("x", origX[i]);
                 elementSelect.setAttribute("y", origY[i]); 
-                elementSelect.style.opacity="0";
+                // elementSelect.style.opacity="0";
+                elementSelect.classList.add("parts_clotihinOff");
                 pintarFondo(idFicha);
             }
         }  
@@ -618,31 +620,32 @@ var win = document.getElementById("bien");
 var fondo = document.getElementById("audio_fondo");
 var fondo2 = document.getElementById("ifremaAudio");
 
-function testing(sum){
-   // console.log("Esto es lo que tiene sum", sum);
-    if(sum == 1){
-        alert("Incrementa el sum")
-        bien_ubicadas = bien_ubicadas +1;
-    }
-    
-    if(bien_ubicadas == 28){
-        fondo.pause();
-        //fondo2.pause();
-        win.play();
-    }
-    console.log("bien ubicadas", bien_ubicadas);
-}
+function testing(){
+    var sum = 0;
+    for(let i=0; i < parts_clothing.length; i++){
+        verClass = parts_clothing[i].classList.contains("parts_clotihinOff");
+        if(verClass === true){
+            sum +=1;
+            console.log("sum tiene", sum);
+        }
 
-function validarVisibilty(){
-    sum +=1;
-    console.log("esto tiene sum", sum);
-    if(sum == 10){
+    }
+    if(sum === 28){
+        setTimeout(()=>gameCompleted(), 1200);
+    }
+    if(sum === 10){
         console.log("ENTRO AL PRIMER IF SUM == A 10");
         visibility();
     }
-    if(sum == 19){
+    if(sum === 19){
         console.log("ENTRO AL SEGUNDO IF SUM == A 19");
         visibility();
     }
-    return;
+}   
+
+function gameCompleted(){
+    console.log("gano");
+    fondo.pause();
+    //fondo2.pause();
+    win.play();
 }
