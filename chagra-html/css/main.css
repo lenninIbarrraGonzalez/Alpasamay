@@ -13,18 +13,17 @@
   z-index: 10;
 }*/
 .rectangulo{
-  opacity: 1
+  opacity: 1;
 }
-.personaje{
-  opacity: 1
+.jungleBn{
+  opacity: 1;
 }
-.personajeVacio{
-  opacity: 0
+.jungleColor{
+  opacity: 0;
 }
 
 .clothing {
     opacity: 1;
-
 }
 .colorear{
   opacity: 0;
@@ -33,10 +32,20 @@
   display: none
 }
 
-
+.coloresON{
+  opacity: 1;
+}
 
 .colorearVacio{
   opacity: 0;
+}
+
+.parts_clotihinOff{
+  opacity: 0;
+}
+
+.clothing_parts{
+  cursor: pointer;
 }
 
 .prueba{

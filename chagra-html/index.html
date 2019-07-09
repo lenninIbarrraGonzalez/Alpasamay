@@ -8,168 +8,149 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="grid"> -->
-        <svg id="lienzo" width="1000" height="563">
+  <!-- <div class="grid"> -->
+    <svg id="lienzo" width="1000" height="563">
 
-            
-            <!-- <g class="grid" id="grid"><image  xlink:href="./img/gridArtboard-PNG.png" width="1000" height="500" x="0" y="0"/></g> -->
-            <!-- imagenes para el personaje base -->
-             <g class="grid" id="grid"><image  xlink:href="./img/gridArtboard-PNG.png" width="1000" height="500" x="0" y="0"/></g>
+      <!-- imagenes para el personaje base -->
+      <g class="grid" id="grid"><image  xlink:href="./img/gridArtboard-PNG.png" width="1000" height="500" x="0" y="0"/></g>
                
 
-         <g class="personaje" id="id_personaje"><image  xlink:href="./img/chagra-bn/fondo-chagra.png"  x="-5" y="-1"/></g> 
-          <g class="personajeVacio" id="id_personaje"><image  xlink:href="./img/chagra-color/fondo-chagra.png"  x="-5" y="-1"/></g>  
+      <g class="jungleBn" id="jungleBn"><image  xlink:href="./img/chagra-bn/fondo-chagra.png"  x="-5" y="-1"/></g> 
+      <g class="jungleColor" id="jungleColor"><image  xlink:href="./img/chagra-color/fondo-chagra.png"  x="-5" y="-1"/></g>  
 
-             <!-- <g class="clothingVacio" id="id_cielo"><image xlink:href="./img/chagra-bn/chontaduro-2.png" x="0" y="0" /></g> 
-             <g class="colorearVacio" id="id_cielo"><image xlink:href="./img/chagra-color/chontaduro-1.png" x="0" y="0" /></g>  -->
+      <g class="clothing" id="id_chontaduro-2"><image xlink:href="./img/chagra-bn/chontaduro-2.png" x="186" y="15" /></g>
+      <g class="colorear" id="id_chontaduro-2"><image xlink:href="./img/chagra-color/chontaduro-2.png" x="186" y="15" /></g> 
 
-             <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/chontaduro-2.png" x="186" y="15" /></g>
-             <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/chontaduro-2.png" x="186" y="15" /></g> 
+      <g class="jungleBn" id="jungleChontaduroBn" id="id_chontaduro-1"><image xlink:href="./img/chagra-bn/chontaduro-1.png" x="700" y="5" /></g>
+      <g class="jungleColor" id="jungleChontaduroColor"><image xlink:href="./img/chagra-color/chontaduro-1.png" x="700" y="5" /></g>
 
+      <g class="clothing" id="id_chiru"><image xlink:href="./img/chagra-bn/chiru.png" x="560" y="108" /></g>
+      <g class="colorear" id="id_chiru"><image xlink:href="./img/chagra-color/chiru.png" x="560" y="108" /></g>
 
-             <g class="clothingVacio" id="id_montanas"><image xlink:href="./img/chagra-bn/chontaduro-1.png" x="700" y="5" /></g>
-             <g class="colorearVacio" id="id_montanas"><image xlink:href="./img/chagra-color/chontaduro-1.png" x="700" y="5" /></g>
+      <g class="clothing" id="id_rumu"><image xlink:href="./img/chagra-bn/rumu.png" x="493" y="220" /></g>
+      <g class="colorear" id="id_rumu"><image xlink:href="./img/chagra-color/rumu.png" x="493" y="220" /></g>
 
-             <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/chiru.png" x="560" y="108" /></g>
-             <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/chiru.png" x="560" y="108" /></g>
+      <g class="clothing" id="id_chini"><image xlink:href="./img/chagra-bn/chini.png" x="580" y="300" /></g>
+      <g class="colorear" id="id_chini"><image xlink:href="./img/chagra-color/chini.png" x="580" y="300" /></g>
 
-             <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/rumu.png" x="493" y="220" /></g>
-             <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/rumu.png" x="493" y="220" /></g>
+      <g class="clothing" id="id_iauar-ambi"><image xlink:href="./img/chagra-bn/iauar-ambi.png" x="528" y="318" /></g>
+      <g class="colorear" id="id_iauar-ambi"><image xlink:href="./img/chagra-color/iauar-ambi.png" x="528" y="318" /></g>
 
-              <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/chini.png" x="580" y="300" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/chini.png" x="580" y="300" /></g>
+      <g class="clothing" id="id_chunta-panga"><image xlink:href="./img/chagra-bn/Chunta-panga.png" x="520" y="370" /></g>
+      <g class="colorear" id="id_chunta-panga"><image xlink:href="./img/chagra-bn/Chunta-panga.png" x="520" y="370" /></g> 
 
-              <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/iauar-ambi.png" x="528" y="318" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/iauar-ambi.png" x="528" y="318" /></g>
+      <g class="clothing" id="id_chivila"><image xlink:href="./img/chagra-bn/chivila.png" x="660" y="255" /></g>
+      <g class="colorear" id="id_chivila"><image xlink:href="./img/chagra-color/chivila.png" x="660" y="255"  /></g>
 
-               <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/Chunta-panga.png" x="520" y="370" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/Chunta-panga.png" x="520" y="370" /></g>
+      <g class="clothing" id="id_cucusacha"><image xlink:href="./img/chagra-bn/Cucusacha.png" x="460" y="310"/></g>
+      <g class="colorear" id="id_cucusacha"><image xlink:href="./img/chagra-color/Cucusacha.png" x="460" y="310"/></g>
 
+      <g class="clothing" id="id_mirena"><image xlink:href="./img/chagra-bn/mirena.png" x="173" y="256" /></g>
+      <g class="colorear" id="id_mirena"><image xlink:href="./img/chagra-color/mirena.png" x="173" y="256" /></g>
 
-               <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/chivila.png" x="660" y="255" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/chivila.png" x="660" y="255"  /></g>
+      <g class="clothing" id="id_Pullito-ambi"><image xlink:href="./img/chagra-bn/Pullito-ambi.png" x="348" y="300" /></g>
+      <g class="colorear" id="id_Pullito-ambi"><image xlink:href="./img/chagra-color/Pullito-ambi.png"x="348" y="300"  /></g>
 
+      <g class="clothing" id="id_puka-borrachero"><image xlink:href="./img/chagra-bn/Puka-borrachero.png" x="246" y="348" /></g>
+      <g class="colorear" id="id_puka-borrachero"><image xlink:href="./img/chagra-color/Puka-borrachero.png" x="246" y="348" /></g>
 
-               <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/cucusacha.png" x="460" y="310"/></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/cucusacha.png" x="460" y="310"/></g>
+      <g class="clothing" id="id_sara"><image xlink:href="./img/chagra-bn/sara.png" x="735" y="172" /></g>
+      <g class="colorear" id="id_sara"><image xlink:href="./img/chagra-color/sara.png" x="735" y="172" /></g>
 
-              <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/mirena.png" x="173" y="256" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/mirena.png" x="173" y="256" /></g>
+      <g class="clothing" id="id_menta"><image xlink:href="./img/chagra-bn/menta.png" x="440" y="375" /></g>
+      <g class="colorear" id="id_menta"><image xlink:href="./img/chagra-color/menta.png" x="440" y="375"  /></g>
 
-               <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/Pullito-ambi.png" x="348" y="300" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/Pullito-ambi.png"x="348" y="300"  /></g>
+      <g class="clothing" id="id_Azultugtu"><image xlink:href="./img/chagra-bn/Azultugtu.png" x="370" y="379" /></g>
+      <g class="colorear" id="id_Azultugtu"><image xlink:href="./img/chagra-color/Azultugtu.png"  x="370" y="379" /></g>
 
-               <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/Puka-borrachero.png" x="246" y="348" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/Puka-borrachero.png" x="246" y="348" /></g>
+      <g class="clothing" id="id_ridondo-panga"><image xlink:href="./img/chagra-bn/Ridondo-panga.png" x="540" y="417" /></g>
+      <g class="colorear" id="id_ridondo-panga"><image xlink:href="./img/chagra-color/Ridondo-panga.png" x="540" y="417" /></g>
 
-               <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/sara.png" x="735" y="172" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/sara.png" x="735" y="172" /></g>
+      <g class="clothing" id="id_alpa-culantro"><image xlink:href="./img/chagra-bn/alpa-culantro.png" x="640" y="375" /></g>
+      <g class="colorear" id="id_alpa-culantro"><image xlink:href="./img/chagra-color/alpa-culantro.png"  x="640" y="375" /></g>
 
-              <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/menta.png" x="440" y="375" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/menta.png" x="440" y="375"  /></g>
+      <g class="jungleBn" id="jungleNamisBn"><image xlink:href="./img/chagra-bn/namis-1.png" x="940" y="348" /></g>
+      <g class="jungleColor" id="jungleNamisColor"><image xlink:href="./img/chagra-color/namis-1.png"   x="940" y="348"  /></g>
 
-              <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/Azultugtu.png" x="370" y="379" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/Azultugtu.png"  x="370" y="379" /></g>
+      <g class="clothing" id="id_namis-2"><image xlink:href="./img/chagra-bn/namis-2.png" x="45" y="210" /></g>
+      <g class="colorear" id="id_namis-2"><image xlink:href="./img/chagra-color/namis-2.png"  x="45" y="210"/></g>
 
-              <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/Ridondo-panga.png" x="540" y="417" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/Ridondo-panga.png" x="540" y="417" /></g>
+      <g class="jungleBn" id="jungleSicsiBn"><image xlink:href="./img/chagra-bn/sicsi-2.png" x="310" y="225" /></g>
+      <g class="jungleColor" id="jungleSicsiColor"><image xlink:href="./img/chagra-color/sicsi-2.png" x="310" y="225"/></g>
 
-               <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/alpa-culantro.png" x="640" y="375" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/alpa-culantro.png"  x="640" y="375" /></g>
-
-                <g class="clothingVacio" id="id_montanas"><image xlink:href="./img/chagra-bn/namis-1.png" x="940" y="348" /></g>
-              <g class="colorearVacio" id="id_montanas"><image xlink:href="./img/chagra-color/namis-1.png"   x="940" y="348"  /></g>
-
-               <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/namis-2.png" x="45" y="210" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/namis-2.png"  x="45" y="210"/></g>
-
-              <g class="clothingVacio" id="id_montanas"><image xlink:href="./img/chagra-bn/sicsi-2.png" x="310" y="225" /></g>
-              <g class="colorearVacio" id="id_montanas"><image xlink:href="./img/chagra-color/sicsi-2.png" x="310" y="225"/></g>
-
-              <g class="clothing" id="id_montanas"><image xlink:href="./img/chagra-bn/sicsi-1.png" x="6" y="308" /></g>
-              <g class="colorear" id="id_montanas"><image xlink:href="./img/chagra-color/sicsi-1.png" x="6" y="308"/></g>
-
-              <g class="clothingVacio" id="id_montanas"><image xlink:href="./img/chagra-color/fondo-letras.png" x="-8" y="470"/></g>
+      <g class="clothing" id="id_sicsi-1"><image xlink:href="./img/chagra-bn/sicsi-1.png" x="6" y="308" /></g>
+      <g class="colorear" id="id_sicsi-1"><image xlink:href="./img/chagra-color/sicsi-1.png" x="6" y="308"/></g>
 
 
 
-
-
-
-
-
-
-
-             
-
-
+      <g class="clothingVacio" id="id_montanas"><image xlink:href="./img/chagra-color/fondo-letras.png" x="-8" y="470"/></g>
 
        
-       
 
-            <!-- imagenes para las partes del personaje -->
+       <!-- imagenes para las partes del personaje -->
 
-            <!-- <g class="clothing_parts" id="0"><image xlink:href="./img/vestidos/vestidos_negro.png" class="parts"/></g>
-            <g class="clothing_parts" id="1"><image xlink:href="./img/cabello/cabello1.png" class="parts"/></g>
-            <g class="clothing_parts" id="2"><image xlink:href="./img/zapatos/zapatos_negros.png" class="parts"/></g> -->
+       <g class="clothing_parts" id="0"><image xlink:href="./img/palabras/chontaduro.png" class="parts" id="0"/></g>
 
-         
+       <g class="clothing_parts" id="1"><image xlink:href="./img/palabras/chiru.png" class="parts" id="1"/></g>
 
-            <g class="clothing_parts" id="0"><image xlink:href="./img/palabras/chontaduro.png" class="parts"/></g>
+       <g class="clothing_parts" id="2"><image xlink:href="./img/palabras/rumu.png" class="parts" id="2"/></g>
 
-            <g class="clothing_parts" id="1"><image xlink:href="./img/palabras/chiru.png" class="parts"/></g>
+       <g class="clothing_parts" id="3"><image xlink:href="./img/palabras/chini.png" class="parts" id="3"/></g>
 
-            <g class="clothing_parts" id="2"><image xlink:href="./img/palabras/rumu.png" class="parts"/></g>
+       <g class="clothing_parts" id="4"><image xlink:href="./img/palabras/iauar-ambi.png" class="parts" id="4"/></g>
 
-            <g class="clothing_parts" id="3"><image xlink:href="./img/palabras/chini.png" class="parts"/></g>
+       <g class="clothing_parts" id="5"><image xlink:href="./img/palabras/chunta-panga.png" class="parts" id="5"/></g>
 
-            <g class="clothing_parts" id="4"><image xlink:href="./img/palabras/iauar-ambi.png" class="parts"/></g>
+       <g class="clothing_parts" id="6"><image xlink:href="./img/palabras/chivila.png" class="parts" id="6"/></g>
 
-             <g class="clothing_parts" id="5"><image xlink:href="./img/palabras/Chunta-panga.png" class="parts"/></g>
+       <g class="clothing_parts" id="7"><image xlink:href="./img/palabras/cucusacha.png" class="parts" id="7"/></g>
 
-              <g class="clothing_parts" id="6"><image xlink:href="./img/palabras/chivila.png" class="parts"/></g>
+       <g class="clothing_parts" id="8"><image xlink:href="./img/palabras/mirena.png" class="parts" id="8"/></g>
 
-               <g class="clothing_parts" id="7"><image xlink:href="./img/palabras/cucusacha.png" class="parts"/></g>
+       <g class="clothing_parts" id="9"><image xlink:href="./img/palabras/pullito-ambi.png" class="parts" id="9"/></g>
 
-                <g class="clothing_parts" id="8"><image xlink:href="./img/palabras/mirena.png" class="parts"/></g>
+       <g class="clothing_parts" id="10"><image xlink:href="./img/palabras/puka-borrachero.png" class="parts" id="10"/></g>
 
-                 <g class="clothing_parts" id="9"><image xlink:href="./img/palabras/Pullito-ambi.png" class="parts"/></g>
+       <g class="clothing_parts" id="11"><image xlink:href="./img/palabras/sara.png" class="parts" id="11"/></g>
 
-                  <g class="clothing_parts" id="10"><image xlink:href="./img/palabras/Puka-borrachero.png" class="parts"/></g>
+       <g class="clothing_parts" id="12"><image xlink:href="./img/palabras/menta.png" class="parts" id="12"/></g>
 
-                <g class="clothing_parts" id="11"><image xlink:href="./img/palabras/sara.png" class="parts"/></g>
+       <g class="clothing_parts" id="13"><image xlink:href="./img/palabras/azultugtu.png" class="parts" id="13"/></g>
 
-              <g class="clothing_parts" id="12"><image xlink:href="./img/palabras/menta.png" class="parts"/></g>
+       <g class="clothing_parts" id="14"><image xlink:href="./img/palabras/ridondo-panga.png" class="parts" id="14"/></g>
 
-               <g class="clothing_parts" id="13"><image xlink:href="./img/palabras/Azultugtu.png" class="parts"/></g>
+       <g class="clothing_parts" id="15"><image xlink:href="./img/palabras/alpa-culantro.png" class="parts" id="15"/></g>
+ 
+       <g class="clothing_parts" id="16"><image xlink:href="./img/palabras/namis.png" class="parts" id="16"/></g>
 
-                <g class="clothing_parts" id="14"><image xlink:href="./img/palabras/Ridondo-panga.png" class="parts"/></g>
-
-                 <g class="clothing_parts" id="15"><image xlink:href="./img/palabras/alpa-culantro.png" class="parts"/></g>
-
-                  <g class="clothing_parts" id="16"><image xlink:href="./img/palabras/namis.png" class="parts"/></g>
-
-                    <g class="clothing_parts" id="17"><image xlink:href="./img/palabras/sicsi.png" class="parts"/></g>
-
-
-
-
-
-            
-
-
-
-
-
-
-
-            
-        </svg>
+       <g class="clothing_parts" id="17"><image xlink:href="./img/palabras/sicsi.png" class="parts" id="17"/></g>
+  </svg>
         <!-- <img src="img/fondo1.png" alt=""> -->
        
-        <audio src="media/queen.mp3" id="win"></audio>
-         <script type="text/javascript" src="js/main.js"></script>
-       
+        <!-- <audio src="media/queen.mp3" id="win"></audio> -->
+
+
+        <script type="text/javascript" src="js/main.js"></script>
+        <audio src="./media/Chontaduro.mp3" id="chontaduro" class="audio"></audio>
+        <audio src="./media/Guinillo.mp3" id="chiru-guinillo" class="audio"></audio>
+        <audio src="./media/Rumu.mp3" id="rumu" class="audio"></audio>
+        <audio src="./media/Chini.mp3" id="chini" class="audio"></audio>
+        <audio src="./media/Iaguarambi.mp3" id="iaguarambi" class="audio"></audio>
+        <audio src="./media/ChuntaPangaKuyanguilla.mp3" id="chuntaPangaKuyanguilla" class="audio"></audio>
+        <audio src="./media/Chivilla.mp3" id="chivilla" class="audio"></audio>
+        <audio src="./media/Cucusacha.mp3" id="cucusacha" class="audio"></audio>
+        <audio src="./media/Mirina.mp3" id="mirina" class="audio"></audio>
+        <audio src="./media/PullitoAmbi.mp3" id="pullitoAmbi" class="audio"></audio>
+        <audio src="./media/PukaBorrachero.mp3" id="pukaBorrachero" class="audio"></audio>
+        <audio src="./media/Sara.mp3" id="sara" class="audio"></audio>
+        <audio src="./media/Menta.mp3" id="menta" class="audio"></audio>
+        <audio src="./media/Asultugtu.mp3" id="asultugtu" class="audio"></audio>
+        <audio src="./media/RidondoPangaKuyanguilla.mp3" id="ridondoPangaKuyanguilla" class="audio"></audio>
+        <audio src="./media/AlpaCulantro.mp3" id="AlpaCulantro" class="audio"></audio>
+        <audio src="./media/Namis.mp3" id="namis" class="audio"></audio>
+        <audio src="./media/Sicsi.mp3" id="sicsi" class="audio"></audio>
+
+        <audio src="./media/Bien.mp3" id="bien" class="bien"></audio>
     <!-- </div> -->
 </body>
 </html>
