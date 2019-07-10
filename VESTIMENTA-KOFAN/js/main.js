@@ -26,12 +26,12 @@ var humanCol = document.getElementsByClassName("colorear_human");
 var tamWidth = [113, 108, 81, 28, 43, 105, 149, 52, 61, 28];
 var tamHeight = [96, 140, 39, 23, 51, 168, 180, 55, 60, 23];
 
-var posX = [620, 630, 640, 600, 650, 790, 771, 852, 775, 742];
-var posY = [153, 280, 245, 200, 100, 310, 128, 70, 67, 195];
+var posX = [568,554,608,780,760,800,804,790];
+var posY = [290,153,100,310,117,119,82,16];
 // debugger;
 for(let i = 0; i < parts_clothing.length; i++){
-    parts_clothing[i].setAttribute("width", tamWidth[i]);
-    parts_clothing[i].setAttribute("height", tamHeight[i]);
+    // parts_clothing[i].setAttribute("width", tamWidth[i]);
+    // parts_clothing[i].setAttribute("height", tamHeight[i]);
 
     parts_clothing[i].setAttribute("x", posX[i]);
     parts_clothing[i].setAttribute("y", posY[i]);
@@ -117,6 +117,7 @@ function deseleccionarElemento() {
 var entorno = document.getElementById('lienzo');
 
 function reordenar(evt){
+    // debugger
     var padre = evt.target.parentNode;
     var clone = padre.cloneNode(true);
     var id = padre.getAttribute("id");
@@ -138,32 +139,32 @@ function animatioTab(id){
         case '0' : parts_colors[0].style.opacity = "0";
                    coloreadas[0].style.opacity = "1";
                    coloreadas[0].classList.add("prueba");
-                   audios[0].play();
+                //    audios[0].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
 
         case '1' : parts_colors[1].style.opacity = "0";
                    coloreadas[1].style.opacity = "1";
                    coloreadas[1].classList.add("prueba");
-                   audios[1].play();
+                //    audios[1].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
         case '2' : parts_colors[2].style.opacity = "0";
                    coloreadas[2].style.opacity = "1";
                    coloreadas[2].classList.add("prueba");
-                   audios[2].play();
+                //    audios[2].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
          case '3' : parts_colors[3].style.opacity = "0";
                    coloreadas[3].style.opacity = "1";
                    coloreadas[3].classList.add("prueba");
-                   audios[3].play();
+                //    audios[3].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
         case '4' : parts_colors[4].style.opacity = "0";
                    coloreadas[4].style.opacity = "1";
                    coloreadas[4].classList.add("prueba");
-                   audios[4].play();
+                //    audios[4].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
         case '5' : parts_colors[5].style.opacity = "0";
@@ -174,13 +175,13 @@ function animatioTab(id){
         case '6' : parts_colors[6].style.opacity = "0";
                    coloreadas[6].style.opacity = "1";
                    coloreadas[6].classList.add("prueba");
-                   audios[5].play();
+                //    audios[5].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
         case '7' : parts_colors[7].style.opacity = "0";
                    coloreadas[7].style.opacity = "1";
                    coloreadas[7].classList.add("prueba");
-                   audios[4].play();
+                //    audios[4].play();
 
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
@@ -188,15 +189,10 @@ function animatioTab(id){
                    coloreadas[8].style.opacity = "1";
                    coloreadas[8].classList.add("prueba");
                   
-                   audios[6].play();
+                //    audios[6].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
-        case '9' : parts_colors[9].style.opacity = "0";
-                   coloreadas[9].style.opacity = "1";
-                   coloreadas[9].classList.add("prueba");
-                   audios[3].play();
-                   setTimeout(()=>verificarColor(id), 1600);
-                   return;
+        
     }
 }
 
@@ -256,16 +252,23 @@ function removeClass(id){
                   coloreadas[8].classList.remove('prueba');
                   parts_colors[8].style.opacity="1";
         return;
-        case '9': coloreadas[9].style.opacity="0";
-                  coloreadas[9].classList.remove('prueba');
-                  parts_colors[9].style.opacity="1";
+        
     }
 }
 
+// falda-mujer-puesta.png" x="105" y="264"
+// blusa-mujer-puesta.png" x="92" y="153"
+// Chaquira-mujer-puesta.png" x="145" y="155"
+// Pantalon-hombre-puesto.png" x="321" y="293"
+// Cusma-hombre-puesta.png" x="304" y="122"
+// CollarComillos-hombre-puesto.png" x="345" y="123"
+// Panoleta-hombre-puesta.png" x="350" y="120"
+// corona-hombre-puesta.png" x="331" y="16"
+
 
 //posiciones originales para el iman
-const origX = [110, 112, 130, 100, 145, 323, 307, 355, 350, 306];
-const origY = [153, 273, 245, 200, 155, 293, 121, 123, 120, 195];
+const origX = [105,92,145,321,304,345,350,331];
+const origY = [264,153,155,293,122,123,120,16];
 
 function iman(idFicha){
     // console.log("idFicha en el iman", idFicha);
@@ -325,10 +328,7 @@ function pintarFondo(idFicha){
                    parts_colors[8].style.opacity="0";
                    parts_colors[8].classList.add("coloresON");
         return;
-         case '9': coloreadas[9].style.opacity="1";
-                   parts_colors[9].style.opacity="0";
-                   parts_colors[9].classList.add("coloresON");
-        return;
+         
     }
 }
 
@@ -343,15 +343,15 @@ function testing(){
         }
 
     }
-    if(sum === 10){
+    if(sum === 8){
         setTimeout(()=>gameCompleted(), 1200);
     }
    
 }
 
-// var win = document.getElementById("bien");
+var win = document.getElementById("bien");
 function gameCompleted(){
-    // console.log("gano");
+    console.log("gano");
     // console.log(humanBn);
     // console.log(humanCol);
     // fondo.pause();
@@ -361,5 +361,5 @@ function gameCompleted(){
         humanBn[i].style.opacity="0";
         humanCol[i].style.opacity="1";
     }
-    // win.play();
+    win.play();
 }
