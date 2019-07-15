@@ -61,7 +61,6 @@
   animation-duration: 5.1s;
   animation-fill-mode: forwards;
   animation-timing-function: linear ;
-
 }
 
 
@@ -78,7 +77,6 @@
 .rodar15{
    transform: rotate(-20deg);
    transition: 4s;
-
 }
 
 
@@ -89,159 +87,110 @@
 }
 
 .prueba{
-    animation: color 2s ease-in-out;
+    animation: color 6s ease-in-out;
     transform-origin: center center;
-    
-  }
+}
 
 
   
-  @keyframes color {
-    0%{
-      opacity: 0.3;
-      transform: rotate(1.2deg);
-         
+@keyframes color {
+  0%{
+    opacity: 0.3;
+    transform: rotate(1.2deg);
     }
-    20%{
-      opacity: 0.8;
-      transform: rotate(-1.2deg);
+  20%{
+    opacity: 0.8;
+    transform: rotate(-1.2deg);
+  }
+  40%{
+    opacity: 0.3;
+    transform: rotate(1.2deg);
+  }
+  60%{
+    opacity: 0.8;
+    transform: rotate(-1.2deg);
+  }
+  80%{
+    opacity: 0.3;
+    transform: rotate(1.2deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(-1.2deg);
+  }
+}
+
+@keyframes girar {
+ 0%{
+   transform: rotate(0deg);    
+ }
+ 100%{
+   transform: rotate(-22deg);
+ }
+}
+
+@keyframes moverFondo {
+  0%{
+    transform: translateX(0); 
     }
-    40%{
-      opacity: 0.3;
-      transform: rotate(1.2deg);
+100%{
+    transform: translateX(-110px);
     }
-    60%{
-      opacity: 0.8;
-      transform: rotate(-1.2deg);
-    }
-    80%{
-      opacity: 0.3;
-      transform: rotate(1.2deg);
-      
+}
+
+@keyframes moverFrente {
+  0%{
+     transform: translateX(0); 
     }
     100%{
-      opacity: 1;
-      transform: rotate(-1.2deg);
+     transform: translateX(-120px);
     }
-  }
-
-   @keyframes girar {
-    0%{
-     
-      transform: rotate(0deg);    
-       
-    }
-    100%{
-      
-      transform: rotate(-22deg);
-    }
-  }
-
-
-
-
-  
-
-  @keyframes moverFondo {
-    0%{
-     
-      transform: translateX(0); 
-       
-    }
-    100%{
-      
-      transform: translateX(-110px);
-    }
-  }
-
-  @keyframes moverFrente {
-    0%{
-     
-      transform: translateX(0); 
-       
-    }
-    100%{
-      
-      transform: translateX(-120px);
-    }
-  }
-
-
-
-
+}
 
 /*abuela caminando*/
-
-
 .abuela{
-   /*   width: 307.2px;
-      height: 414px;
-      background: url("../img/inga-abuela.png");
-      margin:0 auto;*/
-      /*background-position: -252.75px 0;*/
+  animation-duration:1.2s;
+  animation-timing-function: steps(8);
+  animation-iteration-count: 2.5;
+  animation-fill-mode:forwards;
+}
 
-      /*animation:caminar;*/
-      animation-duration:1.2s;
-      animation-timing-function: steps(8);
-      animation-iteration-count: 2.5;
-      animation-fill-mode:forwards;
-
-    }
-
-   
-    @keyframes caminar{
-      0%{
-        transform: translateX(0px);
-
+@keyframes caminar{
+   0%{
+      transform: translateX(0px);
       }
       100%{
         transform: translateX(-1156px);      
-
       }
-    }
+}
 
 /*abuela estatica y saludondo*/
-
-     .saludo{
-   
-      animation:saludo;
-      animation-duration: 1.2s;
-      animation-timing-function: steps(7); 
-      animation-iteration-count: infinite;
-      animation-fill-mode:forwards;
-      
-
-    }
+.saludo{
+  animation:saludo;
+  animation-duration: 1.2s;
+  animation-timing-function: steps(7); 
+  animation-iteration-count: infinite;
+  animation-fill-mode:forwards;
+}
     
-    @keyframes saludo{
-      0%{
-        transform: translateX(0px);
+@keyframes saludo{
+  0%{
+    transform: translateX(0px)
+  }
+  100%{
+    transform: translateX(-1012.68px);
+  }
+}
+.oculto{
+  height: 0px;
+  transition: height 0.3s;
+}
 
-      }
-      100%{
-        transform: translateX(-1012.68px);
-         
+.aparecer{
+ transition: height 0.3s;
+ height: 214px 
+}
 
-      }
-    }
-   
-
-
-
-    .oculto{
-     
-     height: 0px;
-     transition: height 0.3s;
-      
-    }
-
-     .aparecer{
-      transition: height 0.3s;
-     height: 214px 
-      
-    }
-
-    .simbolo:hover{
-      cursor: pointer
-
-    }
+.simbolo:hover{
+  cursor: point
+ }

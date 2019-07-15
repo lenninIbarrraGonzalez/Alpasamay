@@ -39,12 +39,12 @@ function personajeStop(){
 	montanacolor.style.opacity = "1";
 }
 
-montana.addEventListener("click", function(){
-fondocolor.style.opacity=1
+montanacolor.addEventListener("click", function(){
+// fondocolor.style.opacity=1
 montanacolor.style.display="none"
 
-ruedaBn.style.opacity = '0';
-ruedaColor.style.opacity = '1';
+// ruedaBn.style.opacity = '0';
+// ruedaColor.style.opacity = '1';
 
 // alert("hola");
 })
