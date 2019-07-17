@@ -1,26 +1,10 @@
-/* html{
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/grid.png');
-    margin: 0;
-} */
-
 #lienzo{
     /*background: green;*/
     border: 1px solid red;
     margin: 0 auto;
     display: block;
 }
-/*.grid{
-  z-index: 10;
-}*/
-/* .rectangulo{
-  opacity: 1
-} */
-/* .personaje{
-  opacity: 0.3
-} */
-/* .personajeVacio{
-  opacity: 0
-} */
+
 .click{
   cursor:pointer;
 }
@@ -43,10 +27,6 @@
   animation-fill-mode: forwards;  
 }
 
-/* .moverFrontal{
-  animation:moverFrente 5.2s ease-out;
-  animation-fill-mode: forwards;  
-} */
 
 .rueda{
   border: 1px solid red;
@@ -97,7 +77,7 @@
 
 /*abuela estatica y saludondo*/
 .saludo{
-   animation:saludo 1.2s steps(7);
+   animation:saludo 1s steps(7);
    animation-iteration-count: infinite;
 }
     

@@ -150,21 +150,19 @@
 
 /*abuela estatica y saludondo*/
 .saludo{
-  animation:saludo;
-  animation-duration: 5s;
-  animation-timing-function: steps(7); 
+  animation:saludo 1.2s steps(7);
   animation-iteration-count: infinite;
-  animation-fill-mode:forwards;
 }
 
 @keyframes saludo{
   0%{
-    transform: translateX(0px)
-  }
+      transform: translateX(0px);
+    }
   100%{
-    transform: translateX(-1012.68px);
+      transform: translateX(-1012.68px);
+    }
   }
-}
+
 .oculto{
   height: 0px;
   transition: height 1.5s;

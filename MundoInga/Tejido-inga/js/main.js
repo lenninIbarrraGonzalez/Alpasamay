@@ -123,8 +123,9 @@ function exitEstation(){
 }
 
 function final(){
-	abuela.setAttribute("xlink:href", "./img/inga-frente.png");
+	abuela.setAttribute("xlink:href", "./img/inga-saludo.png");
 	abuela.style.animationName="";
+	abuela.classList.add("saludo");
 	audiosTejidos[3].play();
 }
 
