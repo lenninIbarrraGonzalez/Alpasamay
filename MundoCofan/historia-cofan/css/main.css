@@ -1,0 +1,119 @@
+#lienzo{
+  /*background: green;*/
+  border: 1px solid red;
+  margin: 0 auto;
+  display: block;
+}
+
+.click{
+cursor:pointer;
+}
+.clothing {
+  opacity:1;
+}
+.colorearVacio{
+opacity: 0;
+}
+.colorear{
+opacity: 0;
+}
+.desaparecer{
+display: none
+}
+
+/* mover paisaje */
+.mover{
+animation:moverFondo 5.2s ease-out;
+animation-fill-mode: forwards;  
+}
+
+
+.rueda{
+border: 1px solid red;
+margin: auto;
+transform-origin: center 1028px;
+animation-name: girar;
+animation-duration: 5.1s;
+animation-fill-mode: forwards;
+animation-timing-function: linear ;
+
+}
+
+/* girar circulo simbolos */
+@keyframes girar {
+0%{
+   transform: rotate(0deg);    
+  }
+100%{
+    transform: rotate(-20deg);
+  }
+}
+/* mover fondo paisaje*/
+@keyframes moverFondo {
+0%{
+   transform: translateX(0); 
+  }
+100%{
+   transform: translateX(-110px);
+  }
+}
+
+
+/*abuela caminando*/
+.abuela{
+    animation:caminar 1.2s steps(8);
+    animation-iteration-count: 4;
+}
+ 
+@keyframes caminar{
+0%{
+  transform: translateX(0px);
+}
+100%{
+  transform: translateX(-1156px);      
+   }
+}
+
+/*abuela estatica y saludondo*/
+.saludo{
+ animation:saludo 1s steps(7);
+ animation-iteration-count: infinite;
+}
+  
+@keyframes saludo{
+0%{
+  transform: translateX(0px);
+}
+100%{
+  transform: translateX(-1012.68px);
+}
+}
+
+/* mover montaña */
+.prueba{
+animation: color 2s ease-in-out infinite;
+transform-origin: center center;
+}
+
+@keyframes color {
+0%{
+  transform: rotate(1.2deg);
+     
+}
+20%{
+  transform: rotate(-1.2deg);
+}
+40%{
+  transform: rotate(1.2deg);
+}
+60%{
+  transform: rotate(-1.2deg);
+}
+80%{
+  transform: rotate(1.2deg);
+  
+}
+100%{
+  transform: rotate(-1.2deg);
+}
+}
