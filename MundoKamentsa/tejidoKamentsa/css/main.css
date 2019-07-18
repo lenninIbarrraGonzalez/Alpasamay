@@ -1,0 +1,169 @@
+#lienzo{
+  /*background: green;*/
+  border: 1px solid red;
+  margin: 0 auto;
+  display: block;
+}
+
+.rectangulo{
+opacity: 1
+}
+.personaje{
+opacity: 0.3
+}
+.personajeVacio{
+opacity: 0
+}
+
+.clothing {
+  opacity:1;
+}
+.colorear{
+opacity: 0;
+}
+.desaparecer{
+display: none
+}
+
+.grid{
+opacity: 0.5
+}
+
+.mover{
+transition: 4s
+}
+
+.moverFrontal{
+animation:moverFrente 5.2s ease-out;
+animation-fill-mode: forwards;  
+}
+
+.ruedaCompleta{
+transform: rotate(20deg);  
+transition: 30s;
+transform-origin:500px 1030px;
+animation-duration: 30s;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out ;
+}
+
+@keyframes girar {
+0%{
+  transform: rotate(0deg);    
+}
+100%{
+  transform: rotate(-100deg);
+}
+}
+
+
+.rodar15{
+ transform: rotate(-23deg);
+ transition: 5s;
+}
+
+
+@keyframes caminar{
+0%{
+   transform: translateX(0px);
+   }
+   100%{
+     transform: translateX(-1156px);      
+   }
+}
+
+
+.colorearVacio{
+opacity: 0;
+}
+
+.prueba{
+  animation: color 6s ease-in-out;
+  transform-origin: center center;
+}
+
+@keyframes color {
+0%{
+  opacity: 0.3;
+  transform: rotate(1.2deg);
+  }
+20%{
+  opacity: 0.8;
+  transform: rotate(-1.2deg);
+}
+40%{
+  opacity: 0.3;
+  transform: rotate(1.2deg);
+}
+60%{
+  opacity: 0.8;
+  transform: rotate(-1.2deg);
+}
+80%{
+  opacity: 0.3;
+  transform: rotate(1.2deg);
+}
+100%{
+  opacity: 1;
+  transform: rotate(-1.2deg);
+}
+} 
+
+
+
+@keyframes moverFondo {
+0%{
+  transform: translateX(0); 
+  }
+100%{
+  transform: translateX(-110px);
+  }
+}
+
+@keyframes moverFrente {
+0%{
+   transform: translateX(0); 
+  }
+  100%{
+   transform: translateX(-120px);
+  }
+}
+
+/*abuela caminando*/
+.abuela{
+animation-duration:1.2s;
+animation-timing-function: steps(8);
+animation-iteration-count: 3;
+animation-fill-mode:forwards;
+}
+
+
+
+/*abuela estatica y saludondo*/
+.saludo{
+animation:saludo 1.2s steps(7);
+animation-iteration-count: infinite;
+}
+
+@keyframes saludo{
+0%{
+    transform: translateX(0px);
+  }
+100%{
+    transform: translateX(-1012.68px);
+  }
+}
+
+.oculto{
+height: 0px;
+transition: height 1.5s;
+}
+
+.aparecer{
+transition: height 1.5s;
+height: 214px 
+}
+
+.simbolo:hover{
+cursor: pointer;
+}

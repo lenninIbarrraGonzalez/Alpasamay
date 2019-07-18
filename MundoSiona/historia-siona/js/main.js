@@ -44,8 +44,7 @@ function personajeSaludo(){
 	btnCanoa.classList.add('click');
  }
 
-
-btnCanoa.addEventListener("click", function(){
+ btnCanoa.addEventListener("click", function(){
 btnCanoa.style.display="none"
 audios[1].play();
 })

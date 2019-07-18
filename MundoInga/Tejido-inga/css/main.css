@@ -38,15 +38,6 @@
   animation-fill-mode: forwards;  
 }
 
-/* .rueda{
-  border: 1px solid red;
-  margin: auto;
-  animation-name: girar;
-  animation-duration: 15s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear ;
-} */
-
 .ruedaCompleta{
   transform: rotate(20deg);  
   transition: 30s;

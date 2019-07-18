@@ -13,8 +13,9 @@ const btnStart = document.getElementById('ruedaCompleta');
 
 var audiosTejidos = document.getElementsByClassName('audio');
 
+
 btnStart.addEventListener('click', start);
-abuela.setAttribute("xlink:href", "./img/inga-frente.png");
+abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 
 function start(){
 		btnStart.removeEventListener('click', start);
@@ -23,8 +24,8 @@ function start(){
 }
 
 function firstEstation(){
-	fondo.style.transform="translateX(-82px)";
-	abuela.setAttribute("xlink:href", "./img/inga-abuela.png");
+	fondo.style.transform="translateX(-90px)";
+	abuela.setAttribute("xlink:href", "./img/kame-abuela.png");
 	rueda.classList.add("rodar15")
 	abuela.style.animationName="caminar";
 	setTimeout(()=>{
@@ -33,7 +34,7 @@ function firstEstation(){
 }
 
 function removerFirst(){
-abuela.setAttribute("xlink:href", "./img/inga-frente.png");
+abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 abuela.style.animationName="";
 audiosTejidos[0].play();
 letrero1.classList.add("aparecer");
@@ -51,9 +52,9 @@ function hideMsnFirst(){
 }
 
 function secondEstation(){
-	fondo.style.transform="translateX(-164px)";
- 	abuela.setAttribute("xlink:href", "./img/inga-abuela.png");
- 	rueda.style.transform="rotate(-62deg)";
+	fondo.style.transform="translateX(-140px)";
+ 	abuela.setAttribute("xlink:href", "./img/kame-abuela.png");
+ 	rueda.style.transform="rotate(-50deg)";
  	abuela.style.animationName="caminar";
 		setTimeout(()=>{
 			removerSecond();
@@ -61,7 +62,7 @@ function secondEstation(){
 }
 
 function removerSecond(){
-	abuela.setAttribute("xlink:href", "./img/inga-frente.png");
+	abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[1].play();
 	letrero2.classList.add("aparecer");
@@ -81,7 +82,7 @@ function hideMsnSecond(){
 
 function thirdEstation(){
   fondo.style.transform="translateX(-240px)";
-  abuela.setAttribute("xlink:href", "./img/inga-abuela.png"); 
+  abuela.setAttribute("xlink:href", "./img/kame-abuela.png"); 
   rueda.style.transform="rotate(-80deg)"
   abuela.style.animationName="caminar";
 		setTimeout(()=>{
@@ -91,7 +92,7 @@ function thirdEstation(){
 
 function removerThird(){
 	
-	abuela.setAttribute("xlink:href", "./img/inga-frente.png");
+	abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[2].play();
 	letrero3.classList.add("aparecer");
@@ -110,8 +111,8 @@ function hideMsnSThird(){
 
 function exitEstation(){
 	fondo.style.transform="translateX(-330px)";
-	abuela.setAttribute("xlink:href", "./img/inga-abuela.png"); 
-  rueda.style.transform="rotate(-138deg)";
+	abuela.setAttribute("xlink:href", "./img/kame-abuela.png"); 
+  rueda.style.transform="rotate(-132deg)";
   abuela.style.animationName="caminar";
   	setTimeout(()=>{		
 		final();	
@@ -119,7 +120,7 @@ function exitEstation(){
 }
 
 function final(){
-	abuela.setAttribute("xlink:href", "./img/inga-saludo.png");
+	abuela.setAttribute("xlink:href", "./img/kame-saludo.png");
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
 	audiosTejidos[3].play();
