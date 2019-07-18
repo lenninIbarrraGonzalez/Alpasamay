@@ -39,7 +39,6 @@
 
 }
 
-
 /* girar circulo simbolos */
 @keyframes girar {
   0%{
@@ -90,14 +89,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
 /* mover montaña */
 .prueba{
   animation: color 2s ease-in-out infinite;
@@ -126,29 +117,3 @@
     transform: rotate(-1.2deg);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* no hace nada */
-/* @keyframes moverFrente {
-  0%{
-     transform: translateX(0); 
-    }
-  100%{
-     transform: translateX(-120px);
-    }
-} */

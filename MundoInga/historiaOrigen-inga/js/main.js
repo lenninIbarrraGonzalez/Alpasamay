@@ -1,25 +1,15 @@
-var montana=document.querySelector('#montanaAnim');
+
 var montanacolor=document.querySelector('#montanacolor');
-var fondocolor=document.querySelector('#fondo-color');
-
-const ruedaColor = document.getElementById('ruedaColor');
 const fondoMover = document.getElementById('id_mover');
-
 const audios= document.getElementsByClassName("audio");
 const ruedaBn = document.getElementById('ruedaBn');
 var abuela=document.getElementById('abuela');
-
-
-
 
 abuela.setAttribute("xlink:href", "./img/inga-frente.png");
 
 ruedaBn.addEventListener('click', inicio);
 
-
-
 function inicio(){
-	
 	fondoMover.classList.add('mover');
 	ruedaBn.classList.add('rueda');
 	abuela.setAttribute("xlink:href", "./img/inga-abuela.png");

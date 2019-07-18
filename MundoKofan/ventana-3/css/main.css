@@ -1,0 +1,198 @@
+/* html{
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/grid.png');
+    margin: 0;
+} */
+
+#lienzo{
+    /*background: green;*/
+    border: 1px solid red;
+    margin: 0 auto;
+    display: block;
+}
+/*.grid{
+  z-index: 10;
+}*/
+.rectangulo{
+  opacity: 1
+}
+.personaje{
+  opacity: 0.3
+}
+.personajeVacio{
+  opacity: 0
+}
+
+.clothing {
+    opacity:1;
+
+}
+.colorear{
+  opacity: 0;
+}
+.desaparecer{
+  display: none
+}
+
+.mover{
+  animation:moverFondo 5.2s ease-out;
+  animation-fill-mode: forwards;  
+
+}
+
+.moverFrontal{
+  animation:moverFrente 5.2s ease-out;
+  animation-fill-mode: forwards;  
+}
+
+
+
+
+.rueda{
+  border: 1px solid red;
+  margin: auto;
+  transform-origin: center 1028px;
+  animation-name: girar;
+  animation-duration: 5.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear ;
+
+}
+
+
+.colorearVacio{
+  opacity: 0;
+}
+
+.prueba{
+    animation: color 2s ease-in-out;
+    transform-origin: center center;
+    
+  }
+
+
+  
+  @keyframes color {
+    0%{
+      opacity: 0.3;
+      transform: rotate(1.2deg);
+         
+    }
+    20%{
+      opacity: 0.8;
+      transform: rotate(-1.2deg);
+    }
+    40%{
+      opacity: 0.3;
+      transform: rotate(1.2deg);
+    }
+    60%{
+      opacity: 0.8;
+      transform: rotate(-1.2deg);
+    }
+    80%{
+      opacity: 0.3;
+      transform: rotate(1.2deg);
+      
+    }
+    100%{
+      opacity: 1;
+      transform: rotate(-1.2deg);
+    }
+  }
+
+   @keyframes girar {
+    0%{
+     
+      transform: rotate(0deg);    
+       
+    }
+    100%{
+      
+      transform: rotate(-20deg);
+    }
+  }
+
+
+  
+
+  @keyframes moverFondo {
+    0%{
+     
+      transform: translateX(0); 
+       
+    }
+    100%{
+      
+      transform: translateX(-110px);
+    }
+  }
+
+  @keyframes moverFrente {
+    0%{
+     
+      transform: translateX(0); 
+       
+    }
+    100%{
+      
+      transform: translateX(-120px);
+    }
+  }
+
+
+
+
+
+/*abuela caminando*/
+
+
+.abuela{
+   /*   width: 307.2px;
+      height: 414px;
+      background: url("../img/inga-abuela.png");
+      margin:0 auto;*/
+      /*background-position: -252.75px 0;*/
+
+      animation:caminar 1.2s steps(8);
+      animation-iteration-count: 4;
+      
+
+    }
+
+   
+    @keyframes caminar{
+      0%{
+        transform: translateX(0px);
+
+      }
+      100%{
+        transform: translateX(-1156px);      
+
+      }
+    }
+
+/*abuela estatica y saludondo*/
+
+     .saludo{
+   
+      animation:saludo 1.2s steps(7);
+      animation-iteration-count: infinite;
+      
+
+    }
+    
+    @keyframes saludo{
+      0%{
+        transform: translateX(0px);
+
+      }
+      100%{
+        transform: translateX(-1012.68px);
+         
+
+      }
+    }
+    
+    .click{
+    cursor:pointer;
+    }
