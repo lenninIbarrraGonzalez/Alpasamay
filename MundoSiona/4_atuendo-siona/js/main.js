@@ -320,5 +320,5 @@ function gameCompleted(){
         humanBn[i].style.opacity="0";
         humanCol[i].style.opacity="1";
     }
-    // win.play();
+    audios[7].play();
 }
