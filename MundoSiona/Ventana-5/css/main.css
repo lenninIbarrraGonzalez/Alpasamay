@@ -1,247 +1,169 @@
-/* html{
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/grid.png');
-    margin: 0;
-} */
-
 #lienzo{
-    /*background: green;*/
-    border: 1px solid red;
-    margin: 0 auto;
-    display: block;
+  /*background: green;*/
+  border: 1px solid red;
+  margin: 0 auto;
+  display: block;
 }
-/*.grid{
-  z-index: 10;
-}*/
+
 .rectangulo{
-  opacity: 1
+opacity: 1
 }
 .personaje{
-  opacity: 0.3
+opacity: 0.3
 }
 .personajeVacio{
-  opacity: 0
+opacity: 0
 }
 
 .clothing {
-    opacity:1;
-
+  opacity:1;
 }
 .colorear{
-  opacity: 0;
+opacity: 0;
 }
 .desaparecer{
-  display: none
+display: none
 }
 
 .grid{
-  opacity: 0.5
+opacity: 0.5
 }
 
 .mover{
-  /*animation:moverFondo 5.2s ease-out;*/
- /* animation-fill-mode: forwards;  */
- transition: 4s
-
-
+transition: 4s
 }
 
 .moverFrontal{
-  animation:moverFrente 5.2s ease-out;
-  animation-fill-mode: forwards;  
+animation:moverFrente 5.2s ease-out;
+animation-fill-mode: forwards;  
 }
-
-
-
-
-.rueda{
-  border: 1px solid red;
-  margin: auto;
-/*  transform-origin: center 1028px;*/
-  animation-name: girar;
-  animation-duration: 5.1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear ;
-
-}
-
-
 
 .ruedaCompleta{
-  transform: rotate(0deg);  
-  transition: 3s;
-  transform-origin:500px 1030px;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear ;
+transform: rotate(20deg);  
+transition: 30s;
+transform-origin:500px 1030px;
+animation-duration: 30s;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out ;
 }
+
+@keyframes girar {
+0%{
+  transform: rotate(0deg);    
+}
+100%{
+  transform: rotate(-100deg);
+}
+}
+
 
 .rodar15{
-   transform: rotate(-22deg);
-   transition: 4s;
-
+ transform: rotate(-23deg);
+ transition: 5s;
 }
 
 
+@keyframes caminar{
+0%{
+   transform: translateX(0px);
+   }
+   100%{
+     transform: translateX(-1156px);      
+   }
+}
 
 
 .colorearVacio{
-  opacity: 0;
+opacity: 0;
 }
 
 .prueba{
-    animation: color 2s ease-in-out;
-    transform-origin: center center;
-    
+  animation: color 6s ease-in-out;
+  transform-origin: center center;
+}
+
+@keyframes color {
+0%{
+  opacity: 0.3;
+  transform: rotate(1.2deg);
   }
+20%{
+  opacity: 0.8;
+  transform: rotate(-1.2deg);
+}
+40%{
+  opacity: 0.3;
+  transform: rotate(1.2deg);
+}
+60%{
+  opacity: 0.8;
+  transform: rotate(-1.2deg);
+}
+80%{
+  opacity: 0.3;
+  transform: rotate(1.2deg);
+}
+100%{
+  opacity: 1;
+  transform: rotate(-1.2deg);
+}
+} 
 
 
-  
-  @keyframes color {
-    0%{
-      opacity: 0.3;
-      transform: rotate(1.2deg);
-         
-    }
-    20%{
-      opacity: 0.8;
-      transform: rotate(-1.2deg);
-    }
-    40%{
-      opacity: 0.3;
-      transform: rotate(1.2deg);
-    }
-    60%{
-      opacity: 0.8;
-      transform: rotate(-1.2deg);
-    }
-    80%{
-      opacity: 0.3;
-      transform: rotate(1.2deg);
-      
-    }
-    100%{
-      opacity: 1;
-      transform: rotate(-1.2deg);
-    }
+
+@keyframes moverFondo {
+0%{
+  transform: translateX(0); 
   }
-
-   @keyframes girar {
-    0%{
-     
-      transform: rotate(0deg);    
-       
-    }
-    100%{
-      
-      transform: rotate(-22deg);
-    }
+100%{
+  transform: translateX(-110px);
   }
+}
 
-
-
-
-  
-
-  @keyframes moverFondo {
-    0%{
-     
-      transform: translateX(0); 
-       
-    }
-    100%{
-      
-      transform: translateX(-110px);
-    }
+@keyframes moverFrente {
+0%{
+   transform: translateX(0); 
   }
-
-  @keyframes moverFrente {
-    0%{
-     
-      transform: translateX(0); 
-       
-    }
-    100%{
-      
-      transform: translateX(-120px);
-    }
+  100%{
+   transform: translateX(-120px);
   }
-
-
-
-
+}
 
 /*abuela caminando*/
-
-
 .abuela{
-   /*   width: 307.2px;
-      height: 414px;
-      background: url("../img/inga-abuela.png");
-      margin:0 auto;*/
-      /*background-position: -252.75px 0;*/
+animation-duration:1.2s;
+animation-timing-function: steps(8);
+animation-iteration-count: 3;
+animation-fill-mode:forwards;
+}
 
-      /*animation:caminar;*/
-      animation-duration:1.2s;
-      animation-timing-function: steps(8);
-      animation-iteration-count: 2.5;
-      animation-fill-mode:forwards;
 
-    }
-
-   
-    @keyframes caminar{
-      0%{
-        transform: translateX(0px);
-
-      }
-      100%{
-        transform: translateX(-1156px);      
-
-      }
-    }
 
 /*abuela estatica y saludondo*/
+.saludo{
+animation:saludo 1.2s steps(7);
+animation-iteration-count: infinite;
+}
 
-     .saludo{
-   
-      animation:saludo;
-      animation-duration: 1.2s;
-      animation-timing-function: steps(7); 
-      animation-iteration-count: infinite;
-      animation-fill-mode:forwards;
-      
+@keyframes saludo{
+0%{
+    transform: translateX(0px);
+  }
+100%{
+    transform: translateX(-1012.68px);
+  }
+}
 
-    }
-    
-    @keyframes saludo{
-      0%{
-        transform: translateX(0px);
+.oculto{
+height: 0px;
+transition: height 1.5s;
+}
 
-      }
-      100%{
-        transform: translateX(-1012.68px);
-         
+.aparecer{
+transition: height 1.5s;
+height: 214px 
+}
 
-      }
-    }
-   
-
-
-
-    .oculto{
-     
-     height: 0px;
-     transition: height 0.3s;
-      
-    }
-
-     .aparecer{
-      transition: height 0.3s;
-     height: 214px 
-      
-    }
-
-    .simbolo:hover{
-      cursor: pointer
-
-    }
+.simbolo:hover{
+cursor: pointer;
+}
