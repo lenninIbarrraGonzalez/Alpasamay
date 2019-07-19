@@ -139,59 +139,60 @@ function animatioTab(id){
         case '0' : parts_colors[0].style.opacity = "0";
                    coloreadas[0].style.opacity = "1";
                    coloreadas[0].classList.add("prueba");
-                //    audios[0].play();
+                   audios[0].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
 
         case '1' : parts_colors[1].style.opacity = "0";
                    coloreadas[1].style.opacity = "1";
                    coloreadas[1].classList.add("prueba");
-                //    audios[1].play();
+                   audios[1].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
         case '2' : parts_colors[2].style.opacity = "0";
                    coloreadas[2].style.opacity = "1";
                    coloreadas[2].classList.add("prueba");
-                //    audios[2].play();
+                   audios[2].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
          case '3' : parts_colors[3].style.opacity = "0";
                    coloreadas[3].style.opacity = "1";
                    coloreadas[3].classList.add("prueba");
-                //    audios[3].play();
+                
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
         case '4' : parts_colors[4].style.opacity = "0";
                    coloreadas[4].style.opacity = "1";
                    coloreadas[4].classList.add("prueba");
-                //    audios[4].play();
+                   audios[3].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
         case '5' : parts_colors[5].style.opacity = "0";
                    coloreadas[5].style.opacity = "1";
                    coloreadas[5].classList.add("prueba");
+                   audios[4].play();
                    setTimeout(()=>verificarColor(id), 1600);         
                    return;
         case '6' : parts_colors[6].style.opacity = "0";
                    coloreadas[6].style.opacity = "1";
                    coloreadas[6].classList.add("prueba");
-                //    audios[5].play();
+                   audios[5].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
         case '7' : parts_colors[7].style.opacity = "0";
                    coloreadas[7].style.opacity = "1";
                    coloreadas[7].classList.add("prueba");
-                //    audios[4].play();
+                   audios[6].play();
 
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
-         case '8' : parts_colors[8].style.opacity = "0";
-                   coloreadas[8].style.opacity = "1";
-                   coloreadas[8].classList.add("prueba");
+        //  case '8' : parts_colors[8].style.opacity = "0";
+        //            coloreadas[8].style.opacity = "1";
+        //            coloreadas[8].classList.add("prueba");
                   
-                //    audios[6].play();
-                   setTimeout(()=>verificarColor(id), 1600);
-                   return;
+        //         //    audios[6].play();
+        //            setTimeout(()=>verificarColor(id), 1600);
+        //            return;
         
     }
 }
@@ -248,10 +249,10 @@ function removeClass(id){
                   coloreadas[7].classList.remove('prueba');
                   parts_colors[7].style.opacity="1";
         return;
-        case '8': coloreadas[8].style.opacity="0";
-                  coloreadas[8].classList.remove('prueba');
-                  parts_colors[8].style.opacity="1";
-        return;
+        // case '8': coloreadas[8].style.opacity="0";
+        //           coloreadas[8].classList.remove('prueba');
+        //           parts_colors[8].style.opacity="1";
+        // return;
         
     }
 }
@@ -324,10 +325,10 @@ function pintarFondo(idFicha){
                    parts_colors[7].style.opacity="0";
                    parts_colors[7].classList.add("coloresON");
         return;
-         case '8': coloreadas[8].style.opacity="1";
-                   parts_colors[8].style.opacity="0";
-                   parts_colors[8].classList.add("coloresON");
-        return;
+        //  case '8': coloreadas[8].style.opacity="1";
+        //            parts_colors[8].style.opacity="0";
+        //            parts_colors[8].classList.add("coloresON");
+        // return;
          
     }
 }
@@ -349,7 +350,7 @@ function testing(){
    
 }
 
-var win = document.getElementById("bien");
+// var win = document.getElementById("bien");
 function gameCompleted(){
     console.log("gano");
     // console.log(humanBn);
@@ -361,5 +362,5 @@ function gameCompleted(){
         humanBn[i].style.opacity="0";
         humanCol[i].style.opacity="1";
     }
-    win.play();
+    // win.play();
 }
