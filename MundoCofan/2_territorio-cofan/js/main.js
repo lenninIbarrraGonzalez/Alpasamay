@@ -77,7 +77,7 @@ var max = 27;
 function visibility() {
     // parts_clothing = parts_fichas;
     // console.log("esto tiene parts_clothing en visibility", parts_clothing);
-        for(let i=0; i<9; i++){
+        for(let i=0; i<10; i++){
             parts_clothing[i].style.visibility="visible";
         }
 }
@@ -474,8 +474,41 @@ function removeClass(id){
 
 // ******************
 //posiciones originales para el iman
-var origX = [200, 275,450,450,160,528,363,517,650,670,0,395,650,764,512,593,775,929,800,335,10,302,63,790,230,198,288,170];
-var origY = [80, 45, 320,218,238,405,358,223,300,216,368,422,332,326,420,253,250,312,228,166,160,280,0,15,298,302,320,380];
+
+/*
+Apicha 415 340
+tswaikhi 99 384
+naeki 462 264
+kwtichu 561 193
+arapa 164 409
+bumbuhi 817 182
+chanange 644 323
+fmabi 423 391
+gwthupasi 510 23
+ihi 625 398
+
+*/
+var origX = [415,
+             99,
+             462,
+             561,
+             164,
+             817,
+             644,
+             423,
+             510,
+             625,
+             0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var origY = [340,
+             384,
+             264,
+             193,
+             409,
+             182,
+             323,
+             391,
+             23,
+             398,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 function iman(idFicha) {
     // console.log("idFicha en el iman", idFicha);
