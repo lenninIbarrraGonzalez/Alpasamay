@@ -1,0 +1,78 @@
+#lienzo{
+  /*background: green;*/
+  border: 1px solid red;
+  margin: 0 auto;
+  display: block;
+}
+
+.rectangulo{
+opacity: 1
+}
+.personaje{
+opacity: 0.4
+}
+
+/* blanco y negro */
+.clothing {
+  opacity: 1;
+
+}
+/* coloca a color */
+.colorear{
+opacity: 0;
+}
+
+.coloresON{
+opacity: 1;
+}
+
+.desaparecer{
+display: none
+}
+
+.clothing_parts{
+cursor: pointer;
+}
+
+
+.colorearVacio{
+opacity: 0;
+}
+
+.parts_clotihinOff{
+opacity: 0;
+}
+.prueba{
+  animation: color 1.5s ease-in-out;
+  transform-origin: center center;
+}
+
+@keyframes color {
+  0%{
+    /* opacity: 0.3; */
+    transform: rotate(1.2deg);
+             
+  }
+  20%{
+    /* opacity: 0.8; */
+    transform: rotate(-1.2deg);
+  }
+  40%{
+    /* opacity: 0.3; */
+    transform: rotate(1.2deg);
+  }
+  60%{
+    /* opacity: 0.8; */
+    transform: rotate(-1.2deg);
+  }
+  80%{
+    /* opacity: 0.3; */
+    transform: rotate(1.2deg);
+    
+  }
+  100%{
+    /* opacity: 1; */
+    transform: rotate(-1.2deg);
+  }
+}
+

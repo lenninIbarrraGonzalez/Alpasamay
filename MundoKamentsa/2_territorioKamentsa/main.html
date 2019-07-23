@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Document</title>
+</head>
+<body>
+  <svg id="lienzo" width="1000" height="563">
+    <g class="personaje" id="id_personaje"><image xlink:href="./img/fondoREFERENCIA.png" style="opacity: .8" x="0" y="0"/></g>
+
+    <g class="clothingVacio" id="id_arboles1"><image xlink:href="./img/territorio-bn/Territorio-Kamentsa.png" x="0" y="0" /></g>
+    <g class="colorearVacio" id="id_arboles-X"><image xlink:href="./img/territorio-color/Territorio-Kamentsa.png" x="0" y="0" /></g>
+    
+    <g class="clothing" id="id_montana"><image xlink:href="./img/territorio-bn/montana.png" x="364" y="42" /></g>
+    <g class="colorear" id="id_montana"><image xlink:href="./img/territorio-color/montana.png" x="364" y="42" /></g> +
+
+    <g class="clothing" id="id_rio-grande"><image xlink:href="./img/territorio-bn/rio-grande.png" x="315" y="155" /></g>
+    <g class="colorear" id="id_rio-grande"><image xlink:href="./img/territorio-color/rio-grande.png" x="315" y="155" /></g>
+
+    <g class="clothingVacio" id="id_arboles-tapan-rio-X"><image xlink:href="./img/territorio-bn/arboles-tapan-rio-X.png" x="701" y="77" /></g>
+    <g class="colorearVacio" id="id_arboles-tapan-rio-X"><image xlink:href="./img/territorio-color/arboles-tapan-rio-X.png" x="701" y="77" /></g> 
+
+    <g class="clothing" id="id_camino"><image xlink:href="./img/territorio-bn/camino.png" x="-11" y="236" /></g>
+    <g class="colorear" id="id_camino"><image xlink:href="./img/territorio-color/camino.png" x="-11" y="236" /></g> 
+
+    <g class="clothing" id="id_abuela"><image xlink:href="./img/territorio-bn/abuela.png" x="188" y="300"/></g>
+    <g class="colorear" id="id_abuela"><image xlink:href="./img/territorio-color/abuela.png" x="188" y="300"/></g> 
+
+    <g class="clothing" id="id_abuelo"><image xlink:href="./img/territorio-bn/abuelo.png" x="239" y="286"/></g>
+    <g class="colorear" id="id_abuelo"><image xlink:href="./img/territorio-color/abuelo.png" x="239" y="286"/></g> 
+
+    <g class="clothing" id="id_arbol"><image xlink:href="./img/territorio-bn/arbol.png" x="755" y="149" /></g>
+    <g class="colorear" id="id_arbol"><image xlink:href="./img/territorio-color/arbol.png" x="755" y="149" /></g> 
+
+    <g class="clothing" id="id_canasto"><image xlink:href="./img/territorio-bn/canasto.png" x="168" y="382" /></g>
+    <g class="colorear" id="id_canasto"><image xlink:href="./img/territorio-color/canasto.png" x="168" y="382" /></g> 
+
+    <g class="clothing" id="id_casa"><image xlink:href="./img/territorio-bn/casa.png" x="-30" y="131" /></g>
+    <g class="colorear" id="id_casa"><image xlink:href="./img/territorio-color/casa.png" x="-30" y="131" /></g> 
+
+    <g class="clothingVacio" id="id_montanas"><image xlink:href="./img/territorio-bn/maloka-X.png" x="335" y="162" /></g>
+    <g class="colorearVacio" id="id_montanas"><image xlink:href="./img/territorio-color/maloka-X.png" x="335" y="162" /></g> 
+
+    <g class="clothing" id="id_chagra"><image xlink:href="./img/territorio-bn/chagra.png" x="347" y="156" /></g>
+    <g class="colorear" id="id_chagra"><image xlink:href="./img/territorio-color/chagra.png" x="347" y="156" /></g> 
+
+    <g class="clothing" id="id_Laguna-antigua"><image xlink:href="./img/territorio-bn/Laguna-antigua.png" x="536" y="293" /></g>
+    <g class="colorear" id="id_Laguna-antigua"><image xlink:href="./img/territorio-color/Laguna-antigua.png" x="536" y="293" /></g> 
+
+    <g class="clothing" id="id_colibri"><image xlink:href="./img/territorio-bn/colibri.png" x="886" y="318" /></g>
+    <g class="colorear" id="id_colibri"><image xlink:href="./img/territorio-color/colibri.png" x="886" y="318" /></g> 
+
+    <g class="clothing" id="id_cuy"><image xlink:href="./img/territorio-bn/cuy.png" x="115" y="322" /></g>
+    <g class="colorear" id="id_cuy"><image xlink:href="./img/territorio-color/cuy.png" x="115" y="322" /></g> 
+
+    <g class="clothing" id="id_gallina"><image xlink:href="./img/territorio-bn/gallina.png" x="271" y="412" /></g>
+    <g class="colorear" id="id_gallina"><image xlink:href="./img/territorio-color/gallina.png" x="271" y="412" /></g> 
+
+    <g class="clothing" id="id_luna"><image xlink:href="./img/territorio-bn/luna.png" x="780" y="13" /></g>
+    <g class="colorear" id="id_luna"><image xlink:href="./img/territorio-color/luna.png" x="780" y="13" /></g> 
+
+    <g class="clothing" id="id_Marrano"><image xlink:href="./img/territorio-bn/Marrano.png" x="329" y="345" /></g>
+    <g class="colorear" id="id_Marrano"><image xlink:href="./img/territorio-color/Marrano.png" x="329" y="345" /></g> 
+
+    <g class="clothing" id="id_nube"><image xlink:href="./img/territorio-bn/nube.png" x="261" y="28" /></g>
+    <g class="colorear" id="id_nube"><image xlink:href="./img/territorio-color/nube.png" x="261" y="28" /></g> 
+
+    <g class="clothing" id="id_pajaro"><image xlink:href="./img/territorio-bn/pajaro.png" x="-6" y="374" /></g>
+    <g class="colorear" id="id_pajaro"><image xlink:href="./img/territorio-color/pajaro.png" x="-6" y="374" /></g> 
+
+    <g class="clothing" id="id_paramo"><image xlink:href="./img/territorio-bn/paramo.png" x="476" y="76" /></g>
+    <g class="colorear" id="id_paramo"><image xlink:href="./img/territorio-color/paramo.png" x="476" y="76"/></g> 
+
+    <g class="clothing" id="id_pato"><image xlink:href="./img/territorio-bn/pato.png" x="411" y="317" /></g>
+    <g class="colorear" id="id_pato"><image xlink:href="./img/territorio-color/pato.png" x="411" y="317" /></g> 
+
+    <g class="clothing" id="id_pescado"><image xlink:href="./img/territorio-bn/pescado.png" x="527" y="350" /></g>
+    <g class="colorear" id="id_pescado"><image xlink:href="./img/territorio-color/pescado.png" x="527" y="350" /></g> 
+
+    <g class="clothingVacio" id="id_planta-tapa-rio-X"><image xlink:href="./img/territorio-bn/planta-tapa-rio-X.png" x="433" y="378" /></g>
+    <g class="colorearVacio" id="id_planta-tapa-rio-X"><image xlink:href="./img/territorio-color/planta-tapa-rio-X.png" x="433" y="378" /></g> 
+
+    <g class="clothingVacio" id="id_planta-tapa-X"><image xlink:href="./img/territorio-bn/planta-tapa-X.png" x="672" y="269" /></g>
+    <g class="colorearVacio" id="id_planta-tapa-X"><image xlink:href="./img/territorio-color/planta-tapa-X.png" x="672" y="269" /></g>
+    
+    <g class="clothingVacio" id="id_planta-tapa-X"><image xlink:href="./img/territorio-bn/planta-tapa-X.png" x="744" y="268" /></g>
+    <g class="colorearVacio" id="id_planta-tapa-X"><image xlink:href="./img/territorio-color/planta-tapa-X.png" x="744" y="268" /></g> 
+
+    <g class="clothingVacio" id="id_planta-tapa-X"><image xlink:href="./img/territorio-bn/planta-tapa-X.png" x="924" y="255" /></g>
+    <g class="colorearVacio" id="id_planta-tapa-X"><image xlink:href="./img/territorio-color/planta-tapa-X.png" x="924" y="255" /></g> 
+
+    <g class="clothing" id="id_quebrada"><image xlink:href="./img/territorio-bn/quebrada.png" x="434" y="211" /></g>
+    <g class="colorear" id="id_quebrada"><image xlink:href="./img/territorio-color/quebrada.png" x="434" y="211" /></g> 
+
+    <g class="clothing" id="id_sol"><image xlink:href="./img/territorio-bn/sol.png" x="59" y="-3" /></g>
+    <g class="colorear" id="id_sol"><image xlink:href="./img/territorio-color/sol.png" x="59" y="-3" /></g> 
+
+    <g class="clothingVacio" id="id_tapar-camino-X"><image xlink:href="./img/territorio-bn/tapar-camino-X.png" x="-11" y="395" /></g>
+    <g class="colorearVacio" id="id_tapar-camino-X"><image xlink:href="./img/territorio-color/tapar-camino-X.png" x="-11" y="395" /></g>  -->
+
+    <g class="clothingVacio" id="id_montanas"><image xlink:href="./img/fondo-letras.png" x="-8" y="468"/></g>
+
+    <!-- imagenes palabras -->
+    <g class="clothing_parts" id="0"><image xlink:href="./img/palabras/montana.png" class="parts" id="0" /></g>
+    <g class="clothing_parts" id="1"><image xlink:href="./img/palabras/rio-grande.png" class="parts" id="1" /></g>
+    <g class="clothing_parts" id="2"><image xlink:href="./img/palabras/camino.png" class="parts" id="2" /></g>
+    <g class="clothing_parts" id="3"><image xlink:href="./img/palabras/abuela.png" class="parts" id="3" /></g>
+    <g class="clothing_parts" id="4"><image xlink:href="./img/palabras/abuelo.png" class="parts" id="4" /></g>
+    <g class="clothing_parts" id="5"><image xlink:href="./img/palabras/arbol.png" class="parts" id="5" /></g>
+    <g class="clothing_parts" id="6"><image xlink:href="./img/palabras/canasto.png" class="parts" id="6" /></g>
+    <g class="clothing_parts" id="7"><image xlink:href="./img/palabras/casa.png" class="parts" id="7" /></g>
+    <g class="clothing_parts" id="8"><image xlink:href="./img/palabras/chagra.png" class="parts" id="8" /></g>
+    <g class="clothing_parts" id="9"><image xlink:href="./img/palabras/laguna-antigua.png" class="parts" id="9" /></g>
+    <g class="clothing_parts" id="10"><image xlink:href="./img/palabras/colibri.png" class="parts" id="10" /></g>
+    <g class="clothing_parts" id="11"><image xlink:href="./img/palabras/cuy.png" class="parts" id="11" /></g>
+    <g class="clothing_parts" id="12"><image xlink:href="./img/palabras/gallina.png" class="parts" id="12" /></g>
+    <g class="clothing_parts" id="13"><image xlink:href="./img/palabras/luna.png" class="parts" id="13" /></g>
+    <g class="clothing_parts" id="14"><image xlink:href="./img/palabras/marrano.png" class="parts" id="14" /></g>
+    <g class="clothing_parts" id="15"><image xlink:href="./img/palabras/nube.png" class="parts" id="15" /></g>
+    <g class="clothing_parts" id="16"><image xlink:href="./img/palabras/pajaro.png" class="parts" id="16" /></g>
+    <g class="clothing_parts" id="17"><image xlink:href="./img/palabras/paramo.png" class="parts" id="17" /></g>
+    <g class="clothing_parts" id="18"><image xlink:href="./img/palabras/pato.png" class="parts" id="18" /></g>
+    <g class="clothing_parts" id="19"><image xlink:href="./img/palabras/pescado.png" class="parts" id="19" /></g>
+    <g class="clothing_parts" id="20"><image xlink:href="./img/palabras/quebrada.png" class="parts" id="20" /></g>
+    <g class="clothing_parts" id="21"><image xlink:href="./img/palabras/sol.png" class="parts" id="21" /></g>
+  </svg>
+    <audio src="./media/Tejan.mp3" class="audio"></audio>
+    <audio src="./media/Betsbejay.mp3" class="audio"></audio>
+    <audio src="./media/Benach.mp3" class="audio"></audio>
+    <audio src="./media/Betsmama.mp3" class="audio"></audio>
+    <audio src="./media/Betstaita.mp3" class="audio"></audio>
+    <audio src="./media/Betiy.mp3" class="audio"></audio>
+    <audio src="./media/sbaruk.mp3" class="audio"></audio>
+    <audio src="./media/Yebna.mp3" class="audio"></audio>
+    <audio src="./media/Jajan.mp3" class="audio"></audio>
+    <audio src="./media/Wabjajonay.mp3" class="audio"></audio>
+    <audio src="./media/Gntsian.mp3" class="audio"></audio>
+    <audio src="./media/Tsejan.mp3" class="audio"></audio>
+    <audio src="./media/Tuamba.mp3" class="audio"></audio>
+    <audio src="./media/Juashkon.mp3" class="audio"></audio>
+    <audio src="./media/Cots.mp3" class="audio"></audio>
+    <audio src="./media/Jantset.mp3" class="audio"></audio>
+    <audio src="./media/Shlofts.mp3" class="audio"></audio>
+    <audio src="./media/Jashan.mp3" class="audio"></audio>
+    <audio src="./media/Washekjatsana.mp3" class="audio"></audio>
+    <audio src="./media/Begon.mp3" class="audio"></audio>
+    <audio src="./media/Binchebejay.mp3" class="audio"></audio>
+    <audio src="./media/Shinye.mp3" class="audio"></audio>
+    <audio src="./media/bien.mp3" class="audio"></audio>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

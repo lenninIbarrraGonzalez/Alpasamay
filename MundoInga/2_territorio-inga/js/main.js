@@ -1,5 +1,8 @@
 const audios = document.getElementsByClassName("audio");
 
+const winerColor = document.getElementsByClassName("colorearVacio");
+const winerBn = document.getElementsByClassName("clothingVacio");
+
 var bien_ubicadas = 0;
 var ban_bien_ubicadas = 0;
 var verClass;
@@ -465,6 +468,10 @@ function removeClass(id){
                    coloreadas[27].classList.remove('prueba');
                    parts_colors[27].style.opacity="1";
         return;
+        case '28': coloreadas[28].style.opacity="0";
+                   coloreadas[28].classList.remove('prueba');
+                   parts_colors[28].style.opacity="1";
+        return;
     }
 }
 
@@ -643,7 +650,14 @@ function testing(){
 
 function gameCompleted(){
     console.log("gano");
-    fondo.pause();
-    //fondo2.pause();
-    win.play();
+    for(var i =0; i < (winerBn.length)-1; i++){
+        winerBn[i].style.opacity="0";
+    }
+    
+    for(var x =0; x < winerColor.length; x++){
+        winerColor[x].style.opacity="1";
+    }
+
+    audios[28].play();
+   
 }

@@ -37,9 +37,9 @@ for(var i=0; i<=parts_clothing.length; i++){
 }
 
 //posición en X
-var posX = [115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 115, 274, 432, 589];
+var posX = [115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115,274];
 //posición en Y 475
-var posY = [477, 477, 477, 477, 477, 519, 519, 519, 519, 519,477, 477, 477, 477, 477, 519, 519, 519, 519, 519, 477, 477, 477, 477, 477, 519, 519, 519, 519, 519];
+var posY = [477, 477, 477, 477, 477, 519, 519, 519, 519, 519,477, 477, 477, 477, 477, 519, 519, 519, 519, 519, 477, 477];
 
 for(var i=0; i<parts_clothing.length; i++){
     
@@ -292,48 +292,6 @@ function animatioTab(id) {
                     audios[21].play();
                     setTimeout(()=>verificarColor(id), 1600);
         return;
-         case '22': coloreadas[22].style.opacity="1";
-                    coloreadas[22].classList.add('prueba');
-                    parts_colors[22].style.opacity="0";
-                    audios[22].play();
-                    setTimeout(()=>verificarColor(id), 1600);
-        return;
-         case '23': coloreadas[23].style.opacity="1";
-                    coloreadas[23].classList.add('prueba');
-                    parts_colors[23].style.opacity="0";
-                    audios[23].play();
-                    setTimeout(()=>verificarColor(id), 1600);
-        return;
-         case '24': coloreadas[24].style.opacity="1";
-                    coloreadas[24].classList.add('prueba');
-                    parts_colors[24].style.opacity="0";
-                    audios[24].play();
-                    setTimeout(()=>verificarColor(id), 1600);
-        return;
-         case '25': coloreadas[25].style.opacity="1";
-                    coloreadas[25].classList.add('prueba');
-                    parts_colors[25].style.opacity="0";
-                    audios[25].play();
-                    setTimeout(()=>verificarColor(id), 1600);
-        return;
-         case '26': coloreadas[26].style.opacity="1";
-                    coloreadas[26].classList.add('prueba');
-                    parts_colors[26].style.opacity="0";
-                    audios[26].play();
-                    setTimeout(()=>verificarColor(id), 1600);
-        return;
-         case '27': coloreadas[27].style.opacity="1";
-                    coloreadas[27].classList.add('prueba');
-                    parts_colors[27].style.opacity="0";
-                    audios[27].play();
-                    setTimeout(()=>verificarColor(id), 1600);
-        return;
-         case '28': coloreadas[28].style.opacity="1";
-                    coloreadas[28].classList.add('prueba');
-                    parts_colors[28].style.opacity="0";
-                    audios[28].play();
-                    setTimeout(()=>verificarColor(id), 1600);
-        return;
     }
 }
 
@@ -444,87 +402,49 @@ function removeClass(id){
                    coloreadas[21].classList.remove('prueba');
                    parts_colors[21].style.opacity="1";
         return;
-        case '22': coloreadas[22].style.opacity="0";
-                   coloreadas[22].classList.remove('prueba');
-                   parts_colors[22].style.opacity="1";
-        return;
-        case '23': coloreadas[23].style.opacity="0";
-                   coloreadas[23].classList.remove('prueba');
-                   parts_colors[23].style.opacity="1";
-        return;
-        case '24': coloreadas[24].style.opacity="0";
-                   coloreadas[24].classList.remove('prueba');
-                   parts_colors[24].style.opacity="1";
-        return;
-        case '25': coloreadas[25].style.opacity="0";
-                   coloreadas[25].classList.remove('prueba');
-                   parts_colors[25].style.opacity="1";
-        return;
-        case '26': coloreadas[26].style.opacity="0";
-                   coloreadas[26].classList.remove('prueba');
-                   parts_colors[26].style.opacity="1";
-        return;
-        case '27': coloreadas[27].style.opacity="0";
-                   coloreadas[27].classList.remove('prueba');
-                   parts_colors[27].style.opacity="1";
-        return;
-        case '28': coloreadas[28].style.opacity="0";
-                   coloreadas[28].classList.remove('prueba');
-                   parts_colors[28].style.opacity="1";
-        return;
     }
 }
 
 // ******************
 //posiciones originales para el iman
 
-// Apicha-khw 410 335 
-// Tsaikhi 117 386
-// Na-eki 476 258
-// Kwtichu 574 179
-// Arapa 189 416
+//montana 508 187 tejan
+//rio-grande 515 304 bets bejan
+//camino 289 384 benach
+// abuela 186 330 bets mama
+//abuelo 234 321 bets taitra
 
-// Bumbuhi 834 119
-// Chanange 642 320
-// Fambi 439 384
-// Gwthupasi 526 23
-//Ihi. 641 397
+//betiy arbol 782 200
+//canasto sbaruk 166 378
+//casa yebna 86 243 
+//chagra 363 246 jajañ
+//laguna antigua wabjajonay 702 381
 
-//Kahansi 539 420
-//Khachapa 879 317
-//Khumasi 394 413
-//Khuvi 757 309
-//Khwigu 518 333
+//colibri gntsian 909 333
+//cuy tsejan 104 302
+//gallo tuanba 275 409
+//luna juashkon 780 10
+//marrano cots 326 344
 
-//Kinihi 880 230
-//Kuehe 96 24
-//Kunsi 615 254
-//Kuwe 783 13
-//Mama-caensya 196 331
+//nube juantset 297 29
+//pajaro shlofts 14 381
+//paramo jashan 491 98
+//pato washekjatsana 424 319
+// pescado begon 529 334
 
-//Mwnda 788 372
-//Sakira 803 274
-//Thesi 756 235
-//Thwthwkhuchu 329 367
-//Tsa-u 85 256
+//quebrada binche 465 257
+//sol shinye 103 14
 
-//Ufa-tsa-u 341 196
-//Umakhw 422 359
-//Umandu 327 33
-//Yaya-caensya 242 319
 
-var origX = [410,117,476,574,189,
-             834,642,439,526,641,
-             539,879,394,757,518,
-             880,96,615,783,196,
-             788,803,756,329,85,
-             341,422,327,242];
-var origY = [335,386,258,179,416,
-             119,320,384,23,397,
-             420,317,413,309,333,
-             230,24,254,13,331,
-             372,274,235,367,256,
-             196,359,33,319];
+
+
+
+var origX = [508, 515, 289, 186, 234, 782, 166, 86, 363, 702,
+             909, 104, 275, 780, 326, 297, 14, 491, 424, 529,
+            465, 103];
+var origY = [187,304,384,330,321,200,378,243,246,381,
+             333, 302, 409, 10, 344, 29, 381, 98, 319, 334,
+            257, 14];
 
 function iman(idFicha) {
     // console.log("idFicha en el iman", idFicha);
@@ -636,34 +556,6 @@ function pintarFondo(idFicha){
                     parts_colors[21].style.opacity="0";
                     parts_colors[21].classList.add("coloresON");
         return;
-         case '22' : coloreadas[22].style.opacity="1";
-                    parts_colors[22].style.opacity="0";
-                    parts_colors[22].classList.add("coloresON");
-        return;
-         case '23': coloreadas[23].style.opacity="1";
-                    parts_colors[23].style.opacity="0";
-                    parts_colors[23].classList.add("coloresON");
-        return;
-         case '24': coloreadas[24].style.opacity="1";
-                    parts_colors[24].style.opacity="0";
-                    parts_colors[24].classList.add("coloresON");
-        return;
-         case '25': coloreadas[25].style.opacity="1";
-                    parts_colors[25].style.opacity="0";
-                    parts_colors[25].classList.add("coloresON");
-        return;
-         case '26': coloreadas[26].style.opacity="1";
-                    parts_colors[26].style.opacity="0";
-                    parts_colors[26].classList.add("coloresON");
-        return;
-         case '27': coloreadas[27].style.opacity="1";
-                    parts_colors[27].style.opacity="0";
-                    parts_colors[27].classList.add("coloresON");
-        return;
-         case '28': coloreadas[28].style.opacity="1";
-                    parts_colors[28].style.opacity="0";
-                    parts_colors[28].classList.add("coloresON");
-        return;
     }
 }
 
@@ -681,7 +573,7 @@ function testing(){
         }
 
     }
-    if(sum === 29){
+    if(sum === 22){
         setTimeout(()=>gameCompleted(), 1200);
     }
     if(sum === 10){
@@ -705,5 +597,5 @@ function gameCompleted(){
     for(var x =0; x < winerColor.length; x++){
         winerColor[x].style.opacity="1";
     }
-    audios[29].play();
+    audios[22].play();
 }
