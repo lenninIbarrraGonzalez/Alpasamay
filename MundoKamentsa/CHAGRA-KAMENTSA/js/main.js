@@ -51,7 +51,7 @@ for(var i=0; i<parts_clothing.length; i++){
     // parts_clothing[i].setAttribute("y", Math.floor((Math.random()*409+1)));+
     parts_clothing[i].setAttribute("x", posX[i]);
     parts_clothing[i].setAttribute("y", posY[i]);
-    parts_clothing[i].style.visibility="visible";
+    // parts_clothing[i].style.visibility="visible";
    
     if(i < 10){
         parts_clothing[i].style.visibility="visible";
@@ -74,13 +74,13 @@ var currentPostY = 0;
 var min = 0;
 var max = 27;
 
-// function visibility() {
-//     // parts_clothing = parts_fichas;
-//     // console.log("esto tiene parts_clothing en visibility", parts_clothing);
-//         for(let i=0; i<9; i++){
-//             parts_clothing[i].style.visibility="visible";
-//         }
-// }
+function visibility() {
+    // parts_clothing = parts_fichas;
+    // console.log("esto tiene parts_clothing en visibility", parts_clothing);
+        for(let i=0; i<10; i++){
+            parts_clothing[i].style.visibility="visible";
+        }
+}
 //console.log("SECUENCIA", secuenciaVisibility);
 
 function seleccionarElemento(evt) {
@@ -151,7 +151,7 @@ function reordenar(evt){
     var clone = padre.cloneNode(true);
     var id = padre.getAttribute("id");
     //mando a la funcion animar fondo
-    // animatioTab(id);
+    animatioTab(id);
 
     entorno.removeChild(document.getElementById(id));
     entorno.appendChild(clone);
@@ -159,419 +159,401 @@ function reordenar(evt){
 
 }
 // ++++++++++++++++++++++++++
-// function animatioTab(id) {
-//     switch(id){
-//         case '0': parts_colors[0].style.opacity="0";
-//                   coloreadas[0].style.opacity="1";
-//                   coloreadas[0].classList.add('prueba');
-//                   audios[0].play();
-//                   setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//         case '1': coloreadas[1].style.opacity="1";
-//                   coloreadas[1].classList.add('prueba');
-//                   parts_colors[1].style.opacity="0";
-//                   audios[1].play();
-//                   setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//         case '2': coloreadas[2].style.opacity="1";
-//                   coloreadas[2].classList.add('prueba');
-//                   parts_colors[2].style.opacity="0";
-//                   audios[2].play();
-//                   setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '3': coloreadas[3].style.opacity="1";
-//                    coloreadas[3].classList.add('prueba');
-//                    parts_colors[3].style.opacity="0";
-//                    audios[3].play();
-//                    setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '4': coloreadas[4].style.opacity="1";
-//                    coloreadas[4].classList.add('prueba');
-//                    parts_colors[4].style.opacity="0";
-//                    audios[4].play();
-//                    setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '5': coloreadas[5].style.opacity="1";
-//                    coloreadas[5].classList.add('prueba');
-//                    parts_colors[5].style.opacity="0";
-//                    audios[5].play();
-//                    setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '6': coloreadas[6].style.opacity="1";
-//                    coloreadas[6].classList.add('prueba');
-//                    parts_colors[6].style.opacity="0";
-//                    audios[6].play();
-//                    setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '7': coloreadas[7].style.opacity="1";
-//                    coloreadas[7].classList.add('prueba');
-//                    parts_colors[7].style.opacity="0";
-//                   audios[7].play();
-//                    setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '8': coloreadas[8].style.opacity="1";
-//                    coloreadas[8].classList.add('prueba');
-//                    parts_colors[8].style.opacity="0";
-//                   audios[8].play();
-//                    setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '9': coloreadas[9].style.opacity="1";
-//                    coloreadas[9].classList.add('prueba');
-//                    parts_colors[9].style.opacity="0";
-//                   audios[9].play();
-//                    setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '10': coloreadas[10].style.opacity="1";
-//                     coloreadas[10].classList.add('prueba');
-//                     parts_colors[10].style.opacity="0";
-//                     audios[10].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '11': coloreadas[11].style.opacity="1";
-//                     coloreadas[11].classList.add('prueba');
-//                     parts_colors[11].style.opacity="0";
-//                    audios[11].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '12': coloreadas[12].style.opacity="1";
-//                     coloreadas[12].classList.add('prueba');
-//                     parts_colors[12].style.opacity="0";
-//                     audios[12].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '13': coloreadas[13].style.opacity="1";
-//                     coloreadas[13].classList.add('prueba');
-//                     parts_colors[13].style.opacity="0";
-//                    audios[13].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '14': coloreadas[14].style.opacity="1";
-//                     coloreadas[14].classList.add('prueba');
-//                     parts_colors[14].style.opacity="0";
-//                    audios[14].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '15': coloreadas[15].style.opacity="1";
-//                     coloreadas[15].classList.add('prueba');
-//                     parts_colors[15].style.opacity="0";
-//                    audios[15].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '16': coloreadas[16].style.opacity="1";
-//                     coloreadas[16].classList.add('prueba');
-//                     parts_colors[16].style.opacity="0";
-//                    audios[16].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//          case '17': coloreadas[17].style.opacity="1";
-//                     coloreadas[17].classList.add('prueba');
-//                     parts_colors[17].style.opacity="0";
-//                    audios[17].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//         case '18': coloreadas[18].style.opacity="1";
-//                     coloreadas[18].classList.add('prueba');
-//                     parts_colors[18].style.opacity="0";
-//                    audios[18].play();
-//                     setTimeout(()=>verificarColor(id), 1600);
-//         return;
-//     }
-// }
+function animatioTab(id) {
+    switch(id){
+        case '0': parts_colors[0].style.opacity="0";
+                  coloreadas[0].style.opacity="1";
+                  coloreadas[0].classList.add('prueba');
+                  audios[0].play();
+                  setTimeout(()=>verificarColor(id), 1600);
+        return;
+        case '1': coloreadas[1].style.opacity="1";
+                  coloreadas[1].classList.add('prueba');
+                  parts_colors[1].style.opacity="0";
+                  audios[1].play();
+                  setTimeout(()=>verificarColor(id), 1600);
+        return;
+        case '2': coloreadas[2].style.opacity="1";
+                  coloreadas[2].classList.add('prueba');
+                  parts_colors[2].style.opacity="0";
+                  audios[2].play();
+                  setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '3': coloreadas[3].style.opacity="1";
+                   coloreadas[3].classList.add('prueba');
+                   parts_colors[3].style.opacity="0";
+                   audios[3].play();
+                   setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '4': coloreadas[4].style.opacity="1";
+                   coloreadas[4].classList.add('prueba');
+                   parts_colors[4].style.opacity="0";
+                   audios[4].play();
+                   setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '5': coloreadas[5].style.opacity="1";
+                   coloreadas[5].classList.add('prueba');
+                   parts_colors[5].style.opacity="0";
+                   audios[5].play();
+                   setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '6': coloreadas[6].style.opacity="1";
+                   coloreadas[6].classList.add('prueba');
+                   parts_colors[6].style.opacity="0";
+                   audios[6].play();
+                   setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '7': coloreadas[7].style.opacity="1";
+                   coloreadas[7].classList.add('prueba');
+                   parts_colors[7].style.opacity="0";
+                  audios[7].play();
+                   setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '8': coloreadas[8].style.opacity="1";
+                   coloreadas[8].classList.add('prueba');
+                   parts_colors[8].style.opacity="0";
+                  audios[8].play();
+                   setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '9': coloreadas[9].style.opacity="1";
+                   coloreadas[9].classList.add('prueba');
+                   parts_colors[9].style.opacity="0";
+                  audios[9].play();
+                   setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '10': coloreadas[10].style.opacity="1";
+                    coloreadas[10].classList.add('prueba');
+                    parts_colors[10].style.opacity="0";
+                    audios[10].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '11': coloreadas[11].style.opacity="1";
+                    coloreadas[11].classList.add('prueba');
+                    parts_colors[11].style.opacity="0";
+                   audios[11].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '12': coloreadas[12].style.opacity="1";
+                    coloreadas[12].classList.add('prueba');
+                    parts_colors[12].style.opacity="0";
+                    audios[12].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '13': coloreadas[13].style.opacity="1";
+                    coloreadas[13].classList.add('prueba');
+                    parts_colors[13].style.opacity="0";
+                   audios[13].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '14': coloreadas[14].style.opacity="1";
+                    coloreadas[14].classList.add('prueba');
+                    parts_colors[14].style.opacity="0";
+                   audios[14].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '15': coloreadas[15].style.opacity="1";
+                    coloreadas[15].classList.add('prueba');
+                    parts_colors[15].style.opacity="0";
+                   audios[15].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '16': coloreadas[16].style.opacity="1";
+                    coloreadas[16].classList.add('prueba');
+                    parts_colors[16].style.opacity="0";
+                   audios[16].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+         case '17': coloreadas[17].style.opacity="1";
+                    coloreadas[17].classList.add('prueba');
+                    parts_colors[17].style.opacity="0";
+                   audios[17].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+        case '18': coloreadas[18].style.opacity="1";
+                    coloreadas[18].classList.add('prueba');
+                    parts_colors[18].style.opacity="0";
+                   audios[18].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+        case '19': coloreadas[19].style.opacity="1";
+                    coloreadas[19].classList.add('prueba');
+                    parts_colors[19].style.opacity="0";
+                   audios[19].play();
+                    setTimeout(()=>verificarColor(id), 1600);
+        return;
+    }
+}
 
-// function verificarColor(id){
-//     //debugger;
-//     On = parts_colors[id].classList.contains("coloresON");
-//     // console.log("EL valor de ON es: ", On);
-//     if(On === true){
-//         // console.log("Entro al if del true del On llamo a la función ValidadVisibility");
-//         // // var sum = 1;
-//         // validarVisibilty();
-//         testing();
-//     }
-//     else{
-//         // console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
-//         removeClass(id);
-//     }
-//     return;
-// }
+function verificarColor(id){
+    //debugger;
+    On = parts_colors[id].classList.contains("coloresON");
+    // console.log("EL valor de ON es: ", On);
+    if(On === true){
+        // console.log("Entro al if del true del On llamo a la función ValidadVisibility");
+        // // var sum = 1;
+        // validarVisibilty();
+        testing();
+    }
+    else{
+        // console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
+        removeClass(id);
+    }
+    return;
+}
 
-// function removeClass(id){
-//     switch(id){
-//         case '0': coloreadas[0].style.opacity="0";
-//                   coloreadas[0].classList.remove('prueba');
-//                   parts_colors[0].style.opacity="1";
-//         return;
-//         case '1': coloreadas[1].style.opacity="0";
-//                   coloreadas[1].classList.remove('prueba');
-//                   parts_colors[1].style.opacity="1";
-//         return;
-//         case '2': coloreadas[2].style.opacity="0";
-//                   coloreadas[2].classList.remove('prueba');
-//                   parts_colors[2].style.opacity="1";
-//         return;
-//         case '3': coloreadas[3].style.opacity="0";
-//                   coloreadas[3].classList.remove('prueba');
-//                   parts_colors[3].style.opacity="1";
-//         return;
-//         case '4': coloreadas[4].style.opacity="0";
-//                   coloreadas[4].classList.remove('prueba');
-//                   parts_colors[4].style.opacity="1";
-//         return;
-//         case '5': coloreadas[5].style.opacity="0";
-//                   coloreadas[5].classList.remove('prueba');
-//                   parts_colors[5].style.opacity="1";
-//         return;
-//         case '6': coloreadas[6].style.opacity="0";
-//                   coloreadas[6].classList.remove('prueba');
-//                   parts_colors[6].style.opacity="1";
-//         return;
-//         case '7': coloreadas[7].style.opacity="0";
-//                   coloreadas[7].classList.remove('prueba');
-//                   parts_colors[7].style.opacity="1";
-//         return;
-//         case '8': coloreadas[8].style.opacity="0";
-//                   coloreadas[8].classList.remove('prueba');
-//                   parts_colors[8].style.opacity="1";
-//         return;
-//         case '9': coloreadas[9].style.opacity="0";
-//                   coloreadas[9].classList.remove('prueba');
-//                   parts_colors[9].style.opacity="1";
-//         return;
-//         case '10': coloreadas[10].style.opacity="0";
-//                    coloreadas[10].classList.remove('prueba');
-//                    parts_colors[10].style.opacity="1";
-//         return;
-//         case '11': coloreadas[11].style.opacity="0";
-//                    coloreadas[11].classList.remove('prueba');
-//                    parts_colors[11].style.opacity="1";
-//         return;
-//         case '12': coloreadas[12].style.opacity="0";
-//                    coloreadas[12].classList.remove('prueba');
-//                    parts_colors[12].style.opacity="1";
-//         return;
-//         case '13': coloreadas[13].style.opacity="0";
-//                    coloreadas[13].classList.remove('prueba');
-//                    parts_colors[13].style.opacity="1";
-//         return;
-//         case '14': coloreadas[14].style.opacity="0";
-//                    coloreadas[14].classList.remove('prueba');
-//                    parts_colors[14].style.opacity="1";
-//         return;
-//         case '15': coloreadas[15].style.opacity="0";
-//                    coloreadas[15].classList.remove('prueba');
-//                    parts_colors[15].style.opacity="1";
-//         return;
-//         case'16': coloreadas[16].style.opacity="0";
-//                   coloreadas[16].classList.remove('prueba');
-//                   parts_colors[16].style.opacity="1";
-//         return
-//         case '17': coloreadas[17].style.opacity="0";
-//                    coloreadas[17].classList.remove('prueba');
-//                    parts_colors[17].style.opacity="1";
-//         case '17': coloreadas[18].style.opacity="0";
-//                    coloreadas[18].classList.remove('prueba');
-//                    parts_colors[18].style.opacity="1";
+function removeClass(id){
+    switch(id){
+        case '0': coloreadas[0].style.opacity="0";
+                  coloreadas[0].classList.remove('prueba');
+                  parts_colors[0].style.opacity="1";
+        return;
+        case '1': coloreadas[1].style.opacity="0";
+                  coloreadas[1].classList.remove('prueba');
+                  parts_colors[1].style.opacity="1";
+        return;
+        case '2': coloreadas[2].style.opacity="0";
+                  coloreadas[2].classList.remove('prueba');
+                  parts_colors[2].style.opacity="1";
+        return;
+        case '3': coloreadas[3].style.opacity="0";
+                  coloreadas[3].classList.remove('prueba');
+                  parts_colors[3].style.opacity="1";
+        return;
+        case '4': coloreadas[4].style.opacity="0";
+                  coloreadas[4].classList.remove('prueba');
+                  parts_colors[4].style.opacity="1";
+        return;
+        case '5': coloreadas[5].style.opacity="0";
+                  coloreadas[5].classList.remove('prueba');
+                  parts_colors[5].style.opacity="1";
+        return;
+        case '6': coloreadas[6].style.opacity="0";
+                  coloreadas[6].classList.remove('prueba');
+                  parts_colors[6].style.opacity="1";
+        return;
+        case '7': coloreadas[7].style.opacity="0";
+                  coloreadas[7].classList.remove('prueba');
+                  parts_colors[7].style.opacity="1";
+        return;
+        case '8': coloreadas[8].style.opacity="0";
+                  coloreadas[8].classList.remove('prueba');
+                  parts_colors[8].style.opacity="1";
+        return;
+        case '9': coloreadas[9].style.opacity="0";
+                  coloreadas[9].classList.remove('prueba');
+                  parts_colors[9].style.opacity="1";
+        return;
+        case '10': coloreadas[10].style.opacity="0";
+                   coloreadas[10].classList.remove('prueba');
+                   parts_colors[10].style.opacity="1";
+        return;
+        case '11': coloreadas[11].style.opacity="0";
+                   coloreadas[11].classList.remove('prueba');
+                   parts_colors[11].style.opacity="1";
+        return;
+        case '12': coloreadas[12].style.opacity="0";
+                   coloreadas[12].classList.remove('prueba');
+                   parts_colors[12].style.opacity="1";
+        return;
+        case '13': coloreadas[13].style.opacity="0";
+                   coloreadas[13].classList.remove('prueba');
+                   parts_colors[13].style.opacity="1";
+        return;
+        case '14': coloreadas[14].style.opacity="0";
+                   coloreadas[14].classList.remove('prueba');
+                   parts_colors[14].style.opacity="1";
+        return;
+        case '15': coloreadas[15].style.opacity="0";
+                   coloreadas[15].classList.remove('prueba');
+                   parts_colors[15].style.opacity="1";
+        return;
+        case'16': coloreadas[16].style.opacity="0";
+                  coloreadas[16].classList.remove('prueba');
+                  parts_colors[16].style.opacity="1";
+        return
+        case '17': coloreadas[17].style.opacity="0";
+                   coloreadas[17].classList.remove('prueba');
+                   parts_colors[17].style.opacity="1";
+        case '18': coloreadas[18].style.opacity="0";
+                   coloreadas[18].classList.remove('prueba');
+                   parts_colors[18].style.opacity="1";
+        case '19': coloreadas[19].style.opacity="0";
+                   coloreadas[19].classList.remove('prueba');
+                   parts_colors[19].style.opacity="1";
         
-//     }
-// }
+    }
+}
 
 // ******************
 //posiciones originales para el iman
-// sasabe 314 152
-// ozahua 19 123
-// oza 673 209
-//anso 678 331
-// neeñe 777 110
-//gonomana 313 334
-// zibu 870 316
-// arozo 821 363
-// gojoanzo 85 328
-//gujinzere 385 404
+// nyently 91 112
+// wuanyan bebia 69 214
+//jomes 108 298
+//Wuanyan bebia 20 362
+// tsebenga 553 418
+// fCab 372 372
+//wansesna 120 423
+//blangan borrachero 141 40 - 419 151
+//teteyes 274 164 - 
+//chilacuan (teteyes) 636 158 - 644 153
 
 
+// buangan 250 288
+//besha 183 404
+//ciyanguillisha 375 424
+//shajuan 805 156
+//mashagbe 525 282
+//sbuachan 681 324
+//pajacan 273 402
+// wasbonesh 335 341
+//rudesha 431 308
+//sabila 454 411
 
-//zeze 134 144 
-//jinjape 601 395 
-//ruri 496 384
-// enene 537 83
-//oyojao 437 259
-// ujaco 434 256 155 305
-
-
-// punpu 277 425
-//susi 578 288
-
-
-
-
-
-
-
-
-
-
-var origX = [314, 19, 673, 678, 777, 313, 870, 821, 85, 385,
-    134,
-    601,
-    496,
-    537,
-    437,
-    155,
-    277,
-
-    577,
-    308];
+var origX = [91, 69, 108, 20, 553, 372, 120, 419, 274, 644, 
+             250, 183, 375, 805, 525, 681, 273, 335, 431, 454];
     
 
-var origY = [152, 123, 209, 331,110, 334, 316, 363, 328, 404,
-    144,
-    395,
-    384,
-    83,
-    259,
-    305,
-    425,
+var origY = [112, 214, 298, 362, 418, 372, 423, 151, 164, 153, 
+             288, 404, 424, 156, 282, 324, 402, 341, 308, 411];
 
-    300,
-328
-    
-    ];
+function iman(idFicha) {
+    // console.log("idFicha en el iman", idFicha);
+    // console.log("esto es lo que tiene parts_clothing", parts_clothing);
+    for(var i=0; i<parts_clothing.length; i++){
+        if(Math.abs(currentPostX-origX[i])<30 && Math.abs(currentPostY-origY[i])<30){
+            // alert("Entro al primer if");
+            // console.log("este es el valor de i", i);
+            if(idFicha == i){
+                // alert("Entro al segundo if");
+                elementSelect.setAttribute("x", origX[i]);
+                elementSelect.setAttribute("y", origY[i]); 
+                // elementSelect.style.opacity="0";
+                elementSelect.classList.add("parts_clotihinOff");
+                pintarFondo(idFicha);
+            }
+        }  
+    }
+}
 
-// function iman(idFicha) {
-//     // console.log("idFicha en el iman", idFicha);
-//     // console.log("esto es lo que tiene parts_clothing", parts_clothing);
-//     for(var i=0; i<parts_clothing.length; i++){
-//         if(Math.abs(currentPostX-origX[i])<30 && Math.abs(currentPostY-origY[i])<30){
-//             // alert("Entro al primer if");
-//             // console.log("este es el valor de i", i);
-//             if(idFicha == i){
-//                 // alert("Entro al segundo if");
-//                 elementSelect.setAttribute("x", origX[i]);
-//                 elementSelect.setAttribute("y", origY[i]); 
-//                 // elementSelect.style.opacity="0";
-//                 elementSelect.classList.add("parts_clotihinOff");
-//                 pintarFondo(idFicha);
-//             }
-//         }  
-//     }
-// }
-
-// function pintarFondo(idFicha){
-//     switch(idFicha){
-//         case '0': coloreadas[0].style.opacity="1";
-//                   parts_colors[0].style.opacity="0";
-//                   parts_colors[0].classList.add("coloresON");
+function pintarFondo(idFicha){
+    switch(idFicha){
+        case '0': coloreadas[0].style.opacity="1";
+                  parts_colors[0].style.opacity="0";
+                  parts_colors[0].classList.add("coloresON");
                   
-//         return;
-//         case '1': coloreadas[1].style.opacity="1";
-//                   parts_colors[1].style.opacity="0";
-//                   parts_colors[1].classList.add("coloresON");
-//         return;
-//         case '2': coloreadas[2].style.opacity="1";
-//                   parts_colors[2].style.opacity="0";
-//                   parts_colors[2].classList.add("coloresON");
-//         return;
-//          case '3': coloreadas[3].style.opacity="1";
-//                    parts_colors[3].style.opacity="0";
-//                    parts_colors[3].classList.add("coloresON");
-//         return;
-//          case '4': coloreadas[4].style.opacity="1";
-//                    parts_colors[4].style.opacity="0";
-//                    parts_colors[4].classList.add("coloresON");
-//         return;
-//          case '5' :  parts_colors[5].style.opacity="0"         
-//                      coloreadas[5].style.opacity="1";
-//                      parts_colors[5].classList.add("coloresON");
-//         return;
-//          case '6': coloreadas[6].style.opacity="1";
-//                    parts_colors[6].style.opacity="0";
-//                    parts_colors[6].classList.add("coloresON");
-//         return;
-//          case '7': coloreadas[7].style.opacity="1";
-//                    parts_colors[7].style.opacity="0";
-//                    parts_colors[7].classList.add("coloresON");
-//         return;
-//          case '8': coloreadas[8].style.opacity="1";
-//                    parts_colors[8].style.opacity="0";
-//                    parts_colors[8].classList.add("coloresON");
-//         return;
-//          case '9': coloreadas[9].style.opacity="1";
-//                    parts_colors[9].style.opacity="0";
-//                    parts_colors[9].classList.add("coloresON");
-//         return;
-//          case '10': coloreadas[10].style.opacity="1";
-//                     parts_colors[10].style.opacity="0";
-//                     parts_colors[10].classList.add("coloresON");
-//         return;
-//          case '11': coloreadas[11].style.opacity="1";
-//                     parts_colors[11].style.opacity="0";
-//                     parts_colors[11].classList.add("coloresON");
-//         return;
-//          case '12': coloreadas[12].style.opacity="1";
-//                     parts_colors[12].style.opacity="0";
-//                     parts_colors[12].classList.add("coloresON");
-//         return;
-//          case '13': coloreadas[13].style.opacity="1";
-//                     parts_colors[13].style.opacity="0";
-//                     parts_colors[13].classList.add("coloresON");
-//         return;
-//          case '14': coloreadas[14].style.opacity="1";
-//                     parts_colors[14].style.opacity="0";
-//                     parts_colors[14].classList.add("coloresON");
-//         return;
-//          case '15': coloreadas[15].style.opacity="1";
-//                     parts_colors[15].style.opacity="0";
-//                     parts_colors[15].classList.add("coloresON");
-//         return;
-//          case '16': coloreadas[16].style.opacity="1";
-//                     parts_colors[16].style.opacity="0";
-//                     parts_colors[16].classList.add("coloresON");
-//         return;
-//          case '17': coloreadas[17].style.opacity="1";
-//                     parts_colors[17].style.opacity="0";
-//                     parts_colors[17].classList.add("coloresON");
-//         return;
-//          case '18': coloreadas[18].style.opacity="1";
-//                     parts_colors[18].style.opacity="0";
-//                     parts_colors[18].classList.add("coloresON");
+        return;
+        case '1': coloreadas[1].style.opacity="1";
+                  parts_colors[1].style.opacity="0";
+                  parts_colors[1].classList.add("coloresON");
+        return;
+        case '2': coloreadas[2].style.opacity="1";
+                  parts_colors[2].style.opacity="0";
+                  parts_colors[2].classList.add("coloresON");
+        return;
+         case '3': coloreadas[3].style.opacity="1";
+                   parts_colors[3].style.opacity="0";
+                   parts_colors[3].classList.add("coloresON");
+        return;
+         case '4': coloreadas[4].style.opacity="1";
+                   parts_colors[4].style.opacity="0";
+                   parts_colors[4].classList.add("coloresON");
+        return;
+         case '5' :  parts_colors[5].style.opacity="0"         
+                     coloreadas[5].style.opacity="1";
+                     parts_colors[5].classList.add("coloresON");
+        return;
+         case '6': coloreadas[6].style.opacity="1";
+                   parts_colors[6].style.opacity="0";
+                   parts_colors[6].classList.add("coloresON");
+        return;
+         case '7': coloreadas[7].style.opacity="1";
+                   parts_colors[7].style.opacity="0";
+                   parts_colors[7].classList.add("coloresON");
+        return;
+         case '8': coloreadas[8].style.opacity="1";
+                   parts_colors[8].style.opacity="0";
+                   parts_colors[8].classList.add("coloresON");
+        return;
+         case '9': coloreadas[9].style.opacity="1";
+                   parts_colors[9].style.opacity="0";
+                   parts_colors[9].classList.add("coloresON");
+        return;
+         case '10': coloreadas[10].style.opacity="1";
+                    parts_colors[10].style.opacity="0";
+                    parts_colors[10].classList.add("coloresON");
+        return;
+         case '11': coloreadas[11].style.opacity="1";
+                    parts_colors[11].style.opacity="0";
+                    parts_colors[11].classList.add("coloresON");
+        return;
+         case '12': coloreadas[12].style.opacity="1";
+                    parts_colors[12].style.opacity="0";
+                    parts_colors[12].classList.add("coloresON");
+        return;
+         case '13': coloreadas[13].style.opacity="1";
+                    parts_colors[13].style.opacity="0";
+                    parts_colors[13].classList.add("coloresON");
+        return;
+         case '14': coloreadas[14].style.opacity="1";
+                    parts_colors[14].style.opacity="0";
+                    parts_colors[14].classList.add("coloresON");
+        return;
+         case '15': coloreadas[15].style.opacity="1";
+                    parts_colors[15].style.opacity="0";
+                    parts_colors[15].classList.add("coloresON");
+        return;
+         case '16': coloreadas[16].style.opacity="1";
+                    parts_colors[16].style.opacity="0";
+                    parts_colors[16].classList.add("coloresON");
+        return;
+         case '17': coloreadas[17].style.opacity="1";
+                    parts_colors[17].style.opacity="0";
+                    parts_colors[17].classList.add("coloresON");
+        return;
+        case '18': coloreadas[18].style.opacity="1";
+                    parts_colors[18].style.opacity="0";
+                    parts_colors[18].classList.add("coloresON");
+        case '19': coloreadas[19].style.opacity="1";
+                    parts_colors[19].style.opacity="0";
+                    parts_colors[19].classList.add("coloresON");
        
-//     }
-// }
+    }
+}
 
 // var win = document.getElementById("bien");
 // var fondo = document.getElementById("audio_fondo");
 // var fondo2 = document.getElementById("ifremaAudio");
 
-// function testing(){
-//     var sum = 0;
-//     for(let i=0; i < parts_clothing.length; i++){
-//         verClass = parts_clothing[i].classList.contains("parts_clotihinOff");
-//         if(verClass === true){
-//             sum +=1;
-//             // console.log("sum tiene", sum);
-//         }
+function testing(){
+    var sum = 0;
+    for(let i=0; i < parts_clothing.length; i++){
+        verClass = parts_clothing[i].classList.contains("parts_clotihinOff");
+        if(verClass === true){
+            sum +=1;
+            // console.log("sum tiene", sum);
+        }
 
-//     }
-//     if(sum === 19){
-//         setTimeout(()=>gameCompleted(), 1200);
-//     }
-//     if(sum === 10){
-//         // console.log("ENTRO AL PRIMER IF SUM == A 10");
-//         visibility();
-//     }
-//     // if(sum === 19){
-//     //     console.log("ENTRO AL SEGUNDO IF SUM == A 19");
-//     //     visibility();
-//     // }
-// }   
+    }
+    if(sum === 19){
+        setTimeout(()=>gameCompleted(), 1200);
+    }
+    if(sum === 10){
+        // console.log("ENTRO AL PRIMER IF SUM == A 10");
+        visibility();
+    }
+    // if(sum === 20){
+    //     console.log("ENTRO AL SEGUNDO IF SUM == A 19");
+    //     visibility();
+    // }
+}   
 
-// function gameCompleted(){
-//      console.log("gano");
-//     // fondo.pause();
-//     // //fondo2.pause();
-//     // win.play();
-//     audios[19].play();
-//     fondo[0].style.opacity="0";
-//     fondo[1].style.opacity="1";
+function gameCompleted(){
+     console.log("gano");
+    // fondo.pause();
+    // //fondo2.pause();
+    // win.play();
+    audios[20].play();
+    fondo[0].style.opacity="0";
+    fondo[1].style.opacity="1";
 
-// }
+}

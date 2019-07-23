@@ -28,15 +28,15 @@ var tamWidth = [];
 //alto
 var tamHeight = [];
 
-for(var i=0; i<=28; i++){
+for(var i=0; i<=parts_clothing.length; i++){
     tamWidth[i]=141;
     tamHeight[i]=40
 }
 
 //posición en X
-var posX = [115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 194, 352, 508, 655, 115, 274, 432, 589, 733, 194, 352, 508, 655];
+var posX = [115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 115, 274, 432, 589];
 //posición en Y 475
-var posY = [477, 477, 477, 477, 477, 519, 519, 519, 519, 519,477, 477, 477, 477, 477, 519, 519, 519, 519, 477, 477, 477, 477, 477, 519, 519, 519, 519];
+var posY = [477, 477, 477, 477, 477, 519, 519, 519, 519, 519,477, 477, 477, 477, 477, 519, 519, 519, 519, 519, 477, 477, 477, 477, 477, 519, 519, 519, 519, 519];
 
 for(var i=0; i<parts_clothing.length; i++){
     
@@ -73,7 +73,7 @@ var max = 27;
 function visibility() {
     // parts_clothing = parts_fichas;
     // console.log("esto tiene parts_clothing en visibility", parts_clothing);
-        for(let i=0; i<9; i++){
+        for(let i=0; i<10; i++){
             parts_clothing[i].style.visibility="visible";
         }
 }
@@ -470,8 +470,25 @@ function removeClass(id){
 
 // ******************
 //posiciones originales para el iman
-var origX = [200, 275,450,450,160,528,363,517,650,670,0,395,650,764,512,593,775,929,800,335,10,302,63,790,230,198,288,170];
-var origY = [80, 45, 320,218,238,405,358,223,300,216,368,422,332,326,420,253,250,312,228,166,160,280,0,15,298,302,320,380];
+
+// Apicha-khw 410 335 
+// Tsaikhi 117 386
+// Na-eki 476 258
+// Kwtichu 574 179
+// Arapa 189 416
+
+// Bumbuhi 834 119
+// Chanange 642 320
+// Fambi 439 384
+// Gwthupasi 526 23
+//Ihi. 641 397
+
+var origX = [410,117,476,574,189,
+             834,642,439,526,641,
+             0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var origY = [335,386,258,179,416,
+             119,320,384,23,397,
+             0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 function iman(idFicha) {
     // console.log("idFicha en el iman", idFicha);
@@ -628,14 +645,14 @@ function testing(){
         }
 
     }
-    if(sum === 28){
+    if(sum === 29){
         setTimeout(()=>gameCompleted(), 1200);
     }
     if(sum === 10){
         console.log("ENTRO AL PRIMER IF SUM == A 10");
         visibility();
     }
-    if(sum === 19){
+    if(sum === 20){
         console.log("ENTRO AL SEGUNDO IF SUM == A 19");
         visibility();
     }

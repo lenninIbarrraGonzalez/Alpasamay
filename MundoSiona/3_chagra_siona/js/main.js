@@ -368,7 +368,7 @@ function removeClass(id){
         case '17': coloreadas[17].style.opacity="0";
                    coloreadas[17].classList.remove('prueba');
                    parts_colors[17].style.opacity="1";
-        case '17': coloreadas[18].style.opacity="0";
+        case '18': coloreadas[18].style.opacity="0";
                    coloreadas[18].classList.remove('prueba');
                    parts_colors[18].style.opacity="1";
         
