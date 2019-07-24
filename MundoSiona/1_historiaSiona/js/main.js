@@ -53,6 +53,9 @@ function personajeSaludo(){
 subHistoria.classList.toggle('desaparecer')
 btnCanoa.style.display="none"
 audios[1].play();
+	setTimeout(()=>{
+		window.open("../2_territorioSiona/index.html", "_self");
+	},18000);
 })
 	
 

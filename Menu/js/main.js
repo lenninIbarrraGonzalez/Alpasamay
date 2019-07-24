@@ -39,19 +39,19 @@ function msn(ev) {
   switch(dataZona) {
      case 'z-kamentsa' : 
       startAnimation(dataZona);
-      goPresentation();
+      goKamentsa();
       return 
      case 'z-inga' : 
       startAnimation(dataZona);
-      goPresentation();
+      goInga();
        return 
      case 'z-ziona' : 
       startAnimation(dataZona);
-      goPresentation();
+      goZiona();
       return 
      case 'z-cofan' : 
       startAnimation(dataZona);
-      goPresentation();
+      goCofan();
       return 
   }
 }
@@ -98,9 +98,27 @@ function startAnimation(dataZona) {
     }
   }
   
-function goPresentation() {
+function goInga() {
   setTimeout(()=> {
-    window.open("../Puzzle/index.html", "_self");
+    window.open("../MundoInga/1_historiaInga/index.html", "_self");
+  },6000);
+}
+
+function goKamentsa() {
+  setTimeout(()=> {
+    window.open("../MundoKamentsa/1_historiaKamentsa/index.html", "_self");
+  },6000);
+}
+
+function goCofan() {
+  setTimeout(()=> {
+    window.open("../MundoCofan/1_historiaCofan/index.html", "_self");
+  },6000);
+}
+
+function goZiona() {
+  setTimeout(()=> {
+    window.open("../MundoSiona/1_historiaSiona/index.html", "_self");
   },6000);
 }
 

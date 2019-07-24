@@ -66,7 +66,7 @@ function secondEstation(){
 function removerSecond(){
 	abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 	abuela.style.animationName="";
-	// audiosTejidos[1].play();
+	audiosTejidos[1].play();
 	letrero2.classList.add("aparecer");
 	simbolo2.classList.add("prueba");
 		setTimeout(()=>{
@@ -96,7 +96,7 @@ function removerThird(){
 	
 	abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 	abuela.style.animationName="";
-	// audiosTejidos[2].play();
+	audiosTejidos[2].play();
 	letrero3.classList.add("aparecer");
 	simbolo3.classList.add("prueba");
 		setTimeout(()=>{
@@ -126,7 +126,8 @@ function final(){
 	 subAgradecimiento.classList.toggle('desaparecer')
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
-	// audiosTejidos[3].play();
+	audiosTejidos[3].play();
+
 }
 
 

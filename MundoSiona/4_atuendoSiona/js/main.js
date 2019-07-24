@@ -321,4 +321,8 @@ function gameCompleted(){
         humanCol[i].style.opacity="1";
     }
     audios[7].play();
+
+    setTimeout(()=>{
+        window.open("../5_tejidoSiona/index.html", "_self");
+    },3000);
 }

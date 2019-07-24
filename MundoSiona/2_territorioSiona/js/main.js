@@ -725,4 +725,15 @@ function gameCompleted(){
         winerColor[x].style.opacity="1";
     }
     audios[29].play();
+
+    setTimeout(()=>{
+        window.open("../3_chagraSiona/index.html", "_self");
+    },3000);
+
 }
+
+// function next (){
+//     setTimeout(()=>{
+//         window.open("../3_chagraSiona/index.html", "_self");
+//     },1000);
+// }
