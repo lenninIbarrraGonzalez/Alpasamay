@@ -8,6 +8,7 @@ const simbolo3=document.querySelector('#simbolo-3');
 const letrero1=document.querySelector('#letrero-1');
 const letrero2=document.querySelector('#letrero-2');
 const letrero3=document.querySelector('#letrero-3');
+var subAgradecimiento=document.getElementById('subAgradecimiento');
 
 const btnStart = document.getElementById('ruedaCompleta');
 
@@ -119,6 +120,7 @@ function exitEstation(){
 
 function final(){
 	abuela.setAttribute("xlink:href", "./img/cofan-saludo.png");
+	subAgradecimiento.classList.toggle('desaparecer')
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
 	audiosTejidos[3].play();

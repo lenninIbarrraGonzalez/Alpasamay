@@ -6,6 +6,9 @@ var fondocolor=document.getElementById('fondo-color');
 const btnRueda=document.getElementById('id_rueda');
 
 const audios = document.getElementsByClassName('audios');
+var subSaludo=document.getElementById('subSaludo');
+var subHistoria=document.getElementById('subHistoria');
+
 
 
 
@@ -22,6 +25,7 @@ function inicio(){
 	btnRueda.classList.remove('click');
 	btnRueda.classList.add('rueda');
 
+
 	var movimiento=setTimeout(function(){
 		abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 		//
@@ -36,7 +40,7 @@ function inicio(){
 
 function personajeSaludo(){
 	abuela.setAttribute("xlink:href", "./img/kame-saludo.png");
-   
+	 subSaludo.classList.toggle('desaparecer')   
 	audios[0].play();
 	setTimeout(()=>{
 	   personajeStop();
@@ -52,6 +56,8 @@ function personajeStop(){
 }
 
 pajaro.addEventListener('click', function(){
+	subSaludo.classList.toggle('desaparecer')
+subHistoria.classList.toggle('desaparecer')
 	pajaro.style.display="none";
 	audios[1].play();
 })

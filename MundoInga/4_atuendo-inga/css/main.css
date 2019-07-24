@@ -1,13 +1,23 @@
-/* html{
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/grid.png');
-    margin: 0;
-} */
+/*modifique body y lienzo*/
+
+body {
+  margin: 0;
+  
+  background-image: url('../img/fondo-hojas.jpg');    
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  height: 100vh;
+
+}
 
 #lienzo{
-    /*background: green;*/
-    border: 1px solid red;
-    margin: 0 auto;
-    display: block;
+  
+  margin: 50px auto;
+  display: block;
+  border-radius: 7px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.3)
 }
 .rectangulo{
   opacity: 1

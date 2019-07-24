@@ -5,12 +5,18 @@
 
 body {
   margin: 0;
-  /* background-image: url('skyBackground.png');         */
-  background: #7ed6df;
+  background-image: url('../img/img-menu/fondo-hojas.png');    
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+ 
   /* display: flex;
   align-items: center;
   justify-content: center; */
   margin: 0;
+  height: 100vh;
+
 }
 
 .principal-menu{

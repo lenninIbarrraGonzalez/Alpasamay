@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-image: url('../img/fondo-hojas.png');    
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+ 
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+  height: 100vh;
+
+}
+
+
+
+#lienzo{
+  /*background: green;*/
+  position: relative;
+  
+  margin: 50px auto;
+  display: block;
+
+}
+
+
+#texto{
+  transform: translateY(-2280px);
+  transition: 35s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+
+
+}
+
+

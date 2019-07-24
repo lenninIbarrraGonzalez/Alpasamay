@@ -2,6 +2,9 @@ const fondo = document.getElementById('mover');
 const btnArbol = document.getElementById('arbol');
 const btnRueda = document.getElementById('ruedaBn');
 const abuela = document.getElementById('abuela');
+var subSaludo=document.getElementById('subSaludo');
+var subHistoria=document.getElementById('subHistoria');
+
 
 const audios = document.getElementsByClassName('audios');
 
@@ -31,6 +34,7 @@ function inicio(){
 
 function personajeSaludo(){
 	abuela.setAttribute("xlink:href", "./img/kofan-saludo.png");
+	 subSaludo.classList.toggle('desaparecer')
 	audios[0].play();
 	setTimeout(()=>{
 	 personajeStop();
@@ -45,6 +49,8 @@ function personajeStop(){
 }
 
 btnArbol.addEventListener("click", function(){
+subSaludo.classList.toggle('desaparecer')
+subHistoria.classList.toggle('desaparecer')	
 btnArbol.style.display="none"
 audios[1].play();
 })

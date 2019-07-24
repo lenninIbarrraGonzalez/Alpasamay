@@ -7,8 +7,10 @@ var simbolo3=document.querySelector('#simbolo-3');
 var letrero1=document.querySelector('#letrero-1');
 var letrero2=document.querySelector('#letrero-2');
 var letrero3=document.querySelector('#letrero-3');
+var subAgradecimiento=document.getElementById('subAgradecimiento');
 
 const btnStart = document.getElementById('ruedaCompleta');
+
 
 
 // var audiosTejidos = document.getElementsByClassName('audio');
@@ -121,6 +123,7 @@ function exitEstation(){
 
 function final(){
 	abuela.setAttribute("xlink:href", "./img/siona-saludo.png");
+	 subAgradecimiento.classList.toggle('desaparecer')
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
 	// audiosTejidos[3].play();

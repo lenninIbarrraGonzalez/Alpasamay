@@ -2,6 +2,9 @@ const fondo = document.getElementById('mover');
 const btnCanoa = document.getElementById('canoa');
 const btnRueda = document.getElementById('ruedaBn');
 const abuela = document.getElementById('abuela');
+var subSaludo=document.getElementById('subSaludo');
+var subHistoria=document.getElementById('subHistoria');
+
 
 const audios = document.getElementsByClassName('audio');
 
@@ -31,6 +34,7 @@ function inicio(){
 
 function personajeSaludo(){
 	abuela.setAttribute("xlink:href", "./img/siona-saludo.png");
+	subSaludo.classList.toggle('desaparecer')
 	audios[0].play();
 	setTimeout(()=>{
 	 personajeStop();
@@ -45,6 +49,8 @@ function personajeSaludo(){
  }
 
  btnCanoa.addEventListener("click", function(){
+ 	subSaludo.classList.toggle('desaparecer')
+subHistoria.classList.toggle('desaparecer')
 btnCanoa.style.display="none"
 audios[1].play();
 })
