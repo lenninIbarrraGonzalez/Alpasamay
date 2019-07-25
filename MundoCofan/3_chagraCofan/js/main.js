@@ -519,7 +519,11 @@ function gameCompleted(){
         jungleColor[cont].style.opacity = "1";
     }
    
-    // bien[0].play();
+    audios
+
+    setTimeout(()=>{
+        window.open("../4_atuendoCofan/index.html", "_self");
+    },3000);
 }
 
 

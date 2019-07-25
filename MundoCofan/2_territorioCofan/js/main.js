@@ -706,4 +706,7 @@ function gameCompleted(){
         winerColor[x].style.opacity="1";
     }
     audios[29].play();
+    setTimeout(()=>{
+        window.open("../3_chagraCofan/index.html", "_self");
+    },3000);
 }

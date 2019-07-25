@@ -362,5 +362,7 @@ function gameCompleted(){
         humanBn[i].style.opacity="0";
         humanCol[i].style.opacity="1";
     }
-    // win.play();
+    setTimeout(()=>{
+        window.open("../5_tejidoCofan/index.html", "_self");
+    },3000);
 }

@@ -56,6 +56,9 @@ montanacolor.style.display="none"
 subSaludo.classList.toggle('desaparecer')
 subHistoria.classList.toggle('desaparecer')
 audios[1].play();
+	setTimeout(()=>{
+		window.open("../2_territorioInga/index.html", "_self");
+	},18000);
 })
 
 

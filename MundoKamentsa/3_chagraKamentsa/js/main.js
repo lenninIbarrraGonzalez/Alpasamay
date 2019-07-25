@@ -549,11 +549,13 @@ function testing(){
 
 function gameCompleted(){
      console.log("gano");
-    // fondo.pause();
-    // //fondo2.pause();
-    // win.play();
+    
     audios[20].play();
     fondo[0].style.opacity="0";
     fondo[1].style.opacity="1";
+
+    setTimeout(()=>{
+        window.open("../4_atuendoKamentsa/index.html", "_self");
+    },3000);
 
 }

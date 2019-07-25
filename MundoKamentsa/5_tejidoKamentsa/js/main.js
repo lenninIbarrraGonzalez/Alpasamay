@@ -126,6 +126,10 @@ function final(){
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
 	audiosTejidos[3].play();
+
+	setTimeout(()=>{
+		window.open("../../Menu/menu.html", "_self");
+	}, 9000);
 }
 
 

@@ -60,6 +60,9 @@ pajaro.addEventListener('click', function(){
 subHistoria.classList.toggle('desaparecer')
 	pajaro.style.display="none";
 	audios[1].play();
+	setTimeout(()=>{
+		window.open("../2_territorioKamentsa/index.html", "_self");
+	},14000);
 })
 
 

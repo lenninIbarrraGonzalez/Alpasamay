@@ -13,7 +13,7 @@ const btnStart = document.getElementById('ruedaCompleta');
 
 
 
-// var audiosTejidos = document.getElementsByClassName('audio');
+var audiosTejidos = document.getElementsByClassName('audio');
 
 
 btnStart.addEventListener('click', start);
@@ -38,7 +38,7 @@ function firstEstation(){
 function removerFirst(){
 abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 abuela.style.animationName="";
-// audiosTejidos[0].play();
+audiosTejidos[0].play();
 letrero1.classList.add("aparecer");
 simbolo1.classList.add("prueba");
 		setTimeout(()=>{
@@ -127,7 +127,9 @@ function final(){
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
 	audiosTejidos[3].play();
-
+	setTimeout(()=>{
+		window.open("../../Menu/menu.html", "_self");
+	}, 6000);
 }
 
 

@@ -732,8 +732,3 @@ function gameCompleted(){
 
 }
 
-// function next (){
-//     setTimeout(()=>{
-//         window.open("../3_chagraSiona/index.html", "_self");
-//     },1000);
-// }

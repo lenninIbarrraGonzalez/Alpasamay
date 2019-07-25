@@ -53,5 +53,8 @@ subSaludo.classList.toggle('desaparecer')
 subHistoria.classList.toggle('desaparecer')	
 btnArbol.style.display="none"
 audios[1].play();
+	setTimeout(()=>{
+		window.open("../2_territorioCofan/index.html", "_self");
+	},14000);
 })
 	

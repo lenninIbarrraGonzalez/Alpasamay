@@ -348,5 +348,9 @@ function gameCompleted(){
         humanCol[i].style.opacity="1";
     }
     audios[10].play();
+
+    setTimeout(()=>{
+        window.open("../5_tejidoKamentsa/index.html", "_self");
+    },3000);
    
 }

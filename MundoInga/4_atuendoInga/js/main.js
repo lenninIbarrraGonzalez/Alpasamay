@@ -362,4 +362,7 @@ function gameCompleted(){
         humanCol[i].style.opacity="1";
     }
     // win.play();
+    setTimeout(()=>{
+        window.open("../5_TejidoInga/index.html", "_self");
+    },3000);
 }

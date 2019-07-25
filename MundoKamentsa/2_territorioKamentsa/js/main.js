@@ -598,4 +598,7 @@ function gameCompleted(){
         winerColor[x].style.opacity="1";
     }
     audios[22].play();
+    setTimeout(()=>{
+        window.open("../3_chagraKamentsa/index.html", "_self");
+    },3000);
 }

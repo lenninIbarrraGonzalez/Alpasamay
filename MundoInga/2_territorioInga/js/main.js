@@ -659,5 +659,7 @@ function gameCompleted(){
     }
 
     audios[28].play();
-   
+    setTimeout(()=>{
+        window.open("../3_chagraInga/index.html", "_self");
+    },3000);
 }
