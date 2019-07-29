@@ -695,7 +695,7 @@ function testing(){
 }   
 
 function gameCompleted(){
-    
+    audios[29].play();
     console.log("gano");
    
     for(var i =0; i < (winerBn.length)-1; i++){
@@ -705,7 +705,7 @@ function gameCompleted(){
     for(var x =0; x < winerColor.length; x++){
         winerColor[x].style.opacity="1";
     }
-    audios[29].play();
+   
     setTimeout(()=>{
         window.open("../3_chagraCofan/index.html", "_self");
     },3000);

@@ -14,8 +14,8 @@ var humanCol = document.getElementsByClassName("colorear_human");
 // var tamWidth = [113, 108, 81, 28, 43, 105, 149, 52, 61, 28];
 // var tamHeight = [96, 140, 39, 23, 51, 168, 180, 55, 60, 23];
 
-var posX = [570,556,612,779,763,808,801,777];
-var posY = [310,157,101,290,122,118,189,34];
+var posX = [570,556,612,779,763,808,801,777, 910];
+var posY = [310,157,101,290,122,118,189,34, 200];
 // debugger;
 for(let i = 0; i < parts_clothing.length; i++){
     // parts_clothing[i].setAttribute("width", tamWidth[i]);
@@ -171,6 +171,13 @@ function animatioTab(id){
                    audios[6].play();
                    setTimeout(()=>verificarColor(id), 1600);
                    return;
+
+        case '8' : parts_colors[8].style.opacity = "0";
+                   coloreadas[8].style.opacity = "1";
+                   coloreadas[8].classList.add("prueba");
+                   audios[8].play();
+                   setTimeout(()=>verificarColor(id), 1600);
+                   return;
     }
 }
 
@@ -226,13 +233,17 @@ function removeClass(id){
                   coloreadas[7].classList.remove('prueba');
                   parts_colors[7].style.opacity="1";
                   return;
+        case '8': coloreadas[8].style.opacity="0";
+                  coloreadas[8].classList.remove('prueba');
+                  parts_colors[8].style.opacity="1";
+                  return;
     }
 }
 
 
 //posiciones originales para el iman
-const origX = [105, 93,  144, 321, 305, 353, 345, 321];
-const origY = [273, 154, 153, 293, 123, 128, 123, 3];
+const origX = [105, 93,  144, 321, 305, 353, 345, 321, 445];
+const origY = [273, 154, 153, 293, 123, 128, 123, 3, 67];
 
 function iman(idFicha){
     // console.log("idFicha en el iman", idFicha);
@@ -288,6 +299,10 @@ function pintarFondo(idFicha){
                    parts_colors[7].style.opacity="0";
                    parts_colors[7].classList.add("coloresON");
         return;
+        case '8': coloreadas[8].style.opacity="1";
+                   parts_colors[8].style.opacity="0";
+                   parts_colors[8].classList.add("coloresON");
+        return;
     }
 }
 
@@ -302,7 +317,7 @@ function testing(){
         }
 
     }
-    if(sum === 8){
+    if(sum === 9){
         setTimeout(()=>gameCompleted(), 1200);
     }
    

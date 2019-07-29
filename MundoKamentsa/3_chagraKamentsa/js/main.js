@@ -2,6 +2,9 @@ const audios = document.getElementsByClassName("audio");
 
 const fondo = document.getElementsByClassName("fondo");
 
+const winerColor = document.getElementsByClassName("colorearVacio");
+const winerBn = document.getElementsByClassName("clothingVacio");
+
 var bien_ubicadas = 0;
 var ban_bien_ubicadas = 0;
 var verClass;
@@ -36,9 +39,9 @@ for(var i=0; i<=19; i++){
 }
 
 //posición en X
-var posX = [115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 115, 274, 432, 589, 733];
+var posX = [115, 274, 432, 589, 733, 115, 274, 432, 589, 733,115, 274, 432, 589, 733, 115, 274, 432, 589];
 //posición en Y 475
-var posY = [477, 477, 477, 477, 477, 519, 519, 519, 519, 519,477, 477, 477, 477, 477, 519, 519, 519, 519, 519];
+var posY = [477, 477, 477, 477, 477, 519, 519, 519, 519, 519,477, 477, 477, 477, 477, 519, 519, 519, 519];
 
 for(var i=0; i<parts_clothing.length; i++){
     
@@ -275,12 +278,12 @@ function animatioTab(id) {
                    audios[18].play();
                     setTimeout(()=>verificarColor(id), 1600);
         return;
-        case '19': coloreadas[19].style.opacity="1";
-                    coloreadas[19].classList.add('prueba');
-                    parts_colors[19].style.opacity="0";
-                   audios[19].play();
-                    setTimeout(()=>verificarColor(id), 1600);
-        return;
+        // case '19': coloreadas[19].style.opacity="1";
+        //             coloreadas[19].classList.add('prueba');
+        //             parts_colors[19].style.opacity="0";
+        //            audios[19].play();
+        //             setTimeout(()=>verificarColor(id), 1600);
+        // return;
     }
 }
 
@@ -377,9 +380,9 @@ function removeClass(id){
         case '18': coloreadas[18].style.opacity="0";
                    coloreadas[18].classList.remove('prueba');
                    parts_colors[18].style.opacity="1";
-        case '19': coloreadas[19].style.opacity="0";
-                   coloreadas[19].classList.remove('prueba');
-                   parts_colors[19].style.opacity="1";
+        // case '19': coloreadas[19].style.opacity="0";
+        //            coloreadas[19].classList.remove('prueba');
+        //            parts_colors[19].style.opacity="1";
         
     }
 }
@@ -401,7 +404,7 @@ function removeClass(id){
 // buangan 250 288
 //besha 183 404
 //ciyanguillisha 375 424
-//shajuan 805 156
+//shajuan 805 156 878 320
 //mashagbe 525 282
 //sbuachan 681 324
 //pajacan 273 402
@@ -409,12 +412,12 @@ function removeClass(id){
 //rudesha 431 308
 //sabila 454 411
 
-var origX = [91, 69, 108, 20, 553, 372, 120, 419, 274, 644, 
-             250, 183, 375, 805, 525, 681, 273, 335, 431, 454];
+var origX = [91, 69, 108, 20, 553, 372, 120, 419, 274, 
+             250, 183, 375, 878, 525, 681, 273, 335, 431, 454];
     
 
-var origY = [112, 214, 298, 362, 418, 372, 423, 151, 164, 153, 
-             288, 404, 424, 156, 282, 324, 402, 341, 308, 411];
+var origY = [112, 214, 298, 362, 418, 372, 423, 151, 164, 
+             288, 404, 424, 320, 282, 324, 402, 341, 308, 411];
 
 function iman(idFicha) {
     // console.log("idFicha en el iman", idFicha);
@@ -513,9 +516,9 @@ function pintarFondo(idFicha){
         case '18': coloreadas[18].style.opacity="1";
                     parts_colors[18].style.opacity="0";
                     parts_colors[18].classList.add("coloresON");
-        case '19': coloreadas[19].style.opacity="1";
-                    parts_colors[19].style.opacity="0";
-                    parts_colors[19].classList.add("coloresON");
+        // case '19': coloreadas[19].style.opacity="1";
+        //             parts_colors[19].style.opacity="0";
+        //             parts_colors[19].classList.add("coloresON");
        
     }
 }
@@ -534,7 +537,7 @@ function testing(){
         }
 
     }
-    if(sum === 19){
+    if(sum === 18){
         setTimeout(()=>gameCompleted(), 1200);
     }
     if(sum === 10){
@@ -550,9 +553,17 @@ function testing(){
 function gameCompleted(){
      console.log("gano");
     
-    audios[20].play();
+    audios[19].play();
     fondo[0].style.opacity="0";
     fondo[1].style.opacity="1";
+
+    for(var i =0; i < (winerBn.length)-1; i++){
+        winerBn[i].style.opacity="0";
+    }
+    
+    for(var x =0; x < winerColor.length; x++){
+        winerColor[x].style.opacity="1";
+    }
 
     setTimeout(()=>{
         window.open("../4_atuendoKamentsa/index.html", "_self");

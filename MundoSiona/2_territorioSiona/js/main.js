@@ -523,17 +523,13 @@ function removeClass(id){
 
 
 
-var origX = [473,199,85,707,526,
+var origX = [473,85,707,526,
              812,697,553,297,57,
-
-
              295,893,772,329,792,
              652,920,776,682,280,
-
-
-             274,436,91,97,381,
+             274,436,91,97,
              846,86,152,197];
-var origY = [308,383,244,395,327,
+var origY = [308,244,395,327,
              410,322,402,394,373,
 
 
@@ -541,7 +537,7 @@ var origY = [308,383,244,395,327,
              356,316,13,252,23,
 
            
-             341,369,415,20,288,
+             341,369,415,20,
              343,328,329,335];
 
 function iman(idFicha) {
@@ -700,7 +696,7 @@ function testing(){
         }
 
     }
-    if(sum === 29){
+    if(sum === 27){
         setTimeout(()=>gameCompleted(), 1200);
     }
     if(sum === 10){
@@ -724,7 +720,7 @@ function gameCompleted(){
     for(var x =0; x < winerColor.length; x++){
         winerColor[x].style.opacity="1";
     }
-    audios[29].play();
+    audios[27].play();
 
     setTimeout(()=>{
         window.open("../3_chagraSiona/index.html", "_self");

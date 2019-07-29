@@ -4,6 +4,9 @@ const bien = document.getElementsByClassName("bien");
 const jungleBn = document.getElementsByClassName("jungleBn");
 const jungleColor = document.getElementsByClassName("jungleColor");
 
+const winerColor = document.getElementsByClassName("colorearVacio");
+const winerBn = document.getElementsByClassName("clothingVacio");
+
 var bien_ubicadas = 0;
 var ban_bien_ubicadas = 0;
 var verClass;
@@ -385,7 +388,7 @@ var origX = [555, 589, 43, 774,
              477, 116, 133, 425,
              291, 362, 400, 815,
              671, 615, 717, 276];
-var origY = [282, 144, 81, 114,
+var origY = [282, 144, 351, 114,
              388, 235, 381, 94, 
              125, 388, 317, 319,
              336, 390, 395, 352];
@@ -509,6 +512,7 @@ function testing(){
 
 function gameCompleted(){
     console.log("gano");
+    audios[16].play();
     // fondo.pause();
     //fondo2.pause();
     // console.log("estotiene jungleBn", jungleBn);
@@ -519,7 +523,15 @@ function gameCompleted(){
         jungleColor[cont].style.opacity = "1";
     }
    
-    audios
+    for(var i =0; i < (winerBn.length)-1; i++){
+        winerBn[i].style.opacity="0";
+    }
+    
+    for(var x =0; x < winerColor.length; x++){
+        winerColor[x].style.opacity="1";
+    }
+
+    
 
     setTimeout(()=>{
         window.open("../4_atuendoCofan/index.html", "_self");
