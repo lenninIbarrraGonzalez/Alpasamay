@@ -514,17 +514,15 @@ function removeClass(id){
 //Yaya-caensya 242 319
 
 var origX = [410,117,476,574,189,
-             834,642,439,526,641,
-             539,879,394,757,518,
-             880,96,615,783,196,
+             834,642,526,641,
+             539,879,757,880,96,615,783,196,
              788,803,756,329,85,
-             341,422,327,242];
+             341,327,242];
 var origY = [335,386,258,179,416,
-             119,320,384,23,397,
-             420,317,413,309,333,
-             230,24,254,13,331,
+             119,320,23,397,
+             420,317,309,230,24,254,13,331,
              372,274,235,367,256,
-             196,359,33,319];
+             196,33,319];
 
 function iman(idFicha) {
     // console.log("idFicha en el iman", idFicha);
@@ -681,7 +679,7 @@ function testing(){
         }
 
     }
-    if(sum === 29){
+    if(sum === 25){
         setTimeout(()=>gameCompleted(), 1200);
     }
     if(sum === 10){
@@ -695,7 +693,7 @@ function testing(){
 }   
 
 function gameCompleted(){
-    audios[29].play();
+    audios[25].play();
     console.log("gano");
    
     for(var i =0; i < (winerBn.length)-1; i++){
