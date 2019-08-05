@@ -7,7 +7,9 @@ var abuela=document.getElementById('abuela');
 var subSaludo=document.getElementById('subSaludo');
 var subHistoria=document.getElementById('subHistoria');
 
-abuela.setAttribute("xlink:href", "./img/inga-frente.png");
+abuela.setAttribute("width","1012.68")
+abuela.setAttribute("xlink:href", "./img/inga-frente.png",);
+
 
 ruedaBn.addEventListener('click', inicio);
 
@@ -15,13 +17,16 @@ function inicio(){
 	fondoMover.classList.add('mover');
 	ruedaBn.classList.add('rueda');
 	abuela.setAttribute("xlink:href", "./img/inga-abuela.png");
+	abuela.setAttribute("width","1156")
 	abuela.classList.add('abuela');
 	ruedaBn.removeEventListener('click', inicio);
+	
 	ruedaBn.classList.remove('click');
 
 	var movimiento=setTimeout(function(){
 		abuela.setAttribute("xlink:href", "./img/inga-frente.png");
-		//
+		abuela.setAttribute("width","1012.68")
+
 		abuela.classList.add("saludo");
 		
 			setTimeout(()=>{
@@ -35,7 +40,7 @@ function inicio(){
 function personajeSaludo(){
  abuela.setAttribute("xlink:href", "./img/inga-saludo.png");
  subSaludo.classList.toggle('desaparecer')
-
+ abuela.setAttribute("width","1012.68")
 // console.log(audioSaludo);
  audios[0].play();
  setTimeout(()=>{
@@ -45,6 +50,8 @@ function personajeSaludo(){
 
 function personajeStop(){
 	abuela.setAttribute("xlink:href", "./img/inga-frente.png");
+	abuela.setAttribute("width","1012.68")
+
 	// audioSaludo[0].play();
 	montanacolor.classList.add("prueba");
 	montanacolor.style.opacity = "1";
