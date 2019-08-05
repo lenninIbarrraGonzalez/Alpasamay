@@ -34,7 +34,6 @@ function firstEstation(){
 	abuela.setAttribute("xlink:href", "./img/cofan-abuela.png");
 	rueda.classList.add("rodar15")
 	abuela.style.animationName="caminar";
-	
 	setTimeout(()=>{
 		removerFirst();
 	},3500)
@@ -45,9 +44,9 @@ function removerFirst(){
 	abuela.setAttribute("xlink:href", "./img/cofan-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[0].play();
-	letrero1.classList.add("desaparecer");
+	letrero1.classList.add("aparecer");
 	simbolo1.classList.add("prueba");
-	letrero1.classList.toggle('desaparecer')
+	letrero1.desaparecer
 			setTimeout(()=>{
 			 hideMsnFirst();
 			},15000)
@@ -76,10 +75,11 @@ function removerSecond(){
 	abuela.setAttribute("xlink:href", "./img/cofan-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[1].play();
-	letrero1.classList.toggle('desaparecer');
+	
 	letrero2.classList.add("aparecer");
 	simbolo2.classList.add("prueba");
-	letrero2.classList.toggle('desaparecer')
+	
+
 		setTimeout(()=>{
 		 hideMsnSecond();
 		},15000)
@@ -108,10 +108,8 @@ function removerThird(){
 	abuela.setAttribute("xlink:href", "./img/cofan-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[2].play();
-	letrero2.classList.toggle('desaparecer');
 	letrero3.classList.add("aparecer");
 	simbolo3.classList.add("prueba");
-	letrero3.classList.toggle('desaparecer')
 		setTimeout(()=>{
 			hideMsnSThird();
 		},15000)
@@ -127,7 +125,6 @@ function hideMsnSThird(){
 function exitEstation(){
 	abuela.setAttribute("width","1156")
 	fondo.style.transform="translateX(-330px)";
-	letrero3.classList.toggle('desaparecer');
 	abuela.setAttribute("xlink:href", "./img/cofan-abuela.png"); 
   rueda.style.transform="rotate(-110deg)";
   abuela.style.animationName="caminar";

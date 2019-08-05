@@ -93,6 +93,7 @@ opacity: 0;
 }
 
 .prueba{
+ 
   animation: color 6s ease-in-out;
   transform-origin: center center;
 }
@@ -175,8 +176,9 @@ transition: height 1.5s;
 }
 
 .aparecer{
+  display: inline;
 transition: height 1.5s;
-height: 214px 
+height: 214px ;
 }
 
 .simbolo:hover{
