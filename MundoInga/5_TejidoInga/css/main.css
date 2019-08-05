@@ -169,13 +169,13 @@ body {
   }
 
 .oculto{
-  height: 0px;
-  transition: height 1.5s;
+  opacity: 0;
+  transition: all 1.2s;
 }
 
 .aparecer{
- transition: height 1.5s;
- height: 214px 
+ transition: all 1.2s;
+ opacity: 1
 }
 
 .simbolo:hover{
