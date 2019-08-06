@@ -600,5 +600,5 @@ function gameCompleted(){
     audios[22].play();
     setTimeout(()=>{
         window.open("../3_chagraKamentsa/index.html", "_self");
-    },3000);
+    },6000);
 }

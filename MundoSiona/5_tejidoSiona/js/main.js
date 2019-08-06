@@ -21,6 +21,7 @@ abuela.setAttribute("width","1012.68")
 abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 
 function start(){
+	audiosTejidos[4].play();
 	btnStart.removeEventListener('click', start);
 	btnStart.classList.remove("simbolo");
 	firstEstation();

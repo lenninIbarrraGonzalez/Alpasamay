@@ -14,6 +14,7 @@ abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 btnRueda.addEventListener('click', inicio);
 
 function inicio(){
+	audios[2].play();
 	fondo.classList.add('mover');
 	btnRueda.classList.add('rueda');
 	abuela.setAttribute("xlink:href", "./img/siona-abuela.png");

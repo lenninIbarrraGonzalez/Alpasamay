@@ -15,7 +15,7 @@ abuela.setAttribute("xlink:href", "./img/kame-frente.png",);
 btnRueda.addEventListener('click', inicio);
 
 function inicio(){
-	
+	audios[2].play();
 	fondocolor.classList.add('mover');
 	abuela.setAttribute("xlink:href", "./img/kame-abuela.png")
 	abuela.setAttribute("width","1156")
