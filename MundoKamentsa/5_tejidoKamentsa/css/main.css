@@ -175,6 +175,7 @@ transition: height 1.5s;
 }
 
 .aparecer{
+display: inline;
 transition: height 1.5s;
 height: 214px 
 }
