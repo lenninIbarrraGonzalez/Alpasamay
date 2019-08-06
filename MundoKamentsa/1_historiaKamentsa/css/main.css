@@ -103,15 +103,6 @@ animation-timing-function: linear ;
   transform: translateX(-1012.68px);
 }
 }
-
-
-
-
-
-
-
-
-
 /* mover montaña */
 .prueba{
 animation: color 2s ease-in-out infinite;

@@ -9,10 +9,8 @@ const audios = document.getElementsByClassName('audios');
 var subSaludo=document.getElementById('subSaludo');
 var subHistoria=document.getElementById('subHistoria');
 
-
-
-
-abuela.setAttribute("xlink:href", "./img/kame-frente.png");
+abuela.setAttribute("width","1012.68")
+abuela.setAttribute("xlink:href", "./img/kame-frente.png",);
 
 btnRueda.addEventListener('click', inicio);
 
@@ -20,6 +18,7 @@ function inicio(){
 	
 	fondocolor.classList.add('mover');
 	abuela.setAttribute("xlink:href", "./img/kame-abuela.png")
+	abuela.setAttribute("width","1156")
 	abuela.classList.add('abuela');
 	btnRueda.removeEventListener('click', inicio);
 	btnRueda.classList.remove('click');
@@ -28,6 +27,7 @@ function inicio(){
 
 	var movimiento=setTimeout(function(){
 		abuela.setAttribute("xlink:href", "./img/kame-frente.png");
+		abuela.setAttribute("width","1012.68")
 		//
 		abuela.classList.add("saludo");
 		
@@ -40,7 +40,8 @@ function inicio(){
 
 function personajeSaludo(){
 	abuela.setAttribute("xlink:href", "./img/kame-saludo.png");
-	 subSaludo.classList.toggle('desaparecer')   
+	 subSaludo.classList.toggle('desaparecer')  
+	 abuela.setAttribute("width","1012.68") 
 	audios[0].play();
 	setTimeout(()=>{
 	   personajeStop();
@@ -49,20 +50,20 @@ function personajeSaludo(){
 
 function personajeStop(){
 	abuela.setAttribute("xlink:href", "./img/kame-frente.png");
-	
+	abuela.setAttribute("width","1012.68")
 	pajaro.classList.add("prueba");
 	pajaro.style.opacity = "1";
 	pajaro.classList.add('click');
 }
 
 pajaro.addEventListener('click', function(){
-	subSaludo.classList.toggle('desaparecer')
-subHistoria.classList.toggle('desaparecer')
 	pajaro.style.display="none";
+	subSaludo.classList.toggle('desaparecer')
+	subHistoria.classList.toggle('desaparecer')
 	audios[1].play();
 	setTimeout(()=>{
 		window.open("../2_territorioKamentsa/index.html", "_self");
-	},14000);
+	},18000);
 })
 
 
