@@ -349,7 +349,7 @@ function testing(){
    
 }
 
-// var win = document.getElementById("bien");
+ var win = document.getElementById("bien");
 function gameCompleted(){
     // console.log("gano");
     // console.log(humanBn);
@@ -361,8 +361,8 @@ function gameCompleted(){
         humanBn[i].style.opacity="0";
         humanCol[i].style.opacity="1";
     }
-    // win.play();
+     win.play();
     setTimeout(()=>{
         window.open("../5_TejidoInga/index.html", "_self");
-    },3000);
+    },6000);
 }

@@ -379,6 +379,7 @@ function removeClass(id){
 // mirena 173 256 
 // pullito ambi 348 300
 // puka borrachero 246 348
+
 // sara 735 172
 // menta 440 375 
 // azultugtu 370 379
@@ -387,8 +388,12 @@ function removeClass(id){
 // namis 45 210
 // sicsi 6 308
 
-var origX = [186, 560, 493, 580, 528, 520, 660, 460, 173, 348, 246, 735, 440, 370, 540, 640, 45, 6];
-var origY = [15, 108, 220, 300, 318, 370, 225, 310, 256, 300, 348, 172, 375, 379, 417, 375, 210, 308];
+var origX = [226, 609, 493, 580, 528, 520, 
+             699, 460, 173, 348, 246, 
+             788, 440, 370, 540, 640, 45, 6];
+var origY = [54, 158, 220, 300, 318, 370, 
+             328, 310, 256, 300, 348, 
+             283, 375, 379, 417, 375, 210, 308];
 
 function iman(idFicha) {
     // console.log("idFicha en el iman", idFicha);
@@ -526,5 +531,5 @@ function gameCompleted(){
     bien[0].play();
     setTimeout(()=>{
         window.open("../4_atuendoInga/index.html", "_self");
-    },3000);
+    },6000);
 }

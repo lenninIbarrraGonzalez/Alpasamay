@@ -13,6 +13,7 @@ abuela.setAttribute("xlink:href", "./img/kofan-frente.png",);
 btnRueda.addEventListener('click', inicio);
 
 function inicio(){
+	audios[2].play();
 	fondo.classList.add('mover');
 	btnRueda.classList.add('rueda');
 	abuela.setAttribute("xlink:href", "./img/kofan-abuela.png");

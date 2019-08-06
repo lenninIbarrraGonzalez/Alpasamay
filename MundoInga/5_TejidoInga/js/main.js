@@ -25,6 +25,7 @@ function start(){
 }
 
 function firstEstation(){
+	audiosTejidos[4].play();
 	abuela.setAttribute("width","1156")
 	fondo.style.transform="translateX(-82px)";
 	abuela.setAttribute("xlink:href", "./img/inga-abuela.png");

@@ -20,7 +20,7 @@ function inicio(){
 	abuela.setAttribute("width","1156")
 	abuela.classList.add('abuela');
 	ruedaBn.removeEventListener('click', inicio);
-	
+	audios[2].play();
 	ruedaBn.classList.remove('click');
 
 	var movimiento=setTimeout(function(){
@@ -65,7 +65,7 @@ subHistoria.classList.toggle('desaparecer')
 audios[1].play();
 	setTimeout(()=>{
 		window.open("../2_territorioInga/index.html", "_self");
-	},18000);
+	},23000);
 })
 
 

@@ -23,6 +23,7 @@ letrero3.classList.add("desaparecer");
 
 
 function start(){
+	audiosTejidos[4].play();
 	btnStart.removeEventListener('click', start);
 	btnStart.classList.remove("simbolo");
 	firstEstation();
