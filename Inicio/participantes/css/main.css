@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background-image: url('../img/fondo-hojas.png');    
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+ 
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+  height: 100vh;
+
+}
+
+
+
+#lienzo{
+  /*background: green;*/
+  position: relative;
+  
+  margin: 50px auto;
+  display: block;
+
+}
+
+
+.texto{
+ 
+  animation-name: mover;
+  animation-duration: 50s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+
+ @keyframes mover {
+    0%{
+      /* opacity: 0.3; */
+     transform: translateY(0px);          
+    }
+    
+    100%{
+     transform: translateY(-2900px); 
+
+    }
+ 
+ 
+  }
+
+.texto:hover {
+  animation-play-state: paused;
+}
+
+
+
+
+.clothing:hover{
+animation-name: movimiento;  
+animation-iteration-count: infinite;
+animation-duration: 0.5s;
+animation-direction: alternate-reverse;
+cursor: pointer;
+}
+
+
+
+  @keyframes movimiento {
+    0%{
+      /* opacity: 0.3; */
+      transform: translateY(0px); 
+      opacity: 1             
+    }
+      50%{
+      /* opacity: 0.3; */
+     transform: translateY(10px);
+      opacity: 0.9   
+               
+    }
+    100%{
+      transform: translateY(0px); 
+       opacity: 1
+
+    }
+ 
+ 
+  }
+
+
+
