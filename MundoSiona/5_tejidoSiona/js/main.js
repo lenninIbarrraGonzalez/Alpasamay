@@ -10,13 +10,14 @@ var letrero3=document.querySelector('#letrero-3');
 var subAgradecimiento=document.getElementById('subAgradecimiento');
 
 const btnStart = document.getElementById('ruedaCompleta');
-
-
-
 var audiosTejidos = document.getElementsByClassName('audio');
 
+letrero1.classList.add("desaparecer");
+letrero2.classList.add("desaparecer");
+letrero3.classList.add("desaparecer");
 
 btnStart.addEventListener('click', start);
+abuela.setAttribute("width","1012.68")
 abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 
 function start(){
@@ -26,6 +27,7 @@ function start(){
 }
 
 function firstEstation(){
+	abuela.setAttribute("width","1156")
 	fondo.style.transform="translateX(-90px)";
 	abuela.setAttribute("xlink:href", "./img/siona-abuela.png");
 	rueda.classList.add("rodar15")
@@ -36,6 +38,7 @@ function firstEstation(){
 }
 
 function removerFirst(){
+abuela.setAttribute("width","1012.68")
 abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 abuela.style.animationName="";
 audiosTejidos[0].play();
@@ -54,6 +57,7 @@ function hideMsnFirst(){
 }
 
 function secondEstation(){
+	abuela.setAttribute("width","1156")
 	fondo.style.transform="translateX(-140px)";
  	abuela.setAttribute("xlink:href", "./img/siona-abuela.png");
  	rueda.style.transform="rotate(-50deg)";
@@ -64,6 +68,7 @@ function secondEstation(){
 }
 
 function removerSecond(){
+	abuela.setAttribute("width","1012.68")
 	abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[1].play();
@@ -83,6 +88,7 @@ function hideMsnSecond(){
 }
 
 function thirdEstation(){
+	abuela.setAttribute("width","1156");
   fondo.style.transform="translateX(-240px)";
   abuela.setAttribute("xlink:href", "./img/siona-abuela.png"); 
   rueda.style.transform="rotate(-80deg)"
@@ -93,7 +99,7 @@ function thirdEstation(){
 }
 
 function removerThird(){
-	
+	abuela.setAttribute("width","1012.68")
 	abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[2].play();
@@ -112,9 +118,10 @@ function hideMsnSThird(){
 }
 
 function exitEstation(){
+	abuela.setAttribute("width","1156")
 	fondo.style.transform="translateX(-330px)";
 	abuela.setAttribute("xlink:href", "./img/siona-abuela.png"); 
-	rueda.style.transform="rotate(-132deg)";
+	rueda.style.transform="rotate(-138deg)";
   	abuela.style.animationName="caminar";
   	setTimeout(()=>{		
 		final();	
@@ -123,7 +130,8 @@ function exitEstation(){
 
 function final(){
 	abuela.setAttribute("xlink:href", "./img/siona-saludo.png");
-	 subAgradecimiento.classList.toggle('desaparecer')
+	abuela.setAttribute("width","1012.68") 
+	subAgradecimiento.classList.toggle('desaparecer')
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
 	audiosTejidos[3].play();
