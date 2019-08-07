@@ -7,15 +7,16 @@ var simbolo3=document.querySelector('#simbolo-3');
 var letrero1=document.querySelector('#letrero-1');
 var letrero2=document.querySelector('#letrero-2');
 var letrero3=document.querySelector('#letrero-3');
-
 var letrero = document.getElementsByClassName("oculto");
 var subAgradecimiento=document.getElementById('subAgradecimiento');
-
 const btnStart = document.getElementById('ruedaCompleta');
-
-
 var audiosTejidos = document.getElementsByClassName('audio');
 
+var monbn = document.getElementById('id_montanas_bn');
+var moncol = document.getElementById('id_montanas_col');
+
+monbn.style.opacity="1";
+moncol.style.opacity="0";
 
 // letrero1.classList.add("desaparecer");
 // letrero2.classList.add("desaparecer");
@@ -147,11 +148,13 @@ function final(){
 	abuela.classList.add("saludo");
 	audiosTejidos[3].play();
 
-	subAgradecimiento.classList.toggle('desaparecer')
+	subAgradecimiento.classList.toggle('desaparecer');
+	monbn.style.opacity="0";
+	moncol.style.opacity="1";
 
 	setTimeout(()=>{
 		window.open("../../Menu/menu.html", "_self");
-	}, 9000);
+	}, 15000);
 }
 
 
