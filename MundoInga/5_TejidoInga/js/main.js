@@ -8,6 +8,8 @@ var letrero1=document.querySelector('#letrero-1');
 var letrero2=document.querySelector('#letrero-2');
 var letrero3=document.querySelector('#letrero-3');
 var subAgradecimiento=document.getElementById('subAgradecimiento');
+var fondos = document.getElementsByClassName("fondo");
+
 
 const btnStart = document.getElementById('ruedaCompleta');
 
@@ -138,6 +140,8 @@ function final(){
 	 subAgradecimiento.classList.toggle('desaparecer')
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
+	fondos[0].style.opacity="0";
+	fondos[1].style.opacity="1";
 	audiosTejidos[3].play();
 	setTimeout(()=>{
 		window.open("../../Menu/menu.html", "_self");

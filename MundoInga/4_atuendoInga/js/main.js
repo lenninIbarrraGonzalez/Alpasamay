@@ -10,6 +10,8 @@ var coloreadas= document.getElementsByClassName("colorear");
 var humanBn = document.getElementsByClassName("clothing_humanBn");
 var humanCol = document.getElementsByClassName("colorear_human");
 
+var muybien = document.getElementById("id_muybien");
+
 //medidas de las piezas ancho por alto
 // collar mujer = 43 x 51
 // blusa mujer = 113 x 96
@@ -22,6 +24,7 @@ var humanCol = document.getElementsByClassName("colorear_human");
 // pantalo hombre = 105 x 168
 // pañuelo hombre = 61 x 60
 // flores hombre = 28 x 23
+muybien.style.opacity="0";
 
 var tamWidth = [113, 108, 81, 28, 43, 105, 149, 52, 61, 28];
 var tamHeight = [96, 140, 39, 23, 51, 168, 180, 55, 60, 23];
@@ -361,6 +364,7 @@ function gameCompleted(){
         humanBn[i].style.opacity="0";
         humanCol[i].style.opacity="1";
     }
+     muybien.style.opacity="1";
      win.play();
     setTimeout(()=>{
         window.open("../5_TejidoInga/index.html", "_self");
