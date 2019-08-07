@@ -7,14 +7,22 @@ var simbolo3=document.querySelector('#simbolo-3');
 var letrero1=document.querySelector('#letrero-1');
 var letrero2=document.querySelector('#letrero-2');
 var letrero3=document.querySelector('#letrero-3');
+
+var monbn = document.getElementById('id_montanas_bn');
+var moncol = document.getElementById('id_montanas_col');
+
+monbn.style.opacity="1";
+moncol.style.opacity="0";
+
+var letrero = document.getElementsByClassName("oculto");
 var subAgradecimiento=document.getElementById('subAgradecimiento');
 
 const btnStart = document.getElementById('ruedaCompleta');
 var audiosTejidos = document.getElementsByClassName('audio');
 
-letrero1.classList.add("desaparecer");
-letrero2.classList.add("desaparecer");
-letrero3.classList.add("desaparecer");
+// letrero1.classList.add("desaparecer");
+// letrero2.classList.add("desaparecer");
+// letrero3.classList.add("desaparecer");
 
 btnStart.addEventListener('click', start);
 abuela.setAttribute("width","1012.68")
@@ -43,7 +51,7 @@ abuela.setAttribute("width","1012.68")
 abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 abuela.style.animationName="";
 audiosTejidos[0].play();
-letrero1.classList.add("aparecer");
+letrero[0].classList.add("aparecer");
 simbolo1.classList.add("prueba");
 		setTimeout(()=>{
 		 hideMsnFirst();
@@ -51,7 +59,7 @@ simbolo1.classList.add("prueba");
 }
 
 function hideMsnFirst(){
-	letrero1.classList.remove("aparecer");
+	letrero[0].classList.remove("aparecer");
 		setTimeout(()=>{
 			secondEstation();
 		},1200)
@@ -73,7 +81,7 @@ function removerSecond(){
 	abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[1].play();
-	letrero2.classList.add("aparecer");
+	letrero[1].classList.add("aparecer");
 	simbolo2.classList.add("prueba");
 		setTimeout(()=>{
 		 hideMsnSecond();
@@ -81,7 +89,7 @@ function removerSecond(){
 }
 
 function hideMsnSecond(){
-	letrero2.classList.remove("aparecer");
+	letrero[1].classList.remove("aparecer");
 	setTimeout(()=>{
 		
 		thirdEstation();
@@ -104,7 +112,8 @@ function removerThird(){
 	abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[2].play();
-	letrero3.classList.add("aparecer");
+	
+	letrero[2].classList.add("aparecer");
 	simbolo3.classList.add("prueba");
 		setTimeout(()=>{
 			hideMsnSThird();
@@ -112,7 +121,7 @@ function removerThird(){
 }
 
 function hideMsnSThird(){
-	letrero3.classList.remove("aparecer");
+	letrero[2].classList.remove("aparecer");
 		setTimeout(()=>{
 			exitEstation();
 		},1200)
@@ -131,14 +140,20 @@ function exitEstation(){
 
 function final(){
 	abuela.setAttribute("xlink:href", "./img/siona-saludo.png");
-	abuela.setAttribute("width","1012.68") 
-	subAgradecimiento.classList.toggle('desaparecer')
+	abuela.setAttribute("width","1012.68");
+
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
 	audiosTejidos[3].play();
+
+	monbn.style.opacity="0";
+	moncol.style.opacity="1";
+
+	subAgradecimiento.classList.toggle('desaparecer')
+	
 	setTimeout(()=>{
 		window.open("../../Menu/menu.html", "_self");
-	}, 6000);
+	}, 9000);
 }
 
 

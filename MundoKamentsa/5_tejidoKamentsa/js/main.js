@@ -28,7 +28,9 @@ abuela.setAttribute("width","1012.68")
 abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 
 function start(){
-	  audiosTejidos[4].play();
+		
+		audiosTejidos[4].play();
+		
 		btnStart.removeEventListener('click', start);
 		btnStart.classList.remove("simbolo");
 		firstEstation();
@@ -51,7 +53,7 @@ abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 abuela.style.animationName="";
 audiosTejidos[0].play();
 letrero[0].classList.add("aparecer");
-// simbolo1.classList.add("prueba");
+simbolo1.classList.add("prueba");
 		setTimeout(()=>{
 		 hideMsnFirst();
 		},20000)
@@ -81,7 +83,7 @@ function removerSecond(){
 	abuela.style.animationName="";
 	audiosTejidos[1].play();
 	letrero[1].classList.add("aparecer");
-	// simbolo2.classList.add("prueba");
+	simbolo2.classList.add("prueba");
 		setTimeout(()=>{
 		 hideMsnSecond();
 		},20000)
@@ -112,7 +114,7 @@ function removerThird(){
 	abuela.style.animationName="";
 	audiosTejidos[2].play();
 	letrero[2].classList.add("aparecer");
-	// simbolo3.classList.add("prueba");
+	simbolo3.classList.add("prueba");
 		setTimeout(()=>{
 			hideMsnSThird();
 		},20000)
@@ -137,7 +139,7 @@ function exitEstation(){
 }
 
 function final(){
-	debugger
+	//debugger
 	abuela.setAttribute("width","1012.68")
 	abuela.setAttribute("xlink:href", "./img/kame-saludo.png");
 	

@@ -11,6 +11,10 @@ var humanBn = document.getElementsByClassName("clothing_humanBn");
 var humanCol = document.getElementsByClassName("colorear_human");
 
 
+var fondotexto = document.getElementById('id_bien');
+
+fondotexto.style.opacity="0";
+
 // var tamWidth = [113, 108, 81, 28, 43, 105, 149, 52, 61, 28];
 // var tamHeight = [96, 140, 39, 23, 51, 168, 180, 55, 60, 23];
 
@@ -336,8 +340,8 @@ function gameCompleted(){
         humanCol[i].style.opacity="1";
     }
     audios[7].play();
-
+    fondotexto.style.opacity="1";
     setTimeout(()=>{
         window.open("../5_tejidoSiona/index.html", "_self");
-    },3000);
+    },6000);
 }
