@@ -10,6 +10,9 @@ var coloreadas= document.getElementsByClassName("colorear");
 var humanBn = document.getElementsByClassName("clothing_humanBn");
 var humanCol = document.getElementsByClassName("colorear_human");
 
+var texto = document.getElementById('id_texto');
+
+texto.style.opacity='0';
 
 // var tamWidth = [113, 108, 81, 28, 43, 105, 149, 52, 61, 28];
 // var tamHeight = [96, 140, 39, 23, 51, 168, 180, 55, 60, 23];
@@ -348,7 +351,7 @@ function gameCompleted(){
         humanCol[i].style.opacity="1";
     }
     audios[10].play();
-
+    texto.style.opacity='1';
     setTimeout(()=>{
         window.open("../5_tejidoKamentsa/index.html", "_self");
     },6000);
