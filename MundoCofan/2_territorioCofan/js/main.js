@@ -706,5 +706,5 @@ function gameCompleted(){
    
     setTimeout(()=>{
         window.open("../3_chagraCofan/index.html", "_self");
-    },6000);
+    },9000);
 }

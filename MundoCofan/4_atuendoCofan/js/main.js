@@ -10,6 +10,10 @@ var coloreadas= document.getElementsByClassName("colorear");
 var humanBn = document.getElementsByClassName("clothing_humanBn");
 var humanCol = document.getElementsByClassName("colorear_human");
 
+var muybien = document.getElementById('id_muybien');
+
+muybien.style.opacity="0";
+
 //medidas de las piezas ancho por alto
 // collar mujer = 43 x 51
 // blusa mujer = 113 x 96
@@ -362,6 +366,9 @@ function gameCompleted(){
         humanBn[i].style.opacity="0";
         humanCol[i].style.opacity="1";
     }
+    muybien.style.opacity="1";
+    //no tiene audio
+
     setTimeout(()=>{
         window.open("../5_tejidoCofan/index.html", "_self");
     },6000);

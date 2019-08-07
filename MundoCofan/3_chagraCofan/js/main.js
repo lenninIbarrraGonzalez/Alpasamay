@@ -535,7 +535,7 @@ function gameCompleted(){
 
     setTimeout(()=>{
         window.open("../4_atuendoCofan/index.html", "_self");
-    },6000);
+    },9000);
 }
 
 
