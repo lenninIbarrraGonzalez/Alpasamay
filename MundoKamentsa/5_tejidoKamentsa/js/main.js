@@ -7,6 +7,8 @@ var simbolo3=document.querySelector('#simbolo-3');
 var letrero1=document.querySelector('#letrero-1');
 var letrero2=document.querySelector('#letrero-2');
 var letrero3=document.querySelector('#letrero-3');
+
+var letrero = document.getElementsByClassName("oculto");
 var subAgradecimiento=document.getElementById('subAgradecimiento');
 
 const btnStart = document.getElementById('ruedaCompleta');
@@ -15,9 +17,9 @@ const btnStart = document.getElementById('ruedaCompleta');
 var audiosTejidos = document.getElementsByClassName('audio');
 
 
-letrero1.classList.add("desaparecer");
-letrero2.classList.add("desaparecer");
-letrero3.classList.add("desaparecer");
+// letrero1.classList.add("desaparecer");
+// letrero2.classList.add("desaparecer");
+// letrero3.classList.add("desaparecer");
 
 
 
@@ -48,15 +50,15 @@ abuela.setAttribute("width","1012.68")
 abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 abuela.style.animationName="";
 audiosTejidos[0].play();
-letrero1.classList.add("aparecer");
-simbolo1.classList.add("prueba");
+letrero[0].classList.add("aparecer");
+// simbolo1.classList.add("prueba");
 		setTimeout(()=>{
 		 hideMsnFirst();
-		},15000)
+		},20000)
 }
 
 function hideMsnFirst(){
-	letrero1.classList.remove("aparecer");
+	letrero[0].classList.remove("aparecer");
 		setTimeout(()=>{
 			secondEstation();
 		},1200)
@@ -78,15 +80,15 @@ function removerSecond(){
 	abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[1].play();
-	letrero2.classList.add("aparecer");
-	simbolo2.classList.add("prueba");
+	letrero[1].classList.add("aparecer");
+	// simbolo2.classList.add("prueba");
 		setTimeout(()=>{
 		 hideMsnSecond();
-		},15000)
+		},20000)
 }
 
 function hideMsnSecond(){
-	letrero2.classList.remove("aparecer");
+	letrero[1].classList.remove("aparecer");
 	setTimeout(()=>{
 		
 		thirdEstation();
@@ -109,15 +111,15 @@ function removerThird(){
 	abuela.setAttribute("xlink:href", "./img/kame-frente.png");
 	abuela.style.animationName="";
 	audiosTejidos[2].play();
-	letrero3.classList.add("aparecer");
-	simbolo3.classList.add("prueba");
+	letrero[2].classList.add("aparecer");
+	// simbolo3.classList.add("prueba");
 		setTimeout(()=>{
 			hideMsnSThird();
-		},15000)
+		},20000)
 }
 
 function hideMsnSThird(){
-	letrero3.classList.remove("aparecer");
+	letrero[2].classList.remove("aparecer");
 		setTimeout(()=>{
 			exitEstation();
 		},1200)
@@ -135,12 +137,15 @@ function exitEstation(){
 }
 
 function final(){
+	debugger
 	abuela.setAttribute("width","1012.68")
 	abuela.setAttribute("xlink:href", "./img/kame-saludo.png");
-	subAgradecimiento.classList.toggle('desaparecer')
+	
 	abuela.style.animationName="";
 	abuela.classList.add("saludo");
 	audiosTejidos[3].play();
+
+	subAgradecimiento.classList.toggle('desaparecer')
 
 	setTimeout(()=>{
 		window.open("../../Menu/menu.html", "_self");

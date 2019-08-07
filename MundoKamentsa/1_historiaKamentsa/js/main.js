@@ -63,7 +63,7 @@ pajaro.addEventListener('click', function(){
 	audios[1].play();
 	setTimeout(()=>{
 		window.open("../2_territorioKamentsa/index.html", "_self");
-	},18000);
+	},22000);
 })
 
 

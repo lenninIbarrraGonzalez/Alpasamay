@@ -170,14 +170,12 @@ animation-iteration-count: infinite;
 }
 
 .oculto{
-height: 0px;
-transition: height 1.5s;
+opacity: 0;
 }
 
 .aparecer{
-display: inline;
-transition: height 1.5s;
-height: 214px 
+opacity: 1;
+
 }
 
 .simbolo:hover{

@@ -351,6 +351,6 @@ function gameCompleted(){
 
     setTimeout(()=>{
         window.open("../5_tejidoKamentsa/index.html", "_self");
-    },3000);
+    },6000);
    
 }
