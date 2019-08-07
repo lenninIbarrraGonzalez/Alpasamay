@@ -531,5 +531,5 @@ function gameCompleted(){
     bien[0].play();
     setTimeout(()=>{
         window.open("../4_atuendoInga/index.html", "_self");
-    },6000);
+    },8000);
 }
