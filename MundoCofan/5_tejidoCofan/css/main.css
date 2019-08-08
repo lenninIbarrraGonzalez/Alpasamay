@@ -1,5 +1,3 @@
-/*modifique body y lienzo*/
-
 body {
   margin: 0;
   
@@ -37,7 +35,7 @@ opacity: 0
 opacity: 0;
 }
 .desaparecer{
-display: none
+display: none;
 }
 
 .grid{
@@ -145,7 +143,6 @@ opacity: 0;
   }
 }
 
-/*abuela caminando*/
 .abuela{
 animation-duration:1.2s;
 animation-timing-function: steps(8);
@@ -153,9 +150,6 @@ animation-iteration-count: 3;
 animation-fill-mode:forwards;
 }
 
-
-
-/*abuela estatica y saludondo*/
 .saludo{
 animation:saludo 1.2s steps(7);
 animation-iteration-count: infinite;

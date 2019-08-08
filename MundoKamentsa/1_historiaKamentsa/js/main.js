@@ -1,6 +1,5 @@
 var abuela=document.querySelector('#abuela')
 var pajaro=document.querySelector('#pajaroAnim')
-// var montanacolor=document.querySelector('#montanacolor');
 var fondocolor=document.getElementById('fondo-color');
 
 const btnRueda=document.getElementById('id_rueda');

@@ -25,9 +25,6 @@ montanacol.style.opacity="0";
 btnStart.addEventListener('click', start);
 abuela.setAttribute("width","1012.68")
 abuela.setAttribute("xlink:href", "./img/cofan-frente.png");
-// letrero1.classList.add("desaparecer");
-// letrero2.classList.add("desaparecer");
-// letrero3.classList.add("desaparecer");
 
 
 function start(){

@@ -8,28 +8,10 @@ var bien_ubicadas = 0;
 var ban_bien_ubicadas = 0;
 var verClass;
 var On;
-// El evento onMouseDown sucede cuando el usuario pulsa un botón del ratón.
-// El evento onMouseMove tiene lugar cuando el usuario mueve el cursor del ratón.
-// El evento onMouseUp se genera cuando se deja de pulsar un botón del ratón.
-//guardamos las plabras en idioma
 var parts_clothing = document.getElementsByClassName('parts');
-// console.log("esto tiene parts_clothing", parts_clothing);
-
-
-// const parts_fichas = document.getElementsByClassName('parts');
-// console.log("esto tiene parts_fichas", parts_clothing);
-
-//guardamos los elemento en blanco y negro
 var parts_colors = document.getElementsByClassName('clothing');
-//console.log("parts_colors", parts_colors);
-//guardamos los elementos copia a color 
 var coloreadas = document.getElementsByClassName('colorear');
-
-//medida de ancho y alto de cada pieza en los arrays
-
-//ancho
 var tamWidth = [];
-//alto
 var tamHeight = [];
 
 for(var i=0; i<=28; i++){
@@ -37,20 +19,13 @@ for(var i=0; i<=28; i++){
     tamHeight[i]=40
 }
 
-//posición en X
 var posX = [115, 274, 432, 589, 733, 194, 352, 508, 655, 115, 274, 432, 589, 733, 194, 352, 508, 655];
-//posición en Y 475
 var posY = [477, 477, 477, 477, 477, 519, 519, 519, 519, 477, 477, 477, 477, 477, 519, 519, 519, 519];
 
 for(var i=0; i<parts_clothing.length; i++){
     
-    //agregamos con setAtrribute el ancho y alto de las imagenes en partes
     parts_clothing[i].setAttribute("width", tamWidth[i]);
     parts_clothing[i].setAttribute("height", tamHeight[i]);
-
-    //agregamos la posición de forma aleatoria sin sobreponerse a la imagen
-    // parts_clothing[i].setAttribute("x", Math.floor((Math.random()*10+1)));
-    // parts_clothing[i].setAttribute("y", Math.floor((Math.random()*409+1)));+
     parts_clothing[i].setAttribute("x", posX[i]);
     parts_clothing[i].setAttribute("y", posY[i]);
     if(i < 9){
@@ -61,11 +36,6 @@ for(var i=0; i<parts_clothing.length; i++){
     }
     parts_clothing[i].setAttribute("onmousedown", "seleccionarElemento(evt)");
 }
-// mousedown se activa cuando el botón de un dispositivo apuntador 
-//(usualmente el botón de un ratón) es presionado en un elemento.
-
-//inicializamos variables para almacenar información del movimiento
-//current position->posicion actual
 var elementSelect = 0;
 var currentX = 0;
 var currentY = 0;
@@ -75,58 +45,31 @@ var min = 0;
 var max = 27;
 
 function visibility() {
-    // parts_clothing = parts_fichas;
-    // console.log("esto tiene parts_clothing en visibility", parts_clothing);
         for(let i=0; i<9; i++){
             parts_clothing[i].style.visibility="visible";
         }
 }
-//console.log("SECUENCIA", secuenciaVisibility);
 
 function seleccionarElemento(evt) {
-    // debugger
-    //almacenamos la información de la pieza que dispara el evento
     elementSelect = evt.target;
-    //transferimos el elemento seleccionado
     elementSelect = reordenar(evt);
-    //almacenamos la info de X y Y que se disparo en el evento
-    //evt.clientX->obtiene la posicion cordenada x ydel clic dentro en el evento o wind
     currentX = evt.clientX;
     currentY = evt.clientY;
-    //console.log("x: " + currentX + "y: " + currentY  )
-
     currentPostX = parseFloat(elementSelect.getAttribute("x"));
     currentPostY = parseFloat(elementSelect.getAttribute("y"));
     elementSelect.setAttribute("onmousemove", "moverElemento(evt)");
 }
 
 function moverElemento(evt, id) {
-    // console.log("imprimiendo evt en mover elemento", evt);
-    // console.log("imprimiendo el id", evt.target.id);
     var idFicha = evt.target.id;
-    //calculamos la distancia recorrida (pos ant - pos actual)
     var dx = evt.clientX - currentX;
     var dy = evt.clientY - currentY;
-
-    //para que el elemento se movilice la misma distancia que se ha  movido el mouse agregamos esta diferencia
-    // a us posicion almacenada
     currentPostX = currentPostX + dx;
     currentPostY = currentPostY + dy;
-
-    //actualizamos la posicion del elemento
     elementSelect.setAttribute("x", currentPostX);
     elementSelect.setAttribute("y", currentPostY);
-
-    //guardamos la posición del mouse
     currentX = evt.clientX;
     currentY = evt.clientY;
-
-    //para solucionar el problema que la ficha se quedaba pegada al mouse
-    //El evento onMouseOver sucede cada vez que el cursor del ratón 
-    //pasa por encima de un elemento de la página, mientras que el 
-    //evento onMouseOut tiene lugar cuando sale de dicho elemento.
-    //El evento onMouseUp se genera cuando se deja de pulsar un botón del ratón. suelto el click
-
     elementSelect.setAttribute("onmouseout","deseleccionarElemento(evt)");
     elementSelect.setAttribute("onmouseup", "deseleccionarElemento(evt)");
     
@@ -143,14 +86,12 @@ function deseleccionarElemento() {
     }
 }
 
-//creamos una variable global que guardara todo el entorno grafico
 var entorno = document.getElementById('lienzo');
 
 function reordenar(evt){
     var padre = evt.target.parentNode;
     var clone = padre.cloneNode(true);
     var id = padre.getAttribute("id");
-    //mando a la funcion animar fondo
     animatioTab(id);
 
     entorno.removeChild(document.getElementById(id));
@@ -158,7 +99,6 @@ function reordenar(evt){
     return entorno.lastChild.firstChild;
 
 }
-// ++++++++++++++++++++++++++
 function animatioTab(id) {
     switch(id){
         case '0': parts_colors[0].style.opacity="0";
@@ -273,17 +213,11 @@ function animatioTab(id) {
 }
 
 function verificarColor(id){
-    //debugger;
     On = parts_colors[id].classList.contains("coloresON");
-    // console.log("EL valor de ON es: ", On);
     if(On === true){
-        // console.log("Entro al if del true del On llamo a la función ValidadVisibility");
-        // // var sum = 1;
-        // validarVisibilty();
         testing();
     }
     else{
-        // console.log("NO entro en true paso por el else, no tiene la clase, el valor de On es:", On);
         removeClass(id);
     }
     return;
@@ -366,27 +300,6 @@ function removeClass(id){
     }
 }
 
-// ******************
-// posiciones originales para el iman
-// chontaduro 186 15
-// chiru 560 108
-// rumo 493 220
-// chini 580 300
-// iaugar ambi 528 318
-// chunta panga 520 370
-// chivila 660 225
-// cucusacha 460 310
-// mirena 173 256 
-// pullito ambi 348 300
-// puka borrachero 246 348
-
-// sara 735 172
-// menta 440 375 
-// azultugtu 370 379
-// ridondo panga 540 417
-// alpa culantro 640 375
-// namis 45 210
-// sicsi 6 308
 
 var origX = [226, 609, 493, 580, 528, 520, 
              699, 460, 173, 348, 246, 
@@ -396,17 +309,12 @@ var origY = [54, 158, 220, 300, 318, 370,
              283, 375, 379, 417, 375, 210, 308];
 
 function iman(idFicha) {
-    // console.log("idFicha en el iman", idFicha);
-    // console.log("esto es lo que tiene parts_clothing", parts_clothing);
     for(var i=0; i<parts_clothing.length; i++){
         if(Math.abs(currentPostX-origX[i])<30 && Math.abs(currentPostY-origY[i])<30){
-            // alert("Entro al primer if");
             console.log("este es el valor de i", i);
             if(idFicha == i){
-            //     alert("Entro al segundo if");
                 elementSelect.setAttribute("x", origX[i]);
                 elementSelect.setAttribute("y", origY[i]); 
-                // elementSelect.style.opacity="0";
                 elementSelect.classList.add("parts_clotihinOff");
                 pintarFondo(idFicha);
             }
@@ -517,12 +425,6 @@ function testing(){
 var felicitacion = document.getElementById("bien");
 
 function gameCompleted(){
-    console.log("gano");
-    // fondo.pause();
-    //fondo2.pause();
-    // console.log("estotiene jungleBn", jungleBn);
-    // console.log("esto tiene jungleColor", jungleColor);
-    debugger
     for(let cont = 0; cont  < jungleBn.length; cont++){
         jungleBn[cont].style.opacity = "0";
         jungleColor[cont].style.opacity = "1";

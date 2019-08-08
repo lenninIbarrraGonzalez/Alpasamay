@@ -9,14 +9,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
- 
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   margin: 0;
   height: 100vh;
-
 }
 
 .principal-menu{
@@ -141,6 +135,5 @@ body {
   }
   100%{
     transform: rotate(540deg);
-    
   } 
 }

@@ -26,8 +26,6 @@ function inicio(){
 	var movimiento=setTimeout(function(){
 		abuela.setAttribute("xlink:href", "./img/siona-frente.png");
 		abuela.setAttribute("width","1012.68")
-
-		//
 		abuela.classList.add("saludo");
 		
 			setTimeout(()=>{

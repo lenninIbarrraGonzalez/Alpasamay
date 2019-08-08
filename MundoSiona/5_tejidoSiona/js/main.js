@@ -20,9 +20,6 @@ var subAgradecimiento=document.getElementById('subAgradecimiento');
 const btnStart = document.getElementById('ruedaCompleta');
 var audiosTejidos = document.getElementsByClassName('audio');
 
-// letrero1.classList.add("desaparecer");
-// letrero2.classList.add("desaparecer");
-// letrero3.classList.add("desaparecer");
 
 btnStart.addEventListener('click', start);
 abuela.setAttribute("width","1012.68")
@@ -149,7 +146,7 @@ function final(){
 	monbn.style.opacity="0";
 	moncol.style.opacity="1";
 
-	subAgradecimiento.classList.toggle('desaparecer')
+	subAgradecimiento.classList.toggle('desaparecer');
 	
 	setTimeout(()=>{
 		window.open("../../Menu/menu.html", "_self");

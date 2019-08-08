@@ -1,5 +1,3 @@
-/*modifique body y lienzo*/
-
 body {
   margin: 0;
   
@@ -36,7 +34,6 @@ body {
   display: none
 }
 
-/* mover paisaje */
 .mover{
   animation:moverFondo 5.2s ease-out;
   animation-fill-mode: forwards;  
@@ -54,7 +51,6 @@ body {
 
 }
 
-/* girar circulo simbolos */
 @keyframes girar {
   0%{
      transform: rotate(0deg);    
@@ -63,7 +59,7 @@ body {
       transform: rotate(-20deg);
     }
   }
-/* mover fondo paisaje*/
+
 @keyframes moverFondo {
   0%{
      transform: translateX(0); 
@@ -74,7 +70,6 @@ body {
 }
 
 
-/*abuela caminando*/
 .abuela{
       animation:caminar 1.2s steps(8);
       animation-iteration-count: 4;
@@ -89,7 +84,6 @@ body {
      }
 }
 
-/*abuela estatica y saludondo*/
 .saludo{
    animation:saludo 1s steps(7);
    animation-iteration-count: infinite;
@@ -104,7 +98,6 @@ body {
   }
 }
 
-/* mover montaña */
 .prueba{
   animation: color 2s ease-in-out infinite;
   transform-origin: center center;
